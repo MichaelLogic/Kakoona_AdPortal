@@ -1,0 +1,57 @@
+<%= form_for(@merchant) do |f| %>
+  <% if @merchant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@merchant.errors.count, "error") %> prohibited this merchant from being saved:</h2>
+
+      <ul>
+      <% @merchant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :merchant_name %><br>
+    <%= f.text_field :merchant_name %>
+  </div>
+  <div class="field">
+    <%= f.label :merchant_website %><br>
+    <%= f.text_field :merchant_website %>
+  </div>
+  <div class="field">
+    <%= f.label :AvatarGrffks_id %><br>
+    <%= f.text_field :AvatarGrffks_id %>
+  </div>
+  <div class="field">
+    <%= f.label :business_license %><br>
+    <%= f.check_box :business_license %>
+  </div>
+  <div class="field">
+    <%= f.label :chargeback_email %><br>
+    <%= f.text_field :chargeback_email %>
+  </div>
+  <div class="field">
+    <%= f.label :support_email %><br>
+    <%= f.text_field :support_email %>
+  </div>
+  <div class="field">
+    <%= f.label :custom_order_init %><br>
+    <%= f.check_box :custom_order_init %>
+  </div>
+  <div class="field">
+    <%= f.label :curr_monthly_sales %><br>
+    <%= f.text_field :curr_monthly_sales %>
+  </div>
+  <div class="field">
+    <%= f.label :registered_since %><br>
+    <%= f.date_select :registered_since %>
+  </div>
+  <div class="field">
+    <%= f.label :date_modified %><br>
+    <%= f.datetime_select :date_modified %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

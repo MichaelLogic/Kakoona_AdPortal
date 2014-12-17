@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Merchants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Merchant name</th>
+      <th>Merchant website</th>
+      <th>Avatargrffks</th>
+      <th>Business license</th>
+      <th>Chargeback email</th>
+      <th>Support email</th>
+      <th>Custom order init</th>
+      <th>Curr monthly sales</th>
+      <th>Registered since</th>
+      <th>Date modified</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @merchants.each do |merchant| %>
+      <tr>
+        <td><%= merchant.merchant_name %></td>
+        <td><%= merchant.merchant_website %></td>
+        <td><%= merchant.AvatarGrffks %></td>
+        <td><%= merchant.business_license %></td>
+        <td><%= merchant.chargeback_email %></td>
+        <td><%= merchant.support_email %></td>
+        <td><%= merchant.custom_order_init %></td>
+        <td><%= merchant.curr_monthly_sales %></td>
+        <td><%= merchant.registered_since %></td>
+        <td><%= merchant.date_modified %></td>
+        <td><%= link_to 'Show', merchant %></td>
+        <td><%= link_to 'Edit', edit_merchant_path(merchant) %></td>
+        <td><%= link_to 'Destroy', merchant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Merchant', new_merchant_path %>

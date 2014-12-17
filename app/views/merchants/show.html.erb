@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Merchant name:</strong>
+  <%= @merchant.merchant_name %>
+</p>
+
+<p>
+  <strong>Merchant website:</strong>
+  <%= @merchant.merchant_website %>
+</p>
+
+<p>
+  <strong>Avatargrffks:</strong>
+  <%= @merchant.AvatarGrffks %>
+</p>
+
+<p>
+  <strong>Business license:</strong>
+  <%= @merchant.business_license %>
+</p>
+
+<p>
+  <strong>Chargeback email:</strong>
+  <%= @merchant.chargeback_email %>
+</p>
+
+<p>
+  <strong>Support email:</strong>
+  <%= @merchant.support_email %>
+</p>
+
+<p>
+  <strong>Custom order init:</strong>
+  <%= @merchant.custom_order_init %>
+</p>
+
+<p>
+  <strong>Curr monthly sales:</strong>
+  <%= @merchant.curr_monthly_sales %>
+</p>
+
+<p>
+  <strong>Registered since:</strong>
+  <%= @merchant.registered_since %>
+</p>
+
+<p>
+  <strong>Date modified:</strong>
+  <%= @merchant.date_modified %>
+</p>
+
+<%= link_to 'Edit', edit_merchant_path(@merchant) %> |
+<%= link_to 'Back', merchants_path %>

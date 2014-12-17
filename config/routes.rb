@@ -1,4 +1,24 @@
 KakoonaAdportal::Application.routes.draw do
+  resources :ad_campaigns
+
+  resources :products
+
+  resources :content_providers
+
+  resources :merch_representatives
+
+  resources :merchants
+
+  get 'statix/home'
+
+  get 'statix/login'
+
+  get 'statix/about'
+
+  get 'statix/future'
+
+  get 'statix/contact'
+
   get 'welcome/index'
 
   root 'welcome#index'

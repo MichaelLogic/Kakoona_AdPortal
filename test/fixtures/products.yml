@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Merchants_id: 
+  time_created: 2014-12-16 16:51:25
+  product_type: MyString
+  grffk_url: MyString
+  price: 1.5
+  description: MyString
+  size: MyString
+  color: MyString
+  weight: 1
+
+two:
+  Merchants_id: 
+  time_created: 2014-12-16 16:51:25
+  product_type: MyString
+  grffk_url: MyString
+  price: 1.5
+  description: MyString
+  size: MyString
+  color: MyString
+  weight: 1
