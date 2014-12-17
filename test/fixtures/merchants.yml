@@ -9,7 +9,7 @@ one:
   custom_order_init: false
   curr_monthly_sales: MyString
   registered_since: 2014-12-17
-  date_modified: 2014-12-17 03:44:35
+  date_modified: 2014-12-17 07:31:31
 
 two:
   merchant_name: MyString
@@ -20,4 +20,4 @@ two:
   custom_order_init: false
   curr_monthly_sales: MyString
   registered_since: 2014-12-17
-  date_modified: 2014-12-17 03:44:35
+  date_modified: 2014-12-17 07:31:31

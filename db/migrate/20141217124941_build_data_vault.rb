@@ -1,6 +1,4 @@
-# SQLEditor export: Rails Migration
-# id columns are removed
-class Builddatavault < ActiveRecord::Migration 
+class BuildDataVault < ActiveRecord::Migration
   def change
     create_table :Addresses do |t|
       t.integer :location_nickname
@@ -269,5 +267,4 @@ class Builddatavault < ActiveRecord::Migration
     end
 
   end
-
 end
