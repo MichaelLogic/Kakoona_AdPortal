@@ -3,23 +3,21 @@
 one:
   merchant_name: MyString
   merchant_website: MyString
-  AvatarGrffks_id: 
   business_license: false
   chargeback_email: MyString
   support_email: MyString
   custom_order_init: false
   curr_monthly_sales: MyString
-  registered_since: 2014-12-16
-  date_modified: 2014-12-16 16:32:42
+  registered_since: 2014-12-17
+  date_modified: 2014-12-17 03:44:35
 
 two:
   merchant_name: MyString
   merchant_website: MyString
-  AvatarGrffks_id: 
   business_license: false
   chargeback_email: MyString
   support_email: MyString
   custom_order_init: false
   curr_monthly_sales: MyString
-  registered_since: 2014-12-16
-  date_modified: 2014-12-16 16:32:42
+  registered_since: 2014-12-17
+  date_modified: 2014-12-17 03:44:35

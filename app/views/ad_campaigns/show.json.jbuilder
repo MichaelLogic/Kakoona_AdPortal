@@ -1,1 +1,0 @@
-json.extract! @ad_campaign, :id, :campaign_title, :start_date, :end_date, :slug, :KakoonaVideos_id, :KakoonaAudio_id, :campaign_main_grffk_id, :CampaignPreloadGrffks_id, :merchant_info_url, :CampaignBrandGrffks_id, :campaign_reach, :campaign_plays, :clickthru, :campaign_price, :Merchants_id, :created_at, :updated_at
