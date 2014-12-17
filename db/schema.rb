@@ -218,11 +218,11 @@ ActiveRecord::Schema.define(version: 20141217124941) do
   add_index "MerchRepresentatives", ["merchant_id"], name: "index_MerchRepresentatives_on_merchant_id"
 
   create_table "MerchantAvatar", id: false, force: true do |t|
-    t.integer "av_id"
+    t.integer "avatar_grffk_id"
     t.integer "merchant_id"
   end
 
-  add_index "MerchantAvatar", ["av_id"], name: "index_MerchantAvatar_on_av_id"
+  add_index "MerchantAvatar", ["avatar_grffk_id"], name: "index_MerchantAvatar_on_avatar_grffk_id"
   add_index "MerchantAvatar", ["merchant_id"], name: "index_MerchantAvatar_on_merchant_id"
 
   create_table "Merchants", force: true do |t|

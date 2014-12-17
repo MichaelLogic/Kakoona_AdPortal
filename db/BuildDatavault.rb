@@ -109,7 +109,7 @@ class Builddatavault < ActiveRecord::Migration
     end
 
     create_table :MerchantAvatar, :id => false do |t|
-      t.references :av, index: true
+      t.references :avatar_grffk, index: true
       t.references :merchant, index: true
     end
 
