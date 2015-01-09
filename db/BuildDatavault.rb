@@ -66,7 +66,7 @@ class Builddatavault < ActiveRecord::Migration
       t.string :last_session_ip
     end
 
-    create_table :ContentProviderAvatar, :id => false do |t|
+    create_table :ContentProviderAvatars, :id => false do |t|
       t.references :avatar_grffk, index: true
       t.references :content_provider, index: true
     end
