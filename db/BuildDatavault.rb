@@ -96,7 +96,7 @@ class Builddatavault < ActiveRecord::Migration
       t.references :kakoona_video, index: true
     end
 
-    create_table :Merchants do |t|
+    create_table :merchants do |t|
       t.string :merchant_name, :null => false
       t.string :merchant_website, :null => false
       t.boolean :business_license, :null => false

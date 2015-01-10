@@ -225,7 +225,7 @@ ActiveRecord::Schema.define(version: 20141217124941) do
   add_index "MerchantAvatar", ["avatar_grffk_id"], name: "index_MerchantAvatar_on_avatar_grffk_id"
   add_index "MerchantAvatar", ["merchant_id"], name: "index_MerchantAvatar_on_merchant_id"
 
-  create_table "Merchants", force: true do |t|
+  create_table "merchants", force: true do |t|
     t.string   "merchant_name",      null: false
     t.string   "merchant_website",   null: false
     t.boolean  "business_license",   null: false
