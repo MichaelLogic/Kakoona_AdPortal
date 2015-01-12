@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ad campaign:</strong>
+  <%= @campaign_preload_grffk.ad_campaign %>
+</p>
+
+<p>
+  <strong>Raw file name:</strong>
+  <%= @campaign_preload_grffk.raw_file_name %>
+</p>
+
+<p>
+  <strong>Meta description:</strong>
+  <%= @campaign_preload_grffk.meta_description %>
+</p>
+
+<p>
+  <strong>File type:</strong>
+  <%= @campaign_preload_grffk.file_type %>
+</p>
+
+<p>
+  <strong>Grffk url:</strong>
+  <%= @campaign_preload_grffk.grffk_url %>
+</p>
+
+<%= link_to 'Edit', edit_campaign_preload_grffk_path(@campaign_preload_grffk) %> |
+<%= link_to 'Back', campaign_preload_grffks_path %>

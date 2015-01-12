@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Merch Representatives</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Merchant</th>
+      <th>Email</th>
+      <th>Screen name</th>
+      <th>First name</th>
+      <th>Middle name</th>
+      <th>Last name</th>
+      <th>Phone</th>
+      <th>Team role</th>
+      <th>Rep about</th>
+      <th>Is active</th>
+      <th>Auth token</th>
+      <th>Last session time</th>
+      <th>Last session ip</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @merch_representatives.each do |merch_representative| %>
+      <tr>
+        <td><%= merch_representative.merchant %></td>
+        <td><%= merch_representative.email %></td>
+        <td><%= merch_representative.screen_name %></td>
+        <td><%= merch_representative.first_name %></td>
+        <td><%= merch_representative.middle_name %></td>
+        <td><%= merch_representative.last_name %></td>
+        <td><%= merch_representative.phone %></td>
+        <td><%= merch_representative.team_role %></td>
+        <td><%= merch_representative.rep_about %></td>
+        <td><%= merch_representative.is_active %></td>
+        <td><%= merch_representative.auth_token %></td>
+        <td><%= merch_representative.last_session_time %></td>
+        <td><%= merch_representative.last_session_ip %></td>
+        <td><%= link_to 'Show', merch_representative %></td>
+        <td><%= link_to 'Edit', edit_merch_representative_path(merch_representative) %></td>
+        <td><%= link_to 'Destroy', merch_representative, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Merch representative', new_merch_representative_path %>

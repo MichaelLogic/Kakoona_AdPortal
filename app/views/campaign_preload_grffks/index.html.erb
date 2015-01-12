@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Campaign Preload Grffks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ad campaign</th>
+      <th>Raw file name</th>
+      <th>Meta description</th>
+      <th>File type</th>
+      <th>Grffk url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @campaign_preload_grffks.each do |campaign_preload_grffk| %>
+      <tr>
+        <td><%= campaign_preload_grffk.ad_campaign %></td>
+        <td><%= campaign_preload_grffk.raw_file_name %></td>
+        <td><%= campaign_preload_grffk.meta_description %></td>
+        <td><%= campaign_preload_grffk.file_type %></td>
+        <td><%= campaign_preload_grffk.grffk_url %></td>
+        <td><%= link_to 'Show', campaign_preload_grffk %></td>
+        <td><%= link_to 'Edit', edit_campaign_preload_grffk_path(campaign_preload_grffk) %></td>
+        <td><%= link_to 'Destroy', campaign_preload_grffk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Campaign preload grffk', new_campaign_preload_grffk_path %>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ad Campaigns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campaign title</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Slug</th>
+      <th>Merchant info url</th>
+      <th>Campaign reach</th>
+      <th>Campaign plays</th>
+      <th>Clickthru</th>
+      <th>Campaign price</th>
+      <th>Merchant</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ad_campaigns.each do |ad_campaign| %>
+      <tr>
+        <td><%= ad_campaign.campaign_title %></td>
+        <td><%= ad_campaign.start_date %></td>
+        <td><%= ad_campaign.end_date %></td>
+        <td><%= ad_campaign.slug %></td>
+        <td><%= ad_campaign.merchant_info_url %></td>
+        <td><%= ad_campaign.campaign_reach %></td>
+        <td><%= ad_campaign.campaign_plays %></td>
+        <td><%= ad_campaign.clickthru %></td>
+        <td><%= ad_campaign.campaign_price %></td>
+        <td><%= ad_campaign.merchant %></td>
+        <td><%= link_to 'Show', ad_campaign %></td>
+        <td><%= link_to 'Edit', edit_ad_campaign_path(ad_campaign) %></td>
+        <td><%= link_to 'Destroy', ad_campaign, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ad campaign', new_ad_campaign_path %>

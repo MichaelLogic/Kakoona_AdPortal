@@ -1,0 +1,1 @@
+json.extract! @content_provider, :id, :email, :screen_name, :first_name, :middle_name, :last_name, :phone, :team_role, :rep_about, :is_active, :auth_token, :last_session_time, :last_session_ip, :created_at, :updated_at

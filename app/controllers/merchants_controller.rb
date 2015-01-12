@@ -69,6 +69,6 @@ class MerchantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def merchant_params
-      params.require(:merchant).permit(:merchant_name, :merchant_website, :business_license, :chargeback_email, :support_email, :custom_order_init, :curr_monthly_sales, :registered_since, :date_modified)
+      params.require(:merchant).permit(:merchant_name, :merchant_website, :business_license, :chargeback_email, :support_email, :custom_order_init, :curr_monthly_sales, :registered_since)
     end
 end

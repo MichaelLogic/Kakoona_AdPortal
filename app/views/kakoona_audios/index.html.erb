@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Kakoona Audios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Audio title</th>
+      <th>Source</th>
+      <th>Artwork url</th>
+      <th>Description</th>
+      <th>Duration</th>
+      <th>Genre</th>
+      <th>Label name</th>
+      <th>Release date</th>
+      <th>Waveform url</th>
+      <th>Download url</th>
+      <th>Stream url</th>
+      <th>Bpm</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kakoona_audios.each do |kakoona_audio| %>
+      <tr>
+        <td><%= kakoona_audio.audio_title %></td>
+        <td><%= kakoona_audio.source %></td>
+        <td><%= kakoona_audio.artwork_url %></td>
+        <td><%= kakoona_audio.description %></td>
+        <td><%= kakoona_audio.duration %></td>
+        <td><%= kakoona_audio.genre %></td>
+        <td><%= kakoona_audio.label_name %></td>
+        <td><%= kakoona_audio.release_date %></td>
+        <td><%= kakoona_audio.waveform_url %></td>
+        <td><%= kakoona_audio.download_url %></td>
+        <td><%= kakoona_audio.stream_url %></td>
+        <td><%= kakoona_audio.bpm %></td>
+        <td><%= link_to 'Show', kakoona_audio %></td>
+        <td><%= link_to 'Edit', edit_kakoona_audio_path(kakoona_audio) %></td>
+        <td><%= link_to 'Destroy', kakoona_audio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kakoona audio', new_kakoona_audio_path %>

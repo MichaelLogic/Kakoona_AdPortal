@@ -1,0 +1,37 @@
+<%= form_for(@campaign_preload_grffk) do |f| %>
+  <% if @campaign_preload_grffk.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@campaign_preload_grffk.errors.count, "error") %> prohibited this campaign_preload_grffk from being saved:</h2>
+
+      <ul>
+      <% @campaign_preload_grffk.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ad_campaign_id %><br>
+    <%= f.text_field :ad_campaign_id %>
+  </div>
+  <div class="field">
+    <%= f.label :raw_file_name %><br>
+    <%= f.text_field :raw_file_name %>
+  </div>
+  <div class="field">
+    <%= f.label :meta_description %><br>
+    <%= f.text_field :meta_description %>
+  </div>
+  <div class="field">
+    <%= f.label :file_type %><br>
+    <%= f.text_field :file_type %>
+  </div>
+  <div class="field">
+    <%= f.label :grffk_url %><br>
+    <%= f.text_field :grffk_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

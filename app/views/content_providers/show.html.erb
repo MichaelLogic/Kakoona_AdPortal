@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @content_provider.email %>
+</p>
+
+<p>
+  <strong>Screen name:</strong>
+  <%= @content_provider.screen_name %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @content_provider.first_name %>
+</p>
+
+<p>
+  <strong>Middle name:</strong>
+  <%= @content_provider.middle_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @content_provider.last_name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @content_provider.phone %>
+</p>
+
+<p>
+  <strong>Team role:</strong>
+  <%= @content_provider.team_role %>
+</p>
+
+<p>
+  <strong>Rep about:</strong>
+  <%= @content_provider.rep_about %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @content_provider.is_active %>
+</p>
+
+<p>
+  <strong>Auth token:</strong>
+  <%= @content_provider.auth_token %>
+</p>
+
+<p>
+  <strong>Last session time:</strong>
+  <%= @content_provider.last_session_time %>
+</p>
+
+<p>
+  <strong>Last session ip:</strong>
+  <%= @content_provider.last_session_ip %>
+</p>
+
+<%= link_to 'Edit', edit_content_provider_path(@content_provider) %> |
+<%= link_to 'Back', content_providers_path %>

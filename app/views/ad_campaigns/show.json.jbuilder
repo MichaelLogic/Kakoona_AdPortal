@@ -1,0 +1,1 @@
+json.extract! @ad_campaign, :id, :campaign_title, :start_date, :end_date, :slug, :merchant_info_url, :campaign_reach, :campaign_plays, :clickthru, :campaign_price, :merchant_id, :created_at, :updated_at

@@ -1,0 +1,1 @@
+json.extract! @kakoona_audio, :id, :audio_title, :source, :artwork_url, :description, :duration, :genre, :label_name, :release_date, :waveform_url, :download_url, :stream_url, :bpm, :created_at, :updated_at

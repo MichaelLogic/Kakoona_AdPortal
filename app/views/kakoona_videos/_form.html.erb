@@ -1,0 +1,61 @@
+<%= form_for(@kakoona_video) do |f| %>
+  <% if @kakoona_video.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kakoona_video.errors.count, "error") %> prohibited this kakoona_video from being saved:</h2>
+
+      <ul>
+      <% @kakoona_video.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ad_campaign_id %><br>
+    <%= f.text_field :ad_campaign_id %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.number_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :raw_file_name %><br>
+    <%= f.text_field :raw_file_name %>
+  </div>
+  <div class="field">
+    <%= f.label :format_type %><br>
+    <%= f.text_field :format_type %>
+  </div>
+  <div class="field">
+    <%= f.label :file_size %><br>
+    <%= f.text_field :file_size %>
+  </div>
+  <div class="field">
+    <%= f.label :vid_views %><br>
+    <%= f.number_field :vid_views %>
+  </div>
+  <div class="field">
+    <%= f.label :vid_url %><br>
+    <%= f.text_field :vid_url %>
+  </div>
+  <div class="field">
+    <%= f.label :genre %><br>
+    <%= f.text_field :genre %>
+  </div>
+  <div class="field">
+    <%= f.label :vid_description %><br>
+    <%= f.text_area :vid_description %>
+  </div>
+  <div class="field">
+    <%= f.label :meta_tags %><br>
+    <%= f.text_area :meta_tags %>
+  </div>
+  <div class="field">
+    <%= f.label :tender_video_thum_id %><br>
+    <%= f.text_field :tender_video_thum_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

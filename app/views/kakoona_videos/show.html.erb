@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ad campaign:</strong>
+  <%= @kakoona_video.ad_campaign %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @kakoona_video.duration %>
+</p>
+
+<p>
+  <strong>Raw file name:</strong>
+  <%= @kakoona_video.raw_file_name %>
+</p>
+
+<p>
+  <strong>Format type:</strong>
+  <%= @kakoona_video.format_type %>
+</p>
+
+<p>
+  <strong>File size:</strong>
+  <%= @kakoona_video.file_size %>
+</p>
+
+<p>
+  <strong>Vid views:</strong>
+  <%= @kakoona_video.vid_views %>
+</p>
+
+<p>
+  <strong>Vid url:</strong>
+  <%= @kakoona_video.vid_url %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @kakoona_video.genre %>
+</p>
+
+<p>
+  <strong>Vid description:</strong>
+  <%= @kakoona_video.vid_description %>
+</p>
+
+<p>
+  <strong>Meta tags:</strong>
+  <%= @kakoona_video.meta_tags %>
+</p>
+
+<p>
+  <strong>Tender video thum:</strong>
+  <%= @kakoona_video.tender_video_thum %>
+</p>
+
+<%= link_to 'Edit', edit_kakoona_video_path(@kakoona_video) %> |
+<%= link_to 'Back', kakoona_videos_path %>

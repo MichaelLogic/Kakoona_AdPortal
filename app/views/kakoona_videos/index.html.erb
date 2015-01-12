@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Kakoona Videos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ad campaign</th>
+      <th>Duration</th>
+      <th>Raw file name</th>
+      <th>Format type</th>
+      <th>File size</th>
+      <th>Vid views</th>
+      <th>Vid url</th>
+      <th>Genre</th>
+      <th>Vid description</th>
+      <th>Meta tags</th>
+      <th>Tender video thum</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kakoona_videos.each do |kakoona_video| %>
+      <tr>
+        <td><%= kakoona_video.ad_campaign %></td>
+        <td><%= kakoona_video.duration %></td>
+        <td><%= kakoona_video.raw_file_name %></td>
+        <td><%= kakoona_video.format_type %></td>
+        <td><%= kakoona_video.file_size %></td>
+        <td><%= kakoona_video.vid_views %></td>
+        <td><%= kakoona_video.vid_url %></td>
+        <td><%= kakoona_video.genre %></td>
+        <td><%= kakoona_video.vid_description %></td>
+        <td><%= kakoona_video.meta_tags %></td>
+        <td><%= kakoona_video.tender_video_thum %></td>
+        <td><%= link_to 'Show', kakoona_video %></td>
+        <td><%= link_to 'Edit', edit_kakoona_video_path(kakoona_video) %></td>
+        <td><%= link_to 'Destroy', kakoona_video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kakoona video', new_kakoona_video_path %>

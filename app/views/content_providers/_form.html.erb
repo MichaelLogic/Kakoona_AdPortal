@@ -1,0 +1,65 @@
+<%= form_for(@content_provider) do |f| %>
+  <% if @content_provider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@content_provider.errors.count, "error") %> prohibited this content_provider from being saved:</h2>
+
+      <ul>
+      <% @content_provider.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :screen_name %><br>
+    <%= f.text_field :screen_name %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :middle_name %><br>
+    <%= f.text_field :middle_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :team_role %><br>
+    <%= f.text_field :team_role %>
+  </div>
+  <div class="field">
+    <%= f.label :rep_about %><br>
+    <%= f.text_area :rep_about %>
+  </div>
+  <div class="field">
+    <%= f.label :is_active %><br>
+    <%= f.check_box :is_active %>
+  </div>
+  <div class="field">
+    <%= f.label :auth_token %><br>
+    <%= f.text_field :auth_token %>
+  </div>
+  <div class="field">
+    <%= f.label :last_session_time %><br>
+    <%= f.datetime_select :last_session_time %>
+  </div>
+  <div class="field">
+    <%= f.label :last_session_ip %><br>
+    <%= f.text_field :last_session_ip %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

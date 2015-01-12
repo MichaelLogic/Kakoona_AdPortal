@@ -1,0 +1,65 @@
+<%= form_for(@kakoona_audio) do |f| %>
+  <% if @kakoona_audio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kakoona_audio.errors.count, "error") %> prohibited this kakoona_audio from being saved:</h2>
+
+      <ul>
+      <% @kakoona_audio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :audio_title %><br>
+    <%= f.text_field :audio_title %>
+  </div>
+  <div class="field">
+    <%= f.label :source %><br>
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :artwork_url %><br>
+    <%= f.number_field :artwork_url %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.number_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :genre %><br>
+    <%= f.text_field :genre %>
+  </div>
+  <div class="field">
+    <%= f.label :label_name %><br>
+    <%= f.text_field :label_name %>
+  </div>
+  <div class="field">
+    <%= f.label :release_date %><br>
+    <%= f.date_select :release_date %>
+  </div>
+  <div class="field">
+    <%= f.label :waveform_url %><br>
+    <%= f.text_field :waveform_url %>
+  </div>
+  <div class="field">
+    <%= f.label :download_url %><br>
+    <%= f.text_field :download_url %>
+  </div>
+  <div class="field">
+    <%= f.label :stream_url %><br>
+    <%= f.text_field :stream_url %>
+  </div>
+  <div class="field">
+    <%= f.label :bpm %><br>
+    <%= f.text_field :bpm %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

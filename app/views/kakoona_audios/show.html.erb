@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Audio title:</strong>
+  <%= @kakoona_audio.audio_title %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @kakoona_audio.source %>
+</p>
+
+<p>
+  <strong>Artwork url:</strong>
+  <%= @kakoona_audio.artwork_url %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @kakoona_audio.description %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @kakoona_audio.duration %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @kakoona_audio.genre %>
+</p>
+
+<p>
+  <strong>Label name:</strong>
+  <%= @kakoona_audio.label_name %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @kakoona_audio.release_date %>
+</p>
+
+<p>
+  <strong>Waveform url:</strong>
+  <%= @kakoona_audio.waveform_url %>
+</p>
+
+<p>
+  <strong>Download url:</strong>
+  <%= @kakoona_audio.download_url %>
+</p>
+
+<p>
+  <strong>Stream url:</strong>
+  <%= @kakoona_audio.stream_url %>
+</p>
+
+<p>
+  <strong>Bpm:</strong>
+  <%= @kakoona_audio.bpm %>
+</p>
+
+<%= link_to 'Edit', edit_kakoona_audio_path(@kakoona_audio) %> |
+<%= link_to 'Back', kakoona_audios_path %>

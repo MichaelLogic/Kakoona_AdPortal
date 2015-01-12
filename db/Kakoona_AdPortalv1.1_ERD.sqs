@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <SQLContainer>
     <SQLTable>
-        <name><![CDATA[AvatarGrffks]]></name>
+        <name><![CDATA[avatar_grffks]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>727.00</x>
@@ -40,13 +40,13 @@
             <type><![CDATA[string]]></type>
             <uid><![CDATA[DD2AFB7E-52BA-4923-82E0-D8E387E9E551]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[20]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[31]]></labelWindowIndex>
         <temporaryOriginalName><![CDATA[KakoonaTenderVideo]]></temporaryOriginalName>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[04DE1FBF-E864-451B-9156-6B1277F6416E]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[ProviderAddresses]]></name>
+        <name><![CDATA[provider_addresses]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>111.00</x>
@@ -62,9 +62,9 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>ContentProviders</referencesTable>
+            <referencesTable>content_providers</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[ContentProviders]]></referencesTable>
+            <referencesTable><![CDATA[content_providers]]></referencesTable>
             <sourceCardinality>5</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[87348C27-C94A-4F77-AA0E-23BFE863E240]]></referencesFieldUID>
@@ -76,21 +76,21 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>Addresses</referencesTable>
+            <referencesTable>addresses</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[Addresses]]></referencesTable>
+            <referencesTable><![CDATA[addresses]]></referencesTable>
             <sourceCardinality>0</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[08B7A9ED-8F67-48E2-ADA8-A139206A4CE8]]></referencesFieldUID>
             <referencesTableUID><![CDATA[EBE8E7E7-D97D-4165-B51E-AA5ED3610C81]]></referencesTableUID>
             <uid><![CDATA[8BE41ACE-E242-466A-8BCF-71A9B804D0E8]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[19]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[30]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[0936B0C7-F551-4746-843C-AA3506F3DF81]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[RepAdCampaigns]]></name>
+        <name><![CDATA[rep_ad_campaigns]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>1451.00</x>
@@ -106,9 +106,9 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>MerchRepresentatives</referencesTable>
+            <referencesTable>merch_representatives</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[MerchRepresentatives]]></referencesTable>
+            <referencesTable><![CDATA[merch_representatives]]></referencesTable>
             <sourceCardinality>5</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[F3AFB66F-AE50-44C6-ABDD-39ED1013592E]]></referencesFieldUID>
@@ -120,21 +120,21 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>AdCampaigns</referencesTable>
+            <referencesTable>ad_campaigns</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[AdCampaigns]]></referencesTable>
+            <referencesTable><![CDATA[ad_campaigns]]></referencesTable>
             <sourceCardinality>1</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[42C589D9-B40E-40B3-A7AA-9B8B354E915A]]></referencesFieldUID>
             <referencesTableUID><![CDATA[DFB72851-C0B5-493D-AE6D-261F0DF722F2]]></referencesTableUID>
             <uid><![CDATA[8E02F311-600A-40D0-82BA-05B3349697E3]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[18]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[29]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[0CDAB6D6-E37C-46ED-882B-3F6DB8857E29]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[ContentProviderSessions]]></name>
+        <name><![CDATA[content_provider_sessions]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>1057.00</x>
@@ -150,9 +150,9 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>ContentProviders</referencesTable>
+            <referencesTable>content_providers</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[ContentProviders]]></referencesTable>
+            <referencesTable><![CDATA[content_providers]]></referencesTable>
             <sourceCardinality>1</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[87348C27-C94A-4F77-AA0E-23BFE863E240]]></referencesFieldUID>
@@ -164,21 +164,21 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>Sessions</referencesTable>
+            <referencesTable>sessions</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[Sessions]]></referencesTable>
+            <referencesTable><![CDATA[sessions]]></referencesTable>
             <sourceCardinality>1</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[E0D9E4AF-3E5F-4C47-9C04-9557E696CF4B]]></referencesFieldUID>
             <referencesTableUID><![CDATA[4CE7E25F-DB5B-40D6-A29E-E6F1804C5130]]></referencesTableUID>
             <uid><![CDATA[5076EFEF-FC24-4751-8911-FF616D648A44]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[0]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[11]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[2346A2E6-D2B2-462F-BE75-56D2691BA5EF]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[KakoonaAudio]]></name>
+        <name><![CDATA[kakoona_audio]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>2147.00</x>
@@ -256,13 +256,13 @@
             <type><![CDATA[float]]></type>
             <uid><![CDATA[C96BACBF-0F97-482B-BD3C-4457DE5BB37A]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[17]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[28]]></labelWindowIndex>
         <temporaryOriginalName><![CDATA[KakoonaAudio]]></temporaryOriginalName>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[3145713A-D7B5-4E40-8B4D-17520769C20D]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[SocialMedia]]></name>
+        <name><![CDATA[social_media]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>454.00</x>
@@ -302,21 +302,21 @@
             <type><![CDATA[boolean]]></type>
             <uid><![CDATA[E3916ADA-401D-446F-A518-631048C49E42]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[16]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[27]]></labelWindowIndex>
         <temporaryOriginalName><![CDATA[SocialAuth]]></temporaryOriginalName>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[329C1702-8CAC-4A5F-AC65-658C579A6255]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[Sessions]]></name>
+        <name><![CDATA[sessions]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>1090.00</x>
-            <y>1043.00</y>
+            <y>1012.00</y>
         </location>
         <size>
             <width>235.00</width>
-            <height>100.00</height>
+            <height>111.00</height>
         </size>
         <zorder>2</zorder>
         <SQLField>
@@ -328,11 +328,6 @@
             <uid><![CDATA[E0D9E4AF-3E5F-4C47-9C04-9557E696CF4B]]></uid>
         </SQLField>
         <SQLField>
-            <name><![CDATA[time_created]]></name>
-            <type><![CDATA[datetime]]></type>
-            <uid><![CDATA[0C765B7B-1721-46FF-BE4B-76EFA9350F5E]]></uid>
-        </SQLField>
-        <SQLField>
             <name><![CDATA[curr_ip]]></name>
             <type><![CDATA[string]]></type>
             <uid><![CDATA[0B211B1C-73D7-44A2-9A93-A37B0CB81B5F]]></uid>
@@ -342,12 +337,17 @@
             <type><![CDATA[string]]></type>
             <uid><![CDATA[A91DCD56-29D9-4DCB-A116-03752135EB6D]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[15]]></labelWindowIndex>
+        <SQLField>
+            <name><![CDATA[device_spec]]></name>
+            <type><![CDATA[string]]></type>
+            <uid><![CDATA[5E2A9C16-8E6A-4C01-A5F0-F34451CC4DF6]]></uid>
+        </SQLField>
+        <labelWindowIndex><![CDATA[26]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[4CE7E25F-DB5B-40D6-A29E-E6F1804C5130]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[MerchAddresses]]></name>
+        <name><![CDATA[merch_addresses]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>135.00</x>
@@ -363,9 +363,9 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>Merchants</referencesTable>
+            <referencesTable>merchants</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[Merchants]]></referencesTable>
+            <referencesTable><![CDATA[merchants]]></referencesTable>
             <sourceCardinality>5</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[D210AF80-9060-4DFB-BE72-F70B53F68384]]></referencesFieldUID>
@@ -377,29 +377,29 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>Addresses</referencesTable>
+            <referencesTable>addresses</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[Addresses]]></referencesTable>
+            <referencesTable><![CDATA[addresses]]></referencesTable>
             <sourceCardinality>0</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[08B7A9ED-8F67-48E2-ADA8-A139206A4CE8]]></referencesFieldUID>
             <referencesTableUID><![CDATA[EBE8E7E7-D97D-4165-B51E-AA5ED3610C81]]></referencesTableUID>
             <uid><![CDATA[0AD11F2A-EF99-4BEE-8ACF-7F7872040C8C]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[14]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[25]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[5A511396-BB6E-4683-A0C4-3C4A1733B08F]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[ContentProviders]]></name>
+        <name><![CDATA[content_providers]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>1106.00</x>
-            <y>1402.00</y>
+            <y>1372.00</y>
         </location>
         <size>
             <width>213.00</width>
-            <height>320.00</height>
+            <height>281.00</height>
         </size>
         <zorder>16</zorder>
         <SQLField>
@@ -470,16 +470,6 @@
             <uid><![CDATA[5322602F-9A2D-43A4-92B7-D2B505C65551]]></uid>
         </SQLField>
         <SQLField>
-            <name><![CDATA[date_created]]></name>
-            <type><![CDATA[datetime]]></type>
-            <uid><![CDATA[3EDB9E9F-3757-4B49-B6AE-D4EBB36AD865]]></uid>
-        </SQLField>
-        <SQLField>
-            <name><![CDATA[date_modified]]></name>
-            <type><![CDATA[datetime]]></type>
-            <uid><![CDATA[1877DE06-790B-4BDD-9F52-C7C0968D75BA]]></uid>
-        </SQLField>
-        <SQLField>
             <name><![CDATA[last_session_time]]></name>
             <type><![CDATA[datetime]]></type>
             <forcedUnique><![CDATA[0]]></forcedUnique>
@@ -490,12 +480,12 @@
             <type><![CDATA[string]]></type>
             <uid><![CDATA[0D9F4CA8-F90A-4C3F-A77B-61167943DC41]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[13]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[24]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[6C5D9B77-2246-460B-9F3E-CC3F5726E293]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[ContentProviderPrecious]]></name>
+        <name><![CDATA[content_provider_precious]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>1447.00</x>
@@ -511,9 +501,9 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>ContentProviders</referencesTable>
+            <referencesTable>content_providers</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[ContentProviders]]></referencesTable>
+            <referencesTable><![CDATA[content_providers]]></referencesTable>
             <sourceCardinality>0</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[87348C27-C94A-4F77-AA0E-23BFE863E240]]></referencesFieldUID>
@@ -525,21 +515,21 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>Precious</referencesTable>
+            <referencesTable>precious</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[Precious]]></referencesTable>
+            <referencesTable><![CDATA[precious]]></referencesTable>
             <sourceCardinality>0</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[23C368C0-A09C-445C-B855-5936D216CB49]]></referencesFieldUID>
             <referencesTableUID><![CDATA[7C5D9ED4-1C71-4FAE-9BF9-1D49166ED23E]]></referencesTableUID>
             <uid><![CDATA[FEC1F24D-DDF3-46A4-A004-50D947F732A6]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[0]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[10]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[75EB9750-11E7-4094-A2C2-F37B823A3471]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[RepSocialMedia]]></name>
+        <name><![CDATA[rep_social_media]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>430.00</x>
@@ -555,9 +545,9 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>SocialMedia</referencesTable>
+            <referencesTable>social_media</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[SocialMedia]]></referencesTable>
+            <referencesTable><![CDATA[social_media]]></referencesTable>
             <sourceCardinality>0</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[F9E05255-8D7D-4B65-BF5A-19A82D05034C]]></referencesFieldUID>
@@ -568,29 +558,29 @@
             <name><![CDATA[merch_representative_id]]></name>
             <type><![CDATA[integer]]></type>
             <referencesField>id</referencesField>
-            <referencesTable>MerchRepresentatives</referencesTable>
+            <referencesTable>merch_representatives</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[MerchRepresentatives]]></referencesTable>
+            <referencesTable><![CDATA[merch_representatives]]></referencesTable>
             <sourceCardinality>0</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[F3AFB66F-AE50-44C6-ABDD-39ED1013592E]]></referencesFieldUID>
             <referencesTableUID><![CDATA[7A07469A-73B0-4BEA-87D8-305C3C4619FC]]></referencesTableUID>
             <uid><![CDATA[3C5BC403-D927-4FBF-BCE9-2A50F0E04CDF]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[0]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[9]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[784C9011-1246-4003-A874-148E47F1A96F]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[MerchRepresentatives]]></name>
+        <name><![CDATA[merch_representatives]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>1074.00</x>
-            <y>480.00</y>
+            <y>455.00</y>
         </location>
         <size>
-            <width>200.00</width>
-            <height>360.00</height>
+            <width>205.00</width>
+            <height>300.00</height>
         </size>
         <zorder>1</zorder>
         <SQLField>
@@ -605,14 +595,15 @@
             <name><![CDATA[merchant_id]]></name>
             <type><![CDATA[integer]]></type>
             <referencesField>id</referencesField>
-            <referencesTable>Merchants</referencesTable>
+            <referencesTable>merchants</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[Merchants]]></referencesTable>
+            <referencesTable><![CDATA[merchants]]></referencesTable>
             <sourceCardinality>5</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[D210AF80-9060-4DFB-BE72-F70B53F68384]]></referencesFieldUID>
             <referencesTableUID><![CDATA[86D41592-050A-4CC3-B8D5-2B7F33DCB8E7]]></referencesTableUID>
             <forcedUnique><![CDATA[0]]></forcedUnique>
+            <indexed><![CDATA[0]]></indexed>
             <notNull><![CDATA[1]]></notNull>
             <uid><![CDATA[DF5FA9FF-28C1-4C3C-A3BC-3239C35C7EEF]]></uid>
         </SQLField>
@@ -675,16 +666,6 @@
             <uid><![CDATA[22A5895E-1868-4F4D-8745-475F6F826B53]]></uid>
         </SQLField>
         <SQLField>
-            <name><![CDATA[date_created]]></name>
-            <type><![CDATA[datetime]]></type>
-            <uid><![CDATA[F51E442F-86D7-4006-9582-AD03BAEB2ED2]]></uid>
-        </SQLField>
-        <SQLField>
-            <name><![CDATA[date_modified]]></name>
-            <type><![CDATA[datetime]]></type>
-            <uid><![CDATA[F4BF489D-DA70-4978-9000-7784F9262DE3]]></uid>
-        </SQLField>
-        <SQLField>
             <name><![CDATA[last_session_time]]></name>
             <type><![CDATA[datetime]]></type>
             <uid><![CDATA[090827F2-C59E-4605-A2B4-A9A34A7D0E3A]]></uid>
@@ -694,12 +675,12 @@
             <type><![CDATA[string]]></type>
             <uid><![CDATA[47711786-2C1B-47CD-8FCA-D1933EB95349]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[12]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[23]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[7A07469A-73B0-4BEA-87D8-305C3C4619FC]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[Precious]]></name>
+        <name><![CDATA[precious]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>1497.00</x>
@@ -707,7 +688,7 @@
         </location>
         <size>
             <width>216.00</width>
-            <height>180.00</height>
+            <height>140.00</height>
         </size>
         <zorder>3</zorder>
         <SQLField>
@@ -743,22 +724,12 @@
             <type><![CDATA[string]]></type>
             <uid><![CDATA[9AA60E83-D12D-4181-AE5C-9268937D459F]]></uid>
         </SQLField>
-        <SQLField>
-            <name><![CDATA[remember_precious_at]]></name>
-            <type><![CDATA[datetime]]></type>
-            <uid><![CDATA[1F6AD6D2-EB18-44CC-80FA-B969E61AAA11]]></uid>
-        </SQLField>
-        <SQLField>
-            <name><![CDATA[reset_precious_at]]></name>
-            <type><![CDATA[datetime]]></type>
-            <uid><![CDATA[F6BEC879-6B5A-47D6-B7A1-0C898CEEDD17]]></uid>
-        </SQLField>
-        <labelWindowIndex><![CDATA[11]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[22]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[7C5D9ED4-1C71-4FAE-9BF9-1D49166ED23E]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[CampaignPreloadGrffks]]></name>
+        <name><![CDATA[campaign_preload_grffks]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>2119.00</x>
@@ -766,7 +737,7 @@
         </location>
         <size>
             <width>279.00</width>
-            <height>180.00</height>
+            <height>140.00</height>
         </size>
         <zorder>14</zorder>
         <SQLField>
@@ -781,19 +752,14 @@
             <name><![CDATA[ad_campaign_id]]></name>
             <type><![CDATA[integer]]></type>
             <referencesField>id</referencesField>
-            <referencesTable>AdCampaigns</referencesTable>
+            <referencesTable>ad_campaigns</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[AdCampaigns]]></referencesTable>
+            <referencesTable><![CDATA[ad_campaigns]]></referencesTable>
             <sourceCardinality>1</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[42C589D9-B40E-40B3-A7AA-9B8B354E915A]]></referencesFieldUID>
             <referencesTableUID><![CDATA[DFB72851-C0B5-493D-AE6D-261F0DF722F2]]></referencesTableUID>
             <uid><![CDATA[CECB454C-1DC0-43DD-8BB2-8A48CE3E9128]]></uid>
-        </SQLField>
-        <SQLField>
-            <name><![CDATA[time_created]]></name>
-            <type><![CDATA[datetime]]></type>
-            <uid><![CDATA[682AEC0D-B89A-4028-8174-7526B3A9BA48]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[raw_file_name]]></name>
@@ -815,13 +781,13 @@
             <type><![CDATA[string]]></type>
             <uid><![CDATA[20721F85-579A-426F-97F0-CE6EEEA2AC8F]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[10]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[21]]></labelWindowIndex>
         <temporaryOriginalName><![CDATA[CampaignPreloadGrffk]]></temporaryOriginalName>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[7EB72F09-F9D5-45F4-A061-FD050DAA2297]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[Merchants]]></name>
+        <name><![CDATA[merchants]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>351.00</x>
@@ -886,17 +852,12 @@
             <type><![CDATA[date]]></type>
             <uid><![CDATA[99194B79-8BD6-4C99-8D60-F1BB9F302C89]]></uid>
         </SQLField>
-        <SQLField>
-            <name><![CDATA[date_modified]]></name>
-            <type><![CDATA[datetime]]></type>
-            <uid><![CDATA[3A870A3C-0885-4AC6-BC9E-2E50151364FF]]></uid>
-        </SQLField>
-        <labelWindowIndex><![CDATA[6]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[17]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[86D41592-050A-4CC3-B8D5-2B7F33DCB8E7]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[MerchantAvatar]]></name>
+        <name><![CDATA[merchant_avatars]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>370.00</x>
@@ -912,9 +873,9 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>AvatarGrffks</referencesTable>
+            <referencesTable>avatar_grffks</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[AvatarGrffks]]></referencesTable>
+            <referencesTable><![CDATA[avatar_grffks]]></referencesTable>
             <sourceCardinality>1</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[C59F4B2F-7965-4EBC-883C-7192204A6392]]></referencesFieldUID>
@@ -928,22 +889,22 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>Merchants</referencesTable>
+            <referencesTable>merchants</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[Merchants]]></referencesTable>
+            <referencesTable><![CDATA[merchants]]></referencesTable>
             <sourceCardinality>1</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[D210AF80-9060-4DFB-BE72-F70B53F68384]]></referencesFieldUID>
             <referencesTableUID><![CDATA[86D41592-050A-4CC3-B8D5-2B7F33DCB8E7]]></referencesTableUID>
             <uid><![CDATA[A4A9888B-7681-4179-A127-86958299AC45]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[0]]></labelWindowIndex>
-        <temporaryOriginalName><![CDATA[KakoonaTenderVideo]]></temporaryOriginalName>
+        <labelWindowIndex><![CDATA[8]]></labelWindowIndex>
+        <temporaryOriginalName><![CDATA[merchant_avatar]]></temporaryOriginalName>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[8F21AC71-EF4F-447A-939F-A7060FD13708]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[ContentProviderAvatar]]></name>
+        <name><![CDATA[content_provider_avatars]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>710.00</x>
@@ -959,9 +920,9 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>AvatarGrffks</referencesTable>
+            <referencesTable>avatar_grffks</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[AvatarGrffks]]></referencesTable>
+            <referencesTable><![CDATA[avatar_grffks]]></referencesTable>
             <sourceCardinality>1</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[C59F4B2F-7965-4EBC-883C-7192204A6392]]></referencesFieldUID>
@@ -975,30 +936,30 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>ContentProviders</referencesTable>
+            <referencesTable>content_providers</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[ContentProviders]]></referencesTable>
+            <referencesTable><![CDATA[content_providers]]></referencesTable>
             <sourceCardinality>1</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[87348C27-C94A-4F77-AA0E-23BFE863E240]]></referencesFieldUID>
             <referencesTableUID><![CDATA[6C5D9B77-2246-460B-9F3E-CC3F5726E293]]></referencesTableUID>
             <uid><![CDATA[6EC9985F-1888-4851-82DF-37C61BE69A5E]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[0]]></labelWindowIndex>
-        <temporaryOriginalName><![CDATA[KakoonaTenderVideo]]></temporaryOriginalName>
+        <labelWindowIndex><![CDATA[7]]></labelWindowIndex>
+        <temporaryOriginalName><![CDATA[content_provider_avatar]]></temporaryOriginalName>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[9374E10A-E637-4E28-B312-27E0BDED566D]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[CampaignMainGrffks]]></name>
+        <name><![CDATA[campaign_main_grffks]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>2128.00</x>
-            <y>811.00</y>
+            <y>803.00</y>
         </location>
         <size>
             <width>261.00</width>
-            <height>160.00</height>
+            <height>140.00</height>
         </size>
         <zorder>13</zorder>
         <SQLField>
@@ -1012,20 +973,14 @@
             <name><![CDATA[ad_campaign_id]]></name>
             <type><![CDATA[integer]]></type>
             <referencesField>id</referencesField>
-            <referencesTable>AdCampaigns</referencesTable>
+            <referencesTable>ad_campaigns</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[AdCampaigns]]></referencesTable>
+            <referencesTable><![CDATA[ad_campaigns]]></referencesTable>
             <sourceCardinality>1</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[42C589D9-B40E-40B3-A7AA-9B8B354E915A]]></referencesFieldUID>
             <referencesTableUID><![CDATA[DFB72851-C0B5-493D-AE6D-261F0DF722F2]]></referencesTableUID>
             <uid><![CDATA[66DACEEA-D988-40C2-BA87-3E47EC20C11B]]></uid>
-        </SQLField>
-        <SQLField>
-            <name><![CDATA[time_created]]></name>
-            <type><![CDATA[datetime]]></type>
-            <forcedUnique><![CDATA[0]]></forcedUnique>
-            <uid><![CDATA[13A66EB1-CA81-429D-B70F-4701144B2830]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[raw_file_name]]></name>
@@ -1047,13 +1002,13 @@
             <type><![CDATA[string]]></type>
             <uid><![CDATA[CBB07D1A-13AD-4E2F-8C26-FE02581AC49E]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[9]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[20]]></labelWindowIndex>
         <temporaryOriginalName><![CDATA[CampaignMainGrffk]]></temporaryOriginalName>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[9497DA43-DFB0-4562-BEFB-94465AA5D497]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[AdPortalOverviews]]></name>
+        <name><![CDATA[ad_portal_overviews]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>400.00</x>
@@ -1074,9 +1029,9 @@
             <name><![CDATA[merchant_id]]></name>
             <type><![CDATA[integer]]></type>
             <referencesField>id</referencesField>
-            <referencesTable>Merchants</referencesTable>
+            <referencesTable>merchants</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[Merchants]]></referencesTable>
+            <referencesTable><![CDATA[merchants]]></referencesTable>
             <sourceCardinality>1</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[D210AF80-9060-4DFB-BE72-F70B53F68384]]></referencesFieldUID>
@@ -1115,12 +1070,12 @@
             <type><![CDATA[string]]></type>
             <uid><![CDATA[F82E6544-660A-438E-A108-9CCD51485D3F]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[8]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[19]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[9990F1B1-53CB-4865-B3B6-FFE1D186C888]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[RepAvatar]]></name>
+        <name><![CDATA[rep_avatars]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>711.00</x>
@@ -1136,9 +1091,9 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>AvatarGrffks</referencesTable>
+            <referencesTable>avatar_grffks</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[AvatarGrffks]]></referencesTable>
+            <referencesTable><![CDATA[avatar_grffks]]></referencesTable>
             <sourceCardinality>1</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[C59F4B2F-7965-4EBC-883C-7192204A6392]]></referencesFieldUID>
@@ -1152,22 +1107,22 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>MerchRepresentatives</referencesTable>
+            <referencesTable>merch_representatives</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[MerchRepresentatives]]></referencesTable>
+            <referencesTable><![CDATA[merch_representatives]]></referencesTable>
             <sourceCardinality>1</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[F3AFB66F-AE50-44C6-ABDD-39ED1013592E]]></referencesFieldUID>
             <referencesTableUID><![CDATA[7A07469A-73B0-4BEA-87D8-305C3C4619FC]]></referencesTableUID>
             <uid><![CDATA[4D9021DF-22F4-47DF-996B-5F0D952F95AE]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[0]]></labelWindowIndex>
-        <temporaryOriginalName><![CDATA[KakoonaTenderVideo]]></temporaryOriginalName>
+        <labelWindowIndex><![CDATA[6]]></labelWindowIndex>
+        <temporaryOriginalName><![CDATA[rep_avatar]]></temporaryOriginalName>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[9EB1CB0F-9133-4EE5-8020-E06D44F5A363]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[ContentProviderSocialMedia]]></name>
+        <name><![CDATA[content_provider_social_media]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>429.00</x>
@@ -1183,9 +1138,9 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>ContentProviders</referencesTable>
+            <referencesTable>content_providers</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[ContentProviders]]></referencesTable>
+            <referencesTable><![CDATA[content_providers]]></referencesTable>
             <sourceCardinality>0</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[87348C27-C94A-4F77-AA0E-23BFE863E240]]></referencesFieldUID>
@@ -1197,21 +1152,21 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>SocialMedia</referencesTable>
+            <referencesTable>social_media</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[SocialMedia]]></referencesTable>
+            <referencesTable><![CDATA[social_media]]></referencesTable>
             <sourceCardinality>0</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[F9E05255-8D7D-4B65-BF5A-19A82D05034C]]></referencesFieldUID>
             <referencesTableUID><![CDATA[329C1702-8CAC-4A5F-AC65-658C579A6255]]></referencesTableUID>
             <uid><![CDATA[52C97E88-A25F-46A6-A4B1-55C1C2027BBF]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[0]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[5]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[9FF17691-33D6-4156-9694-B8E7E442BCD2]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[CampaignBrandGrffks]]></name>
+        <name><![CDATA[campaign_brand_grffks]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>2112.00</x>
@@ -1219,7 +1174,7 @@
         </location>
         <size>
             <width>279.00</width>
-            <height>160.00</height>
+            <height>140.00</height>
         </size>
         <zorder>15</zorder>
         <SQLField>
@@ -1233,19 +1188,14 @@
             <name><![CDATA[ad_campaign_id]]></name>
             <type><![CDATA[integer]]></type>
             <referencesField>id</referencesField>
-            <referencesTable>AdCampaigns</referencesTable>
+            <referencesTable>ad_campaigns</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[AdCampaigns]]></referencesTable>
+            <referencesTable><![CDATA[ad_campaigns]]></referencesTable>
             <sourceCardinality>1</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[42C589D9-B40E-40B3-A7AA-9B8B354E915A]]></referencesFieldUID>
             <referencesTableUID><![CDATA[DFB72851-C0B5-493D-AE6D-261F0DF722F2]]></referencesTableUID>
             <uid><![CDATA[434EF6CB-7C47-4229-8DEA-715C86CE5FD4]]></uid>
-        </SQLField>
-        <SQLField>
-            <name><![CDATA[time_created]]></name>
-            <type><![CDATA[datetime]]></type>
-            <uid><![CDATA[29FC63BA-71D0-4B69-AB90-E2ED3ABF62D5]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[raw_file_name]]></name>
@@ -1267,21 +1217,21 @@
             <type><![CDATA[string]]></type>
             <uid><![CDATA[F207BE83-65BE-4382-A462-774296C9F485]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[7]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[18]]></labelWindowIndex>
         <temporaryOriginalName><![CDATA[CampaignBrandGrffk]]></temporaryOriginalName>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[AECC056D-1465-4E02-A77C-69E66068ADBA]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[KakoonaVideos]]></name>
+        <name><![CDATA[kakoona_videos]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>2146.00</x>
-            <y>187.00</y>
+            <y>179.00</y>
         </location>
         <size>
             <width>222.00</width>
-            <height>280.00</height>
+            <height>260.00</height>
         </size>
         <zorder>9</zorder>
         <SQLField>
@@ -1295,11 +1245,6 @@
             <name><![CDATA[ad_campaign_id]]></name>
             <type><![CDATA[string]]></type>
             <uid><![CDATA[823DCD79-05E2-463C-AACC-6897D0673EAB]]></uid>
-        </SQLField>
-        <SQLField>
-            <name><![CDATA[time_uploaded]]></name>
-            <type><![CDATA[datetime]]></type>
-            <uid><![CDATA[F9CAE45A-C2D6-4412-8828-A6F8AC0741C9]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[duration]]></name>
@@ -1352,21 +1297,21 @@
             <name><![CDATA[tender_video_thum_id]]></name>
             <type><![CDATA[integer]]></type>
             <referencesField>id</referencesField>
-            <referencesTable>TenderVideoThums</referencesTable>
+            <referencesTable>tender_video_thums</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[TenderVideoThums]]></referencesTable>
+            <referencesTable><![CDATA[tender_video_thums]]></referencesTable>
             <sourceCardinality>1</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[D107DD0D-4A2E-4DC0-847A-05BA2B5EAA2C]]></referencesFieldUID>
             <referencesTableUID><![CDATA[C3D162FC-6E38-4113-95EF-551D46E94B3F]]></referencesTableUID>
             <uid><![CDATA[D8CF8369-850A-497E-B2BF-D1F2503FFC62]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[5]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[16]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[BA6CBE03-6A57-4273-B8F0-126250F4B770]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[RepPrecious]]></name>
+        <name><![CDATA[rep_precious]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>1449.00</x>
@@ -1382,9 +1327,9 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>MerchRepresentatives</referencesTable>
+            <referencesTable>merch_representatives</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[MerchRepresentatives]]></referencesTable>
+            <referencesTable><![CDATA[merch_representatives]]></referencesTable>
             <sourceCardinality>0</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[F3AFB66F-AE50-44C6-ABDD-39ED1013592E]]></referencesFieldUID>
@@ -1396,21 +1341,21 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>Precious</referencesTable>
+            <referencesTable>precious</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[Precious]]></referencesTable>
+            <referencesTable><![CDATA[precious]]></referencesTable>
             <sourceCardinality>0</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[23C368C0-A09C-445C-B855-5936D216CB49]]></referencesFieldUID>
             <referencesTableUID><![CDATA[7C5D9ED4-1C71-4FAE-9BF9-1D49166ED23E]]></referencesTableUID>
             <uid><![CDATA[BC2D888E-40FE-4496-963E-9495B0E10B16]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[0]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[4]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[BE517A40-1E8F-4A14-B3A8-E5718873F2D6]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[TenderVideoThums]]></name>
+        <name><![CDATA[tender_video_thums]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>2432.00</x>
@@ -1418,7 +1363,7 @@
         </location>
         <size>
             <width>200.00</width>
-            <height>140.00</height>
+            <height>120.00</height>
         </size>
         <zorder>11</zorder>
         <SQLField>
@@ -1427,11 +1372,6 @@
             <primaryKey>1</primaryKey>
             <forcedUnique><![CDATA[1]]></forcedUnique>
             <uid><![CDATA[D107DD0D-4A2E-4DC0-847A-05BA2B5EAA2C]]></uid>
-        </SQLField>
-        <SQLField>
-            <name><![CDATA[time_created]]></name>
-            <type><![CDATA[datetime]]></type>
-            <uid><![CDATA[16E1E19C-FDAC-4047-AC24-AF10602EEB2D]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[raw_file_name]]></name>
@@ -1453,13 +1393,13 @@
             <type><![CDATA[string]]></type>
             <uid><![CDATA[63B30FBD-5035-438C-A2D1-447430600CA6]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[4]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[15]]></labelWindowIndex>
         <temporaryOriginalName><![CDATA[KakoonaTenderVideo]]></temporaryOriginalName>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[C3D162FC-6E38-4113-95EF-551D46E94B3F]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[Products]]></name>
+        <name><![CDATA[products]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>1031.00</x>
@@ -1481,9 +1421,9 @@
             <name><![CDATA[merchant_id]]></name>
             <type><![CDATA[integer]]></type>
             <referencesField>id</referencesField>
-            <referencesTable>Merchants</referencesTable>
+            <referencesTable>merchants</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[Merchants]]></referencesTable>
+            <referencesTable><![CDATA[merchants]]></referencesTable>
             <sourceCardinality>5</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[D210AF80-9060-4DFB-BE72-F70B53F68384]]></referencesFieldUID>
@@ -1530,13 +1470,13 @@
             <type><![CDATA[integer]]></type>
             <uid><![CDATA[86945769-82BF-4F02-BF9D-841ED1E14AB0]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[2]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[13]]></labelWindowIndex>
         <temporaryOriginalName><![CDATA[KakoonaTenderVideo]]></temporaryOriginalName>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[CE25EF26-8EB7-4B9B-8EB1-261434FA6332]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[CampaignAudio]]></name>
+        <name><![CDATA[campaign_audio]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>1743.00</x>
@@ -1552,9 +1492,9 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>AdCampaigns</referencesTable>
+            <referencesTable>ad_campaigns</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[AdCampaigns]]></referencesTable>
+            <referencesTable><![CDATA[ad_campaigns]]></referencesTable>
             <sourceCardinality>0</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[42C589D9-B40E-40B3-A7AA-9B8B354E915A]]></referencesFieldUID>
@@ -1566,22 +1506,22 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>KakoonaAudio</referencesTable>
+            <referencesTable>kakoona_audio</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[KakoonaAudio]]></referencesTable>
+            <referencesTable><![CDATA[kakoona_audio]]></referencesTable>
             <sourceCardinality>0</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[06DEEB47-4E63-4BB3-8FBA-1ADE253FE2F6]]></referencesFieldUID>
             <referencesTableUID><![CDATA[3145713A-D7B5-4E40-8B4D-17520769C20D]]></referencesTableUID>
             <uid><![CDATA[4CB9735A-E9A5-4476-94FA-E5093055CE19]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[0]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[3]]></labelWindowIndex>
         <temporaryOriginalName><![CDATA[CampaignVideos]]></temporaryOriginalName>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[D56140E6-C21A-42EA-A89A-DA2FFE4B67C8]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[ProductInventory]]></name>
+        <name><![CDATA[product_inventory]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>1404.00</x>
@@ -1589,7 +1529,7 @@
         </location>
         <size>
             <width>240.00</width>
-            <height>120.00</height>
+            <height>80.00</height>
         </size>
         <zorder>20</zorder>
         <SQLField>
@@ -1597,9 +1537,9 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>AdCampaigns</referencesTable>
+            <referencesTable>ad_campaigns</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[AdCampaigns]]></referencesTable>
+            <referencesTable><![CDATA[ad_campaigns]]></referencesTable>
             <sourceCardinality>1</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[42C589D9-B40E-40B3-A7AA-9B8B354E915A]]></referencesFieldUID>
@@ -1612,9 +1552,9 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>Products</referencesTable>
+            <referencesTable>products</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[Products]]></referencesTable>
+            <referencesTable><![CDATA[products]]></referencesTable>
             <sourceCardinality>0</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[E3506750-B29B-4408-A5CF-47F118814703]]></referencesFieldUID>
@@ -1623,22 +1563,17 @@
             <uid><![CDATA[0D8923B1-86DB-4205-8612-6EF39E27DF40]]></uid>
         </SQLField>
         <SQLField>
-            <name><![CDATA[time_updated]]></name>
-            <type><![CDATA[datetime]]></type>
-            <uid><![CDATA[AA8F4AF4-876F-4567-AD39-4F32A7D232DE]]></uid>
-        </SQLField>
-        <SQLField>
             <name><![CDATA[inventory_count]]></name>
             <type><![CDATA[integer]]></type>
             <uid><![CDATA[FF38D814-C3C6-4702-BF7E-2A676DFF7803]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[1]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[12]]></labelWindowIndex>
         <temporaryOriginalName><![CDATA[KakoonaTenderVideo]]></temporaryOriginalName>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[D640E7AF-0DB5-4962-BF8E-AAC7A48332C0]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[AdCampaigns]]></name>
+        <name><![CDATA[ad_campaigns]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>1359.00</x>
@@ -1646,7 +1581,7 @@
         </location>
         <size>
             <width>329.00</width>
-            <height>300.00</height>
+            <height>240.00</height>
         </size>
         <zorder>8</zorder>
         <SQLField>
@@ -1711,9 +1646,9 @@
             <name><![CDATA[merchant_id]]></name>
             <type><![CDATA[integer]]></type>
             <referencesField>id</referencesField>
-            <referencesTable>Merchants</referencesTable>
+            <referencesTable>merchants</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[Merchants]]></referencesTable>
+            <referencesTable><![CDATA[merchants]]></referencesTable>
             <sourceCardinality>5</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[D210AF80-9060-4DFB-BE72-F70B53F68384]]></referencesFieldUID>
@@ -1721,12 +1656,12 @@
             <notNull><![CDATA[1]]></notNull>
             <uid><![CDATA[62E129FF-8BA8-4A9F-B9CE-FF7CE2A05383]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[3]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[14]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[DFB72851-C0B5-493D-AE6D-261F0DF722F2]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[RepSessions]]></name>
+        <name><![CDATA[rep_sessions]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>1067.00</x>
@@ -1742,9 +1677,9 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>Sessions</referencesTable>
+            <referencesTable>sessions</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[Sessions]]></referencesTable>
+            <referencesTable><![CDATA[sessions]]></referencesTable>
             <sourceCardinality>0</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[E0D9E4AF-3E5F-4C47-9C04-9557E696CF4B]]></referencesFieldUID>
@@ -1756,21 +1691,21 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>MerchRepresentatives</referencesTable>
+            <referencesTable>merch_representatives</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[MerchRepresentatives]]></referencesTable>
+            <referencesTable><![CDATA[merch_representatives]]></referencesTable>
             <sourceCardinality>0</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[F3AFB66F-AE50-44C6-ABDD-39ED1013592E]]></referencesFieldUID>
             <referencesTableUID><![CDATA[7A07469A-73B0-4BEA-87D8-305C3C4619FC]]></referencesTableUID>
             <uid><![CDATA[7969D2F9-2451-4969-8094-E83DC74DC9F3]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[0]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[2]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[E9856836-24A3-4A33-943A-E0FA4E7BA85E]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[CampaignVideos]]></name>
+        <name><![CDATA[campaign_videos]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>1747.00</x>
@@ -1786,9 +1721,9 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>AdCampaigns</referencesTable>
+            <referencesTable>ad_campaigns</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[AdCampaigns]]></referencesTable>
+            <referencesTable><![CDATA[ad_campaigns]]></referencesTable>
             <sourceCardinality>5</sourceCardinality>
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[42C589D9-B40E-40B3-A7AA-9B8B354E915A]]></referencesFieldUID>
@@ -1800,22 +1735,22 @@
             <type><![CDATA[integer]]></type>
             <primaryKey>1</primaryKey>
             <referencesField>id</referencesField>
-            <referencesTable>KakoonaVideos</referencesTable>
+            <referencesTable>kakoona_videos</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[KakoonaVideos]]></referencesTable>
+            <referencesTable><![CDATA[kakoona_videos]]></referencesTable>
             <sourceCardinality>0</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[4BD73A63-D244-4727-A873-E5479703560A]]></referencesFieldUID>
             <referencesTableUID><![CDATA[BA6CBE03-6A57-4273-B8F0-126250F4B770]]></referencesTableUID>
             <uid><![CDATA[641344D8-1199-4DAB-8E7F-FF1C443A797E]]></uid>
         </SQLField>
-        <labelWindowIndex><![CDATA[0]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[1]]></labelWindowIndex>
         <temporaryOriginalName><![CDATA[CampaignVideos]]></temporaryOriginalName>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[EA548344-133A-498A-A037-7C76482584C3]]></uid>
     </SQLTable>
     <SQLTable>
-        <name><![CDATA[Addresses]]></name>
+        <name><![CDATA[addresses]]></name>
         <schema><![CDATA[]]></schema>
         <location>
             <x>114.00</x>
@@ -2041,7 +1976,7 @@ b21NYXJnaW6GkoSjnqiiNIaShJmZD05TU2NhbGluZ0ZhY3RvcoaShKOeqKIBhpKE
 mZkLTlNQYXBlck5hbWWGkoSZmQluYS1sZXR0ZXKGhoY=
 ]]></encodedPrintInfo>
         <autoSizeTablesOption><![CDATA[0]]></autoSizeTablesOption>
-        <documentScaleFactor><![CDATA[0.583]]></documentScaleFactor>
+        <documentScaleFactor><![CDATA[0.743]]></documentScaleFactor>
         <dropTableOption><![CDATA[0]]></dropTableOption>
         <exportDialect><![CDATA[Rails]]></exportDialect>
         <fileversion><![CDATA[3.1]]></fileversion>
@@ -2056,9 +1991,9 @@ mZkLTlNQYXBlck5hbWWGkoSZmQluYS1sZXR0ZXKGhoY=
         <SourceSidebarWidth><![CDATA[276.000000]]></SourceSidebarWidth>
         <uid><![CDATA[3167D8B9-4E85-493E-A42B-4FB44CC42B9B]]></uid>
         <windowHeight><![CDATA[868.000000]]></windowHeight>
-        <windowLocationX><![CDATA[-1.000000]]></windowLocationX>
+        <windowLocationX><![CDATA[12.000000]]></windowLocationX>
         <windowLocationY><![CDATA[10.000000]]></windowLocationY>
-        <windowScrollOrigin><![CDATA[{0, 200.5}]]></windowScrollOrigin>
+        <windowScrollOrigin><![CDATA[{819, 55}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1428.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>

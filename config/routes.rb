@@ -1,4 +1,20 @@
 KakoonaAdportal::Application.routes.draw do
+  resources :products
+
+  resources :kakoona_videos
+
+  resources :kakoona_audios
+
+  resources :campaign_preload_grffks
+
+  resources :campaign_brand_grffks
+
+  resources :ad_campaigns
+
+  resources :content_providers
+
+  resources :merch_representatives
+
   resources :merchants
 
   get 'statix/home'
