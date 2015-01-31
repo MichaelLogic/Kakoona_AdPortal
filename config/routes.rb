@@ -27,9 +27,7 @@ KakoonaAdportal::Application.routes.draw do
 
   get 'statix/contact'
 
-  get 'welcome/index'
-
-  root 'welcome#index'
+  root 'statix#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

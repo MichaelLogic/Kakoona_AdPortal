@@ -11,6 +11,24 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
+//= require bootstrap-sprockets
+//= require bootstrap-datepicker
+//= require jquery-ui
+//= require select2
+//= require ace/ace
+//= require ace/worker-html
+//= require ace/mode-javascript
+//= require jquery-tmpl
+
+//= require jquery.flot
+//= require jquery.flot.resize
+//= require jquery.flot.stack
+//= require raphael
+//= require morris
+//= require moment
+//= require fullcalendar
+//= require fullcalendar/gcal
 //= require turbolinks
 //= require_tree .
