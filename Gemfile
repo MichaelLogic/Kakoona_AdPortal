@@ -13,7 +13,7 @@ gem 'arel', 				        '6.0.0.beta2'
 gem 'uglifier',             '2.5.3'
 gem 'coffee-rails',         '4.0.1'
 gem 'jquery-rails',         '3.1.2'
-gem 'jquery-ui-rails',      '~> 5.0.3'
+
 gem 'jquery-tmpl-rails',    '~> 1.1.0'
 gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 gem 'select2-rails',        '~> 3.5.9.2'
@@ -26,7 +26,6 @@ gem 'sdoc',                 '0.4.0', group: :doc
 gem 'i18n', 				        '~> 0.7.0beta1'
 gem 'google-webfonts-rails','~> 0.0.4'
 gem 'font-awesome-sass',    '~> 4.2.2'
-gem 'flot-rails',           '~> 0.0.6'
 gem 'morrisjs-rails',       '~> 0.5.1'
 gem 'raphael-rails',        '~> 2.1.2'
 

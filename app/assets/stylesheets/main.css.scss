@@ -1,14 +1,16 @@
-@import "bootstrap-sprockets";
 @import "bootstrap";
-@import "bootstrap-datepicker";
-@import "jquery-ui";
+@import "bootstrap-overrides";
+//@import "bootstrap-datepicker";
+@import "jquery-ui-1.10.2.custom";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "kakoona_custom/layout";
 @import "kakoona_custom/elements";
 @import "kakoona_custom/icons";
 
-@import "morris";
+//@import "morris";
 @import "select2";
 @import "fullcalendar";
 @import "fullcalendar.print";
+@import "index.scss";
+@import "kakoona_custom/skins/dark"

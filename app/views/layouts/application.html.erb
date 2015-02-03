@@ -3,7 +3,6 @@
 <head>
   <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= google_webfonts_init({
     google: ['Open Sans', 'Lato']
   }) %>
@@ -13,12 +12,13 @@
 <body>
 	<%= render 'layouts/header' %>
 	<%= render 'layouts/sidebar' %>
-	<div class="container">
+	<div class="content">
       <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
       <%= yield %>
       <%= debug(params) if Rails.env.development? %>
-    </div>
+  </div>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </body>
 </html>
