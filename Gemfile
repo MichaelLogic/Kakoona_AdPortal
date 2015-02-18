@@ -25,7 +25,7 @@ gem 'rails-html-sanitizer', '1.0.1'
 gem 'sdoc',                 '0.4.0', group: :doc
 gem 'i18n', 				        '~> 0.7.0beta1'
 gem 'google-webfonts-rails','~> 0.0.4'
-gem 'font-awesome-sass',    '~> 4.2.2'
+gem 'font-awesome-sass',    '~> 4.3.0'
 gem 'morrisjs-rails',       '~> 0.5.1'
 gem 'raphael-rails',        '~> 2.1.2'
 
