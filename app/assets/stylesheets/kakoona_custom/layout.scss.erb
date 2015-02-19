@@ -30,7 +30,7 @@ body.menu {
 		width: 850px;
 	}
 	#sidebar-nav {
-		position: absolute;
+		position: fixed;
 		left: 0;
 		/*height: 100%;*/
 		border-right: 0px;
@@ -273,11 +273,13 @@ input.search{
 
 /* Sidebar */
 #sidebar-nav {
-	position: absolute;
+	position: fixed;
 	width: 180px;
 	float: left;
 	margin: 0em;
-	padding-top: 5.8em;
+	padding-top: 1em;
+
+
 
 	#dashboard-menu {
 		list-style: none;
@@ -289,22 +291,22 @@ input.search{
 		> li > a {
 			display: block;
 			padding: 19px 14px 15px 14px;
-			margin-left: -15px;
-			margin-bottom: 5px;
+			margin-left: -10px;
+			margin-bottom: 10px;
 			border-bottom: 1px solid #dae1e8;
 			box-shadow: 0 2px 1px -1px #FFFFFF;
 			color: rgb(110, 130, 155);
 			outline: 0px;
-			line-height: 21px;
+			line-height: 30px;
 		}
 		> li {
 			position: relative;
 			/* font awesome icon */
 			.icon-group {
-				font-size: 22px;
+				font-size: 30px;
 			}
 			i {
-				font-size: 23px;
+				font-size: 30px;
 				top: 17px;
 			}
 			&:hover i{
@@ -325,6 +327,12 @@ input.search{
 				}
 			}
 		}
+		
+		#kakoona-logo {
+			position: fixed;
+			bottom: 0;
+		}
+
 		.pointer {
 			position: absolute;
 			right: 9px;
