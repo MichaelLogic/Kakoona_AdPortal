@@ -13,33 +13,41 @@
     <!-- upper main stats -->
     <div id="main-stats">
         <div class="row stats-row">
-            <div class="col-md-3 col-sm-3 stat">
-                <div class="data">
-                    <span class="number">2457</span>
-                    veiws
+            <div class="col-md-6 col-sm-6 merch-subheader">
+                <div class="merch-thum">
+                    <%= link_to image_tag("logo_hasbro.jpg", alt: "Hasbro", title: "Merchant Info"), "#" , class: 'img-responsive', id: 'merch-logo' %>
                 </div>
-                <span class="date">Today</span>
+                <span class="day">Sunday</span>
+                <span class="date">
+                    February 22, 2015
+                </span>
             </div>
-            <div class="col-md-3 col-sm-3 stat">
-                <div class="data">
-                    <span class="number">3240</span>
-                    users
+            <div class="col-md-2 col-sm-2 merch-subheader">
+                <div class="merch-stat">
+                    <i class="fa fa-play fa-2x"></i>
+                    <span class="stat-label">Total Streams</span>
+                    <span class="number">
+                        83,789
+                    </span>
                 </div>
-                <span class="date">February 2013</span>
             </div>
-            <div class="col-md-3 col-sm-3 stat">
-                <div class="data">
-                    <span class="number">322</span>
-                    purchases
+            <div class="col-md-2 col-sm-2 merch-subheader">
+                <div class="merch-stat">
+                    <i class="fa fa-volume-up fa-2x"></i>
+                    <span class="stat-label">Total Clicks</span>
+                    <span class="number">
+                        81,534
+                    </span>
                 </div>
-                <span class="date">This week</span>
             </div>
-            <div class="col-md-3 col-sm-3 stat last">
-                <div class="data">
-                    <span class="number">$2,340</span>
-                    sales
+            <div class="col-md-2 col-sm-2 merch-subheader">
+                <div class="merch-stat">
+                    <i class="fa fa-money fa-2x"></i>
+                    <span class="stat-label">Total Purchases</span>
+                    <span class="number">
+                       2,677
+                    </span>
                 </div>
-                <span class="date">last 30 days</span>
             </div>
         </div>
     </div>
@@ -66,6 +74,7 @@
         <!-- end statistics chart -->
 
         <!-- UI Elements section -->
+        <!--
         <div class="row section ui-elements">
             <div class="col-md-12">
                 <h4>UI Elements</h4>
@@ -131,153 +140,214 @@
                 </div>
             </div>
         </div>
+        -->
         <!-- end UI elements section -->
 
         <!-- table sample -->
         <!-- the script for the toggle all checkboxes from header is located in js/theme.js -->
         <div class="table-products section">
             <div class="row head">
-                <div class="col-md-12">
-                    <h4>Products <small>Table sample</small></h4>
+                <div class="col-md-10">
+                    <i class="fa fa-bullhorn fa-2x"></i><span class="campaigns-subtitle">Current Campaigns</span><span class="campaign-count">(3)</span>
+                </div>
+                <div class="col-md-2 btn-add-campaign">
+                    <a class="btn-flat new-product">+ Add A Campaign</a>
                 </div>
             </div>
 
-            <div class="row filter-block">
-                <div class="col-md-8 col-md-offset-5">
-                    <div class="ui-select">
-                        <select>
-                          <option>Filter users</option>
-                          <option>Signed last 30 days</option>
-                          <option>Active users</option>
-                        </select>
+            <!-- row -->
+            <div class="row campaign-row">
+                <div class="col-md-4 col-sm-4 campaign-inst">
+                    <div class="campaign-thum">
+                        <%= link_to image_tag("thum-campaign-default.jpg", alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
                     </div>
-                    <input type="text" class="search">
-                    <a class="btn-flat new-product">+ Add product</a>
+                    <span class="campaign-title">
+                        Winter Skate Promo 2015
+                    </span>
+                    <span class="day">
+                        <i class="fa fa-link"></i>
+                        <%= link_to "facebook.com/hasbro", "http://www.facebook.com/hasbro" %>
+                    </span>
+                </div>
+                <div class="col-md-2 col-sm-2 campaign-inst">
+                    <div class="campaign-stat">
+                        <i class="fa fa-play fa-2x"></i>
+                        <span class="stat-label">Total Streams</span>
+                        <span class="number">
+                            83,789
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 campaign-inst">
+                    <div class="campaign-stat">
+                        <i class="fa fa-volume-up fa-2x"></i>
+                        <span class="stat-label">Total Clicks</span>
+                        <span class="number">
+                            81,534
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 campaign-inst">
+                    <div class="campaign-stat">
+                        <i class="fa fa-money fa-2x"></i>
+                        <span class="stat-label">Total Purchases</span>
+                        <span class="number">
+                           2,677
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 campaign-inst">
+                    <div class="campaign-stat edit">
+                        <span class="number">Edit Product</span>
+                    </div>
+                </div>
+            </div>
+            <!-- row -->
+            <div class="row campaign-row">
+                <div class="col-md-4 col-sm-4 campaign-inst">
+                    <div class="campaign-thum">
+                        <%= link_to image_tag("thum-campaign-default.jpg", alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
+                    </div>
+                    <span class="campaign-title">
+                        Winter Skate Promo 2015
+                    </span>
+                    <span class="day">
+                        <i class="fa fa-link"></i>
+                        <%= link_to "facebook.com/hasbro", "http://www.facebook.com/hasbro" %>
+                    </span>
+                </div>
+                <div class="col-md-2 col-sm-2 campaign-inst">
+                    <div class="campaign-stat">
+                        <i class="fa fa-play fa-2x"></i>
+                        <span class="stat-label">Total Streams</span>
+                        <span class="number">
+                            83,789
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 campaign-inst">
+                    <div class="campaign-stat">
+                        <i class="fa fa-volume-up fa-2x"></i>
+                        <span class="stat-label">Total Clicks</span>
+                        <span class="number">
+                            81,534
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 campaign-inst">
+                    <div class="campaign-stat">
+                        <i class="fa fa-money fa-2x"></i>
+                        <span class="stat-label">Total Purchases</span>
+                        <span class="number">
+                           2,677
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 campaign-inst">
+                    <div class="campaign-stat edit">
+                        <span class="number">Edit Product</span>
+                    </div>
+                </div>
+            </div>
+            <!-- row -->
+            <div class="row campaign-row">
+                <div class="col-md-4 col-sm-4 campaign-inst">
+                    <div class="campaign-thum">
+                        <%= link_to image_tag("thum-campaign-default.jpg", alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
+                    </div>
+                    <span class="campaign-title">
+                        Winter Skate Promo 2015
+                    </span>
+                    <span class="day">
+                        <i class="fa fa-link"></i>
+                        <%= link_to "facebook.com/hasbro", "http://www.facebook.com/hasbro" %>
+                    </span>
+                </div>
+                <div class="col-md-2 col-sm-2 campaign-inst">
+                    <div class="campaign-stat">
+                        <i class="fa fa-play fa-2x"></i>
+                        <span class="stat-label">Total Streams</span>
+                        <span class="number">
+                            83,789
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 campaign-inst">
+                    <div class="campaign-stat">
+                        <i class="fa fa-volume-up fa-2x"></i>
+                        <span class="stat-label">Total Clicks</span>
+                        <span class="number">
+                            81,534
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 campaign-inst">
+                    <div class="campaign-stat">
+                        <i class="fa fa-money fa-2x"></i>
+                        <span class="stat-label">Total Purchases</span>
+                        <span class="number">
+                           2,677
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 campaign-inst">
+                    <div class="campaign-stat edit">
+                        <span class="number">Edit Product</span>
+                    </div>
+                </div>
+            </div>
+            <!-- row -->
+            <div class="row campaign-row">
+                <div class="col-md-4 col-sm-4 campaign-inst">
+                    <div class="campaign-thum">
+                        <%= link_to image_tag("thum-campaign-default.jpg", alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
+                    </div>
+                    <span class="campaign-title">
+                        Winter Skate Promo 2015
+                    </span>
+                    <span class="day">
+                        <i class="fa fa-link"></i>
+                        <%= link_to "facebook.com/hasbro", "http://www.facebook.com/hasbro" %>
+                    </span>
+                </div>
+                <div class="col-md-2 col-sm-2 campaign-inst">
+                    <div class="campaign-stat">
+                        <i class="fa fa-play fa-2x"></i>
+                        <span class="stat-label">Total Streams</span>
+                        <span class="number">
+                            83,789
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 campaign-inst">
+                    <div class="campaign-stat">
+                        <i class="fa fa-volume-up fa-2x"></i>
+                        <span class="stat-label">Total Clicks</span>
+                        <span class="number">
+                            81,534
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 campaign-inst">
+                    <div class="campaign-stat">
+                        <i class="fa fa-money fa-2x"></i>
+                        <span class="stat-label">Total Purchases</span>
+                        <span class="number">
+                           2,677
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 campaign-inst">
+                    <div class="campaign-stat edit">
+                        <span class="number">Edit Product</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="row">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th class="col-md-3">
-                                <input type="checkbox">
-                                Product
-                            </th>
-                            <th class="col-md-3">
-                                <span class="line"></span>Description
-                            </th>
-                            <th class="col-md-3">
-                                <span class="line"></span>Status
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- row -->
-                        <tr class="first">
-                            <td>
-                                <input type="checkbox">
-                                <div class="img">
-                                    <%= image_tag("table-img.png", alt: "pic") %>
-                                </div>
-                                <a href="#">There are many variations </a>
-                            </td>
-                            <td class="description">
-                                if you are going to use a passage of Lorem Ipsum.
-                            </td>
-                            <td>
-                                <span class="label label-success">Active</span>
-                                <ul class="actions">
-                                    <li><i class="table-edit"></i></li>
-                                    <li><i class="table-settings"></i></li>
-                                    <li class="last"><i class="table-delete"></i></li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <!-- row -->
-                        <tr>
-                            <td>
-                                <input type="checkbox">
-                                <div class="img">
-                                    <%= image_tag("table-img.png", alt: "pic") %>
-                                </div>
-                                <a href="#">Internet tend</a>
-                            </td>
-                            <td class="description">
-                                There are many variations of passages.
-                            </td>
-                            <td>
-                                <ul class="actions">
-                                    <li><i class="table-edit"></i></li>
-                                    <li><i class="table-settings"></i></li>
-                                    <li class="last"><i class="table-delete"></i></li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <!-- row -->
-                        <tr>
-                            <td>
-                                <input type="checkbox">
-                                <div class="img">
-                                    <%= image_tag("table-img.png", alt: "pic") %>
-                                </div>
-                                <a href="#">Many desktop publishing </a>
-                            </td>
-                            <td class="description">
-                                if you are going to use a passage of Lorem Ipsum.
-                            </td>
-                            <td>
-                                <ul class="actions">
-                                    <li><i class="table-edit"></i></li>
-                                    <li><i class="table-settings"></i></li>
-                                    <li class="last"><i class="table-delete"></i></li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <!-- row -->
-                        <tr>
-                            <td>
-                                <input type="checkbox">
-                                <div class="img">
-                                    <%= image_tag("table-img.png", alt: "pic") %>
-                                </div>
-                                <a href="#">Generate Lorem </a>
-                            </td>
-                            <td class="description">
-                                There are many variations of passages.
-                            </td>
-                            <td>
-                                <span class="label label-info">Standby</span>
-                                <ul class="actions">
-                                    <li><i class="table-edit"></i></li>
-                                    <li><i class="table-settings"></i></li>
-                                    <li class="last"><i class="table-delete"></i></li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <!-- row -->
-                        <tr>
-                            <td>
-                                <input type="checkbox">
-                                <div class="img">
-                                    <%= image_tag("table-img.png", alt: "pic") %>
-                                </div>
-                                <a href="#">Internet tend</a>
-                            </td>
-                            <td class="description">
-                                There are many variations of passages.
-                            </td>
-                            <td>                                        
-                                <ul class="actions">
-                                    <li><i class="table-edit"></i></li>
-                                    <li><i class="table-settings"></i></li>
-                                    <li class="last"><i class="table-delete"></i></li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+
+
+
+
             <ul class="pagination">
                 <li><a href="#">&laquo;</a></li>
                 <li class="active"><a href="#">1</a></li>
