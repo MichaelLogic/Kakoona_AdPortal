@@ -10,9 +10,15 @@
   <%= render 'layouts/shim' %>
 </head>
 <body>
-	<%= render 'layouts/header' %>
-	<%= render 'layouts/sidebar' %>
-	<div class="content">
+  <% if controller_name == 'sessions' && action_name == 'new' %>
+    <%= stylesheet_link_tag    "kakoona_custom/signin", media: "all", "data-turbolinks-track" => true %>
+    <%= render 'layouts/loginheader' %>
+    <div class="login-content">
+  <% else %>
+  	<%= render 'layouts/header' %>
+  	<%= render 'layouts/sidebar' %>
+    <div class="content">
+  <% end %>
       <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>

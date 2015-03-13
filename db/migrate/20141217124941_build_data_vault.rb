@@ -63,8 +63,12 @@ class BuildDataVault < ActiveRecord::Migration
       t.string :auth_token
       t.datetime :last_session_time
       t.string :last_session_ip
+      t.string :password_digest
+      t.string :remember_token
+      t.boolean :admin, :null => false
       t.timestamps :null=> false
     end
+    add_index :content_providers, [:email, :remember_token]
 
     create_table :content_provider_avatars, :id => false do |t|
       t.references :avatar_grffk
@@ -123,9 +127,14 @@ class BuildDataVault < ActiveRecord::Migration
       t.string :auth_token
       t.datetime :last_session_time
       t.string :last_session_ip
+      t.string :password_digest
+      t.string :remember_token
+      t.boolean :admin, :null => false
       t.timestamps :null=> false
     end
+    add_index :merch_representatives, [:email, :remember_token]
     add_index :merch_representatives, [:merchant_id, :created_at]
+
 
     create_table :ad_portal_overviews do |t|
       t.references :merchant, index: true

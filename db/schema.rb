@@ -150,9 +150,14 @@ ActiveRecord::Schema.define(version: 20141217124941) do
     t.string   "auth_token"
     t.datetime "last_session_time"
     t.string   "last_session_ip"
+    t.string   "password_digest"
+    t.string   "remember_token"
+    t.boolean  "admin",             null: false
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
+
+  add_index "content_providers", ["email", "remember_token"], name: "index_content_providers_on_email_and_remember_token", using: :btree
 
   create_table "kakoona_audio", force: true do |t|
     t.string   "audio_title"
@@ -208,10 +213,14 @@ ActiveRecord::Schema.define(version: 20141217124941) do
     t.string   "auth_token"
     t.datetime "last_session_time"
     t.string   "last_session_ip"
+    t.string   "password_digest"
+    t.string   "remember_token"
+    t.boolean  "admin",             null: false
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
 
+  add_index "merch_representatives", ["email", "remember_token"], name: "index_merch_representatives_on_email_and_remember_token", using: :btree
   add_index "merch_representatives", ["merchant_id", "created_at"], name: "index_merch_representatives_on_merchant_id_and_created_at", using: :btree
   add_index "merch_representatives", ["merchant_id"], name: "index_merch_representatives_on_merchant_id", using: :btree
 

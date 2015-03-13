@@ -17,9 +17,9 @@ KakoonaAdportal::Application.routes.draw do
 
   resources :merchants
 
-  get 'statix/home'
+  resources :sessions, only: [:new, :create, :destroy]
 
-  get 'statix/login'
+  get 'statix/home'
 
   get 'statix/about'
 
@@ -28,6 +28,9 @@ KakoonaAdportal::Application.routes.draw do
   get 'statix/contact'
 
   root 'statix#home'
+
+  match '/login',   to: 'sessions#new', via: :get
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
