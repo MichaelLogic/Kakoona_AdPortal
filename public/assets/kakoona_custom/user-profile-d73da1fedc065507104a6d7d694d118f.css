@@ -1,0 +1,202 @@
+/* line 3, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .header .avatar {
+  float: left;
+  margin-right: 25px;
+  border: 2px solid #e9ecee;
+  position: relative;
+  top: 3px;
+}
+/* line 10, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .header .name {
+  font-weight: 600;
+  margin: 20px 0 8px 0;
+  line-height: 26px;
+  margin-bottom: 10px;
+  float: none;
+}
+/* line 17, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .header span.area {
+  color: #7d848c;
+  font-style: italic;
+  font-size: 14px;
+}
+/* line 22, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .header a.btn-flat {
+  margin-top: 18px;
+}
+/* line 25, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .header a.delete-user {
+  margin-left: 10px;
+  font-size: 14px;
+}
+/* line 31, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .profile .profile-box {
+  border-top: 1px solid #dde2e9;
+  padding-top: 23px;
+  width: 90%;
+}
+/* line 36, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .profile .section {
+  margin-bottom: 80px;
+}
+/* line 39, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .profile .section.comment {
+  margin-bottom: 100px;
+  margin-top: 60px;
+}
+/* line 44, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .profile .bio {
+  box-shadow: 4px 0px 3px -1px rgba(226, 226, 226, 0.1);
+  border-right: 1px solid #edeef1;
+}
+/* line 47, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .profile .bio .span12 {
+  margin-left: 0;
+}
+/* line 50, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .profile .bio h6 {
+  font-weight: 600;
+  font-size: 14px;
+}
+/* line 54, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .profile .bio p {
+  color: #777e86;
+}
+/* line 57, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .profile .bio textarea {
+  width: 97%;
+  margin-bottom: 13px;
+  height: 80px;
+}
+/* line 62, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .profile .bio .submit-box {
+  text-align: right;
+}
+/* line 64, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .profile .bio .submit-box input.btn-flat {
+  font-weight: 500;
+}
+/* line 67, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .profile .bio .submit-box span {
+  text-transform: uppercase;
+  color: #7e91aa;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 2px 0 8px;
+}
+/* line 75, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .profile .bio .submit-box input.reset {
+  color: #7e91aa;
+  font-weight: 500;
+}
+/* line 83, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .address h6 {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+/* line 89, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .address iframe {
+  width: 90%;
+  margin-bottom: 30px;
+  float: right;
+  border: 0px;
+}
+/* line 95, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .address ul {
+  padding: 0;
+  margin-left: 30px;
+  list-style: none;
+}
+/* line 99, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .address ul li {
+  font-size: 13px;
+  line-height: 21px;
+}
+/* line 102, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .address ul li.ico-li {
+  margin: 7px 0 7px;
+}
+/* line 106, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .address ul i {
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  margin-right: 7px;
+}
+/* line 111, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+.user-profile .address ul i.ico-mail {
+  margin-right: 5px;
+}
+
+/* responsive */
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 123, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+  .user-profile .address ul {
+    margin-left: 18px;
+  }
+  /* line 125, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+  .user-profile .address ul i {
+    display: none;
+  }
+  /* line 128, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+  .user-profile .address ul li.ico-li {
+    font-weight: bold;
+  }
+  /* line 130, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+  .user-profile .address ul li.ico-li a {
+    font-weight: normal;
+  }
+}
+@media (max-width: 768px) {
+  /* line 140, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+  .user-profile .profile .bio {
+    border-right: 0 none;
+    border-bottom: 1px solid #edeef1;
+    box-shadow: 0px 4px 3px -1px rgba(226, 226, 226, 0.1);
+  }
+  /* line 144, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+  .user-profile .profile .bio .span12 {
+    width: auto;
+  }
+  /* line 148, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+  .user-profile .profile .profile-box {
+    width: 100%;
+  }
+  /* line 152, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+  .user-profile .address {
+    margin-top: 44px;
+  }
+  /* line 154, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+  .user-profile .address iframe {
+    width: 100%;
+  }
+  /* line 157, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+  .user-profile .address h6 {
+    margin-left: 0;
+  }
+  /* line 160, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+  .user-profile .address ul {
+    margin: 0;
+  }
+  /* line 165, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+  .user-profile .header a.btn-flat {
+    margin: 0;
+  }
+  /* line 168, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+  .user-profile .header a.edit {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 480px) {
+  /* line 177, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+  .user-profile .header a.btn-flat {
+    margin: 0;
+  }
+  /* line 180, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/user-profile.scss */
+  .user-profile .header a.edit {
+    margin-right: 10px;
+  }
+}

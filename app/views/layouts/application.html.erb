@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="<%= controller_name %>">
 <head>
   <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -9,9 +9,8 @@
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
 </head>
-<body>
+<body class="<%= controller_name %> <%= action_name %>">
   <% if controller_name == 'sessions' && action_name == 'new' %>
-    <%= stylesheet_link_tag    "kakoona_custom/signin", media: "all", "data-turbolinks-track" => true %>
     <%= render 'layouts/loginheader' %>
     <div class="login-content">
   <% else %>

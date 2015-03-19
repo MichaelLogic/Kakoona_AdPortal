@@ -1,0 +1,203 @@
+/* line 1, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper {
+  /* separator */
+  /* pop dialogs specific styles */
+}
+/* line 2, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .title {
+  margin-bottom: 30px;
+}
+/* line 5, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .section {
+  margin-bottom: 40px;
+}
+/* line 8, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .section a.btn-flat,
+#pad-wrapper .section a.btn-glow {
+  margin-right: 5px;
+}
+/* line 13, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .section.btns a.btn-flat,
+#pad-wrapper .section.btns a.btn-glow {
+  margin-bottom: 12px;
+}
+/* line 18, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .section code {
+  margin-right: 25px;
+}
+/* line 21, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .section .btn-group i {
+  color: #7d8892;
+}
+/* line 24, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .section .btn-group.audio i {
+  color: #96a9b8;
+  font-size: 12px;
+}
+/* line 29, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .ctrls {
+  margin-bottom: 20px;
+}
+/* line 31, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .ctrls .btn-glow {
+  margin-right: 8px;
+}
+/* line 34, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .ctrls .btn-flat.icon {
+  margin-right: 8px;
+}
+/* line 37, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .ctrls .btn-group.settings {
+  margin-left: 20px;
+}
+/* line 40, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .ctrls .btn-group.settings i {
+  font-size: 13px;
+  color: #444;
+}
+/* line 44, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .ctrls .slider-frame {
+  margin-right: 10px;
+}
+/* line 47, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .ctrls .pagination {
+  margin: 5px 0px;
+}
+/* line 49, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .ctrls .pagination.inverse {
+  margin-left: 25px;
+}
+/* line 53, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .ctrls h4 {
+  margin: 20px 0px 20px 0px;
+}
+/* line 58, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .ctrls .dropdown .dropdown-menu {
+  margin-right: 10px;
+  position: static;
+  display: block;
+}
+/* line 64, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .ctrls .nav-tabs {
+  margin-bottom: 15px;
+}
+/* line 67, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .ctrls .tab-content {
+  padding: 0px 10px;
+  margin-bottom: 20px;
+}
+/* line 72, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .sliders .slider {
+  margin-bottom: 20px;
+}
+/* line 77, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .separator {
+  border-top: 1px solid #edeff1;
+  margin-top: 100px;
+  padding-top: 45px;
+  box-shadow: inset 0px 3px 4px -1px #fafafa;
+}
+/* line 85, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+#pad-wrapper .section.dialogs h4 {
+  margin-bottom: 30px;
+}
+
+/* for menu dialog sample */
+/* line 94, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+.pop-dialog .menu {
+  width: 200px;
+  margin: 5px -10px 0px -10px;
+}
+/* line 97, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+.pop-dialog .menu .item {
+  display: block;
+  padding: 5px 0px 5px 20px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+/* line 105, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+.pop-dialog .menu .item:hover {
+  background-color: #30a1ec;
+  color: #fff;
+}
+/* line 110, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+.pop-dialog .menu .footer {
+  border-top: 1px solid #e6e8e9;
+  background-color: #eff4f7;
+  margin: 15px 0px -10px 0px;
+  border-radius: 0px 0px 5px 5px;
+  padding: 12px 20px;
+}
+/* line 116, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+.pop-dialog .menu .footer .logout {
+  font-weight: 600;
+  color: #7d91a8;
+}
+
+/* styles for settings dialog sample */
+/* line 126, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+.pop-dialog.full {
+  width: 100%;
+}
+
+/* line 129, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+.pop-dialog .settings {
+  width: auto;
+  margin: 5px -10px 0px -10px;
+  position: relative;
+}
+/* line 133, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+.pop-dialog .settings .close-icon {
+  text-decoration: none;
+  position: absolute;
+  top: -18px;
+  right: 10px;
+}
+/* line 139, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+.pop-dialog .settings .icon-remove-sign {
+  font-size: 15px;
+  color: #95a8b7;
+  cursor: pointer;
+}
+/* line 144, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+.pop-dialog .settings .items {
+  margin-top: 15px;
+}
+/* line 146, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+.pop-dialog .settings .items .item {
+  display: block;
+  padding: 7px 0px 7px 20px;
+  color: #333;
+  font-size: 13px;
+  font-weight: 600;
+  border-top: 1px solid #e6e8e9;
+}
+/* line 153, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+.pop-dialog .settings .items .item:hover {
+  color: #6187c0;
+}
+/* line 156, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+.pop-dialog .settings .items .item:first-child {
+  border-top: 0px;
+}
+/* line 159, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+.pop-dialog .settings .items .item .check {
+  float: right;
+  margin-right: 30px;
+}
+/* line 163, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+.pop-dialog .settings .items .item .icon-reorder {
+  color: #d9e4ee;
+  font-size: 18px;
+  margin-right: 13px;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 173, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/ui-elements.scss */
+  #pad-wrapper .section.dialogs > .span4 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}

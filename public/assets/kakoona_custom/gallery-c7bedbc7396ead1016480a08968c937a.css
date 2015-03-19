@@ -1,0 +1,108 @@
+/* line 2, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.gallery .gallery-wrapper {
+  text-align: center;
+  position: relative;
+}
+/* line 6, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.gallery .img-container {
+  margin-bottom: 50px;
+}
+/* line 9, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.gallery .img-container .img-box {
+  display: inline-block;
+  position: relative;
+}
+/* line 13, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.gallery .img-container .img-box:hover span {
+  visibility: visible;
+}
+/* line 17, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.gallery .img-container img {
+  border: 4px solid #dff0fd;
+  border-radius: 3px;
+  cursor: pointer;
+}
+/* line 22, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.gallery .img-container .title {
+  margin-top: 5px;
+  font-size: 13px;
+}
+/* line 26, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.gallery .img-container .icon {
+  position: absolute;
+  background: rgba(56, 156, 240, 0.8);
+  height: 48px;
+  width: 48px;
+  visibility: hidden;
+  left: 41%;
+  border-radius: 100%;
+  cursor: pointer;
+  text-align: center;
+}
+/* line 37, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.gallery .img-container i {
+  display: inline-block;
+  margin-top: 14px;
+}
+/* line 41, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.gallery .img-container span.edit {
+  top: 23%;
+}
+/* line 44, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.gallery .img-container span.trash {
+  top: 48%;
+}
+/* line 48, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.gallery .new-img {
+  display: inline-block;
+}
+/* line 50, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.gallery .new-img img {
+  border: 2px dashed #dee3e8;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+/* line 54, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.gallery .new-img img:hover {
+  opacity: 0.8;
+  border-color: #ccc;
+}
+
+/* gallery blank state */
+/* line 64, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.no-gallery {
+  border-top: 1px solid #edeff1;
+  padding-top: 40px;
+  box-shadow: 0px 4px 9px -6px rgba(0, 0, 0, 0.12) inset;
+  margin-bottom: 100px;
+}
+/* line 69, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.no-gallery .center {
+  margin: 0 auto;
+  text-align: center;
+  width: 42%;
+}
+/* line 73, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.no-gallery .center h6 {
+  color: #364453;
+  font-weight: 600;
+  margin: 30px 0 9px;
+  font-size: 15px;
+}
+/* line 79, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.no-gallery .center p {
+  color: #364453;
+  font-size: 13px;
+}
+/* line 83, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+.no-gallery .center a {
+  margin-top: 30px;
+}
+
+/*Responsive*/
+@media (max-width: 979px) {
+  /* line 92, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/gallery.scss */
+  .gallery .popup {
+    display: none;
+  }
+}

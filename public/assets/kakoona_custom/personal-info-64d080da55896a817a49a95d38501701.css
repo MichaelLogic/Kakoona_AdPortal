@@ -1,0 +1,150 @@
+/* line 2, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+.settings-wrapper .wrapp {
+  margin-top: 100px;
+}
+/* line 6, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+.settings-wrapper .avatar-box img {
+  border: 3px solid #c3cddb;
+  margin-bottom: 28px;
+}
+/* line 10, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+.settings-wrapper .avatar-box p {
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+/* line 14, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+.settings-wrapper .avatar-box input[type="file"] {
+  font-size: 11px;
+}
+/* line 18, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+.settings-wrapper .personal-info {
+  border-left: 1px solid #edeff1;
+  box-shadow: inset 3px 0px 4px -1px #fafafa;
+}
+/* line 21, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+.settings-wrapper .personal-info .alert {
+  margin-bottom: 50px;
+  display: inline-block;
+  font-size: 13px;
+}
+/* line 25, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+.settings-wrapper .personal-info .alert i {
+  float: left;
+}
+/* line 29, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+.settings-wrapper .personal-info h5.personal-title {
+  font-size: 22px;
+  margin: 0 0 50px 50px;
+  color: #696d73;
+  font-style: italic;
+}
+/* line 35, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+.settings-wrapper .personal-info form {
+  margin-left: 50px;
+}
+/* line 38, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+.settings-wrapper .personal-info label {
+  display: inline-block;
+  float: left;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: auto;
+  width: 20%;
+  margin-right: 10px;
+  text-align: left;
+}
+/* line 48, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+.settings-wrapper .personal-info .input[type="text"] {
+  font-weight: 600;
+}
+/* line 51, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+.settings-wrapper .personal-info .ui-select {
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 55, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+.settings-wrapper .personal-info .actions {
+  margin-bottom: 25px;
+  margin-top: 30px;
+  width: 100%;
+  padding-right: 70px;
+  float: left;
+  text-align: right;
+}
+/* line 62, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+.settings-wrapper .personal-info .actions span {
+  text-transform: uppercase;
+  color: #7e91aa;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 2px 0 8px;
+}
+/* line 71, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+.settings-wrapper .personal-info input.reset {
+  color: #7e91aa;
+  font-weight: 500;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  /* line 85, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+  .settings-wrapper #pad-wrapper {
+    padding: 0px 20px;
+  }
+  /* line 88, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+  .settings-wrapper .avatar-box {
+    text-align: center;
+  }
+  /* line 91, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+  .settings-wrapper .personal-info {
+    border: 0 none;
+    box-shadow: none;
+    margin-top: 40px;
+  }
+  /* line 95, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+  .settings-wrapper .personal-info h5.personal-title {
+    margin-left: 0;
+  }
+  /* line 98, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+  .settings-wrapper .personal-info .ui-select {
+    width: 90%;
+  }
+  /* line 101, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+  .settings-wrapper .personal-info label {
+    width: 100%;
+  }
+  /* line 104, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+  .settings-wrapper .personal-info .actions {
+    text-align: center;
+  }
+  /* line 107, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+  .settings-wrapper .personal-info form {
+    margin-left: 0;
+    padding: 0px 10px 0px 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 116, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+  .settings-wrapper .personal-info .ui-select {
+    width: 77%;
+  }
+
+  /* line 119, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+  .avatar-box {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* line 123, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+  .settings-wrapper .personal-info {
+    border-left: 0px;
+    box-shadow: none;
+  }
+}
+@media (min-width: 768px) {
+  /* line 129, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/personal-info.scss */
+  .settings-wrapper .personal-info .alert {
+    margin-left: 50px;
+  }
+}

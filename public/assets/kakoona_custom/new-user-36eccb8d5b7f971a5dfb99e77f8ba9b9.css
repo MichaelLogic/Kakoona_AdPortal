@@ -1,0 +1,49 @@
+/* line 1, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/new-user.scss */
+.new-user {
+  /* form sidebar*/
+}
+/* line 3, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/new-user.scss */
+.new-user .form-wrapper .with-sidebar {
+  border-right: 1px solid #edeef1;
+  box-shadow: 4px 0px 3px -1px rgba(226, 226, 226, 0.1);
+}
+/* line 11, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/new-user.scss */
+.new-user .form-sidebar .alert {
+  margin: 10px 0px 30px 0px;
+}
+/* line 13, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/new-user.scss */
+.new-user .form-sidebar .alert i {
+  margin-bottom: 30px;
+}
+/* line 17, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/new-user.scss */
+.new-user .form-sidebar h6 {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+/* line 21, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/new-user.scss */
+.new-user .form-sidebar p {
+  color: #777e86;
+}
+/* line 24, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/new-user.scss */
+.new-user .form-sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 28, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/new-user.scss */
+.new-user .form-sidebar ul a {
+  text-decoration: underline;
+}
+
+/* responsive */
+@media (max-width: 991px) {
+  /* line 40, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/new-user.scss */
+  .new-user .form-wrapper .with-sidebar {
+    border-right: 0 none;
+    box-shadow: none;
+  }
+  /* line 45, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/new-user.scss */
+  .new-user .form-sidebar {
+    margin-top: 40px;
+  }
+}

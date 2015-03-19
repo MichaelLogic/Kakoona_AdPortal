@@ -1,0 +1,107 @@
+/* line 2, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper {
+  margin-bottom: 40px;
+}
+/* line 4, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper .field-box {
+  margin-bottom: 30px;
+  margin-left: 0;
+  float: left;
+  width: 100%;
+}
+/* line 10, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper label {
+  display: inline-block;
+  float: left;
+  font-weight: 600;
+  cursor: auto;
+  font-size: 12px;
+  width: 140px;
+  text-align: left;
+}
+/* line 19, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper input:-moz-placeholder {
+  font-style: italic;
+}
+/* line 20, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper input:-ms-input-placeholder {
+  font-style: italic;
+}
+/* line 21, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper input::-webkit-input-placeholder {
+  font-style: italic;
+}
+/* line 23, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper .predefined {
+  position: relative;
+}
+/* line 25, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper .predefined input {
+  padding-left: 40px;
+}
+/* line 28, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper .predefined .value {
+  position: absolute;
+  top: 6px;
+}
+/* line 34, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper label.checkbox {
+  cursor: pointer;
+  color: #555;
+}
+/* line 38, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper label.radio {
+  position: relative;
+  left: -20px;
+  width: 100%;
+  cursor: pointer;
+  color: #555;
+}
+/* line 45, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper label.checkbox,
+.form-page .form-wrapper label.radio {
+  font-weight: lighter;
+}
+/* line 48, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper label.checkbox input[type="checkbox"],
+.form-page .form-wrapper label.checkbox input[type="radio"],
+.form-page .form-wrapper label.radio input[type="checkbox"],
+.form-page .form-wrapper label.radio input[type="radio"] {
+  font-size: large;
+  margin-left: 0px;
+}
+/* line 55, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper .wysi-column {
+  float: left;
+  width: 75%;
+}
+/* line 61, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper .column.pull-right label {
+  display: block;
+  width: 100%;
+}
+/* line 65, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper .column.pull-right .ui-select {
+  width: 250px;
+}
+/* line 68, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper .column.pull-right .input-group {
+  margin-bottom: 10px;
+  width: 250px;
+}
+/* line 72, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper .column.pull-right .input-datepicker {
+  width: 250px;
+}
+/* line 76, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+.form-page .form-wrapper .select2-container {
+  margin-left: 0px;
+}
+
+/*Responsive*/
+@media (max-width: 767px) {
+  /* line 84, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/form-showcase.scss */
+  .form-page .form-wrapper label.radio {
+    left: 0px;
+  }
+}

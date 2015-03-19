@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'sprockets/railtie'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -21,6 +22,13 @@ module KakoonaAdportal
     # config.i18n.default_locale = :de
     I18n.enforce_available_locales = true
 
+    # Enable the asset pipeline
+    config.assets.enabled = true
+
+    # Don't load resources when precompiling
+    config.assets.initialize_on_precompile = false
+
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
   end
 end

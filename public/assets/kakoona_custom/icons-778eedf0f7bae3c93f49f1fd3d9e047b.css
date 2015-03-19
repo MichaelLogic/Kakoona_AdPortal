@@ -1,0 +1,137 @@
+/* line 16, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/icons.scss.erb */
+i.tool {
+  height: 14px;
+  width: 14px;
+  background: url("/dev-assets/btn-tool-6da570001fceb16ab41e7f56e3e87574.png") no-repeat;
+  display: inline-block;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+}
+
+/* line 26, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/icons.scss.erb */
+i.arrow-down {
+  background: url("/dev-assets/ico-arrow-black-9ed112be2e50fe59b186e84b2daef11a.png") no-repeat;
+  width: 9px;
+  height: 6px;
+  display: inline-block;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+}
+
+/* line 36, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/icons.scss.erb */
+i.shuffle {
+  background: url("/dev-assets/btn-shuffle-2796d9ba276b3e309e41fd9275f12f2a.png") no-repeat;
+  display: inline-block;
+  height: 13px;
+  width: 18px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+}
+
+/* line 46, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/icons.scss.erb */
+i.setting {
+  background: url("/dev-assets/btn-setting-594aa0b62ab78dc310b5468ea1a07b8c.png") no-repeat;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+}
+
+/* line 56, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/icons.scss.erb */
+i.attach {
+  background: url("/dev-assets/btn-attach-d61817e607b7c0f38865d5f640ebca05.png") no-repeat;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+}
+
+/* line 66, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/icons.scss.erb */
+i.ico-phone {
+  background: url("/dev-assets/ico-phone-c1654d5fff3a8cb76643faa570cd4c94.png") no-repeat;
+  height: 18px;
+  width: 13px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+}
+
+/* line 75, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/icons.scss.erb */
+i.ico-mail {
+  background: url("/dev-assets/ico-mail-c6ce1357bc8a9f5e6a2d5f43ee7bb8b5.png") no-repeat;
+  height: 11px;
+  width: 17px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+}
+
+/* line 84, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/icons.scss.erb */
+i.gallery-edit {
+  background: url("/dev-assets/ico-gallery-edit-34807a00d78a2660e98d1a45379d9d92.png") no-repeat;
+  height: 20px;
+  width: 20px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+}
+
+/* line 93, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/icons.scss.erb */
+i.gallery-trash {
+  background: url("/dev-assets/ico-gallery-trash-69a38d9eda9f9d7fb37166f88bf9df09.png") no-repeat;
+  height: 19px;
+  width: 17px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+}
+
+/* line 102, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/icons.scss.erb */
+i.table-edit {
+  background: url("/dev-assets/ico-table-new-8c5c7ab0ac59673c45cb2f0a7e9ec7f6.png") no-repeat;
+  width: 14px;
+  height: 13px;
+  display: inline-block;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+}
+
+/* line 112, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/icons.scss.erb */
+i.table-settings {
+  background: url("/dev-assets/ico-table-edit-7f3b65a6d025c2fda6cfef99fb8c5efc.png") no-repeat;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
+  top: 1px;
+}
+
+/* line 120, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/icons.scss.erb */
+i.table-delete {
+  background: url("/dev-assets/ico-table-delete-38ee655052a6ea1c16dc4c54cd9fd7e9.png") no-repeat;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+}

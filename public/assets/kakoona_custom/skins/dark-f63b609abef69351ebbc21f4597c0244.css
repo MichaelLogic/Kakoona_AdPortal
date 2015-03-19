@@ -1,0 +1,69 @@
+/* line 2, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/skins/dark.scss.erb */
+html .statix {
+  background: transparent url("/assets/bgs/back-orange-f5a8b705c83ad8454a00a7205f3d2b01.png") repeat-x 0 0;
+  min-height: 100%;
+  background-size: 100% 100%;
+}
+/* line 7, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/skins/dark.scss.erb */
+html .statix.small {
+  background-size: auto !important;
+}
+
+/* line 11, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/skins/dark.scss.erb */
+body .statix {
+  background: none;
+}
+/* line 15, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/skins/dark.scss.erb */
+body .statix.menu #sidebar-nav {
+  background: transparent url("/assets/bgs/back-orange-f5a8b705c83ad8454a00a7205f3d2b01.png") repeat-x 0 0;
+  background-size: 100% 100%;
+  box-shadow: none;
+}
+
+/* line 22, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/skins/dark.scss.erb */
+.navbar-inverse {
+  background: none;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+/* line 27, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/skins/dark.scss.erb */
+.navbar-inverse .notification-dropdown .count {
+  background: #fc827b;
+}
+
+/* sidebar */
+/* line 36, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/skins/dark.scss.erb */
+#sidebar-nav #dashboard-menu > li.active > a,
+#sidebar-nav #dashboard-menu > li > a:hover {
+  color: #fff;
+  text-shadow: none;
+}
+/* line 41, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/skins/dark.scss.erb */
+#sidebar-nav #dashboard-menu > li > a {
+  color: #bebebe;
+  box-shadow: none;
+  border: 0px;
+}
+/* line 46, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/skins/dark.scss.erb */
+#sidebar-nav #dashboard-menu a i {
+  opacity: 0.6;
+}
+/* line 49, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/skins/dark.scss.erb */
+#sidebar-nav #dashboard-menu a i.icon-chevron-down {
+  color: #fff;
+}
+/* line 53, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/skins/dark.scss.erb */
+#sidebar-nav #dashboard-menu ul.submenu {
+  border-bottom: 0px;
+  box-shadow: 0 2px 1px -1px #4b6588;
+}
+/* line 57, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/skins/dark.scss.erb */
+#sidebar-nav #dashboard-menu ul.submenu a {
+  text-shadow: none;
+  color: lightgray;
+}
+
+/* line 65, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/skins/dark.scss.erb */
+.content {
+  box-shadow: none;
+}
