@@ -30,6 +30,7 @@ KakoonaAdportal::Application.routes.draw do
   root 'statix#home'
 
   match '/login',   to: 'sessions#new', via: :get
+  match '/signup',  to: 'merch_representatives#new', via: :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

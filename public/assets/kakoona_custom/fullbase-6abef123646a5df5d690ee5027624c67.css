@@ -1,0 +1,416 @@
+/* line 1, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+html .sessions, .merch_representatives {
+  background: none;
+  background-color: #00adee;
+  min-height: 100%;
+  background-size: 100% 100%;
+}
+/* line 7, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+html .sessions.small, .merch_representatives.small {
+  background-size: auto !important;
+}
+
+/* line 14, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.sessions h2, .merch_representatives h2 {
+  color: #fff;
+  padding-left: 30px;
+  font-size: 3em;
+  font-weight: lighter;
+  font-family: 'Lato', 'Open Sans';
+}
+/* line 20, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.sessions h2 .small, .merch_representatives h2 .small {
+  color: #f28c8c;
+}
+/* line 25, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.sessions h3, .merch_representatives h3 {
+  color: #fff;
+  padding-left: 30px;
+  font-size: 2em;
+  font-weight: lighter;
+  font-family: 'Lato', 'Open Sans';
+}
+
+/* line 34, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content {
+  background-color: #00adee;
+  margin-left: 0;
+  border-radius: 0;
+  /* *** FORM LOGIN *** */
+  /* *** FORM NEW ENTITY (Merch_Representatives & Content_Providers) *** */
+  /* background switcher */
+}
+/* line 39, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content form .form-buttons {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  line-height: 32px;
+}
+/* line 46, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content form .form-buttons div {
+  margin: 0 !important;
+}
+/* line 51, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+/* line 57, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .logo {
+  margin-bottom: 45px;
+  position: relative;
+  left: -2px;
+}
+/* line 62, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .box {
+  margin: 0 auto;
+  padding: 35px 0 30px;
+  float: none;
+  width: 540px;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background: #f2f2f2;
+}
+/* line 71, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .box .content-wrap {
+  width: 82%;
+  margin: 0 auto;
+}
+/* line 75, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .box h6 {
+  text-transform: uppercase;
+  margin: 0 0 30px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+/* line 81, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .box input[type="text"],
+.full-content .login-wrapper .box input[type="password"] {
+  font-size: 24px;
+  font-weight: bold;
+  height: 60px;
+  margin-top: 5px;
+  overflow: hidden;
+  padding: 0 20px;
+  width: 437px;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+/* line 93, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .box input[type="password"] {
+  margin-bottom: 10px;
+}
+/* line 96, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .box input:-moz-placeholder {
+  color: #9ba8b6;
+  font-size: 24px;
+  letter-spacing: 0px;
+  font-style: none;
+}
+/* line 102, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .box input:-ms-input-placeholder {
+  color: #9ba8b6;
+  font-style: none;
+  letter-spacing: 0px;
+  font-size: 24px;
+}
+/* line 108, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .box input::-webkit-input-placeholder {
+  color: #9ba8b6;
+  font-style: none;
+  letter-spacing: 0px;
+  font-size: 24px;
+}
+/* line 115, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .box input[type=submit] {
+  background: #00adee;
+  border: 0;
+  color: #fff;
+  padding: 6px 10px;
+  width: 140px;
+  height: 32px;
+  text-align: left;
+  cursor: pointer;
+}
+/* line 126, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .box a.forgot {
+  display: block;
+  text-align: right;
+  font-style: italic;
+  text-decoration: underline;
+  color: #3d88ba;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+/* line 135, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .box .remember {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+/* line 139, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .box .remember input[type="checkbox"] {
+  float: left;
+  margin-right: 8px;
+}
+/* line 143, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .box .remember label {
+  float: left;
+  color: #4a576a;
+  font-size: 13px;
+  font-weight: 600;
+}
+/* line 150, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .box .login {
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 8px 30px;
+}
+/* line 156, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .no-account {
+  margin: 0 auto;
+  float: none;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 25px;
+}
+/* line 162, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .no-account p {
+  display: inline-block;
+  color: #fff;
+}
+/* line 166, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .no-account a {
+  color: #facc13;
+  margin-left: 7px;
+  border-bottom: 1px solid;
+  transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  /* Firefox 4 */
+  -webkit-transition: all .1s linear;
+  /* Safari and Chrome */
+  -o-transition: all .1s linear;
+  /* Opera */
+}
+/* line 175, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .login-wrapper .no-account a:hover {
+  text-decoration: none;
+  color: #fff;
+  border-bottom-color: #fff;
+}
+/* line 185, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content #frmLogin {
+  float: none;
+  margin-top: 50px;
+}
+/* line 189, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content #frmLogin label, .full-content #frmSignup label {
+  /*    position:absolute;
+      top:7px;
+      left:12px;*/
+  color: #999999;
+}
+/* line 195, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content #frmLogin #submit, .full-content #frmSignup #submit, .full-content #frmForgot #submit, .full-content #changePass #submit, .full-content #confirmPass #submit, .full-content #changeEmail #submit {
+  background: url("/assets/arrow-to-right2-7b2502f87ae806be53d01566d7d0c6b6.png") no-repeat scroll 390px 29px #00ADEE;
+  font-size: 20px;
+  font-weight: bold;
+  height: 80px;
+  text-indent: 25px;
+  width: 480px;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+/* line 205, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content #frmLogin #submit:hover, .full-content #frmSignup #submit:hover, .full-content #frmForgot #submit:hover, .full-content #changePass #submit:hover,
+.full-content #confirmPass #submit:hover, .full-content #changeEmail #submit:hover {
+  background-color: #000 !important;
+}
+/* line 209, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .signup_privacy_policy {
+  font-size: 12px;
+  margin: 0 0 18px;
+}
+/* line 213, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content #frmLogin .signup_privacy_policy {
+  margin-top: 5px;
+}
+/* line 217, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content #frmForgot #submit {
+  margin-top: 10px;
+}
+/* line 218, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content #frmSignup #submit {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+/* line 222, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .formNewEntity {
+  width: 82%;
+  margin: 0 auto;
+  padding: 35px 0 30px;
+  float: none;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background: #f2f2f2;
+}
+/* line 231, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .formNewEntity .form-content {
+  position: relative;
+  width: 82%;
+  margin: 0 auto;
+}
+/* line 236, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .formNewEntity .form-content h1 {
+  color: #ccc;
+  text-transform: uppercase;
+  margin: 0 0 30px 0;
+  font-size: 2em;
+  font-weight: bold;
+}
+/* line 244, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .formNewEntity .form-content h6 {
+  text-transform: uppercase;
+  margin: 0 0 30px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+/* line 251, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .formNewEntity .form-content .kakoona-select {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
+  background-color: #3498DB;
+  background-repeat: no-repeat;
+  background-position: right 10px top 25px;
+  background-size: 20px 20px;
+  color: white;
+  padding: 12px 30px 12px 12px;
+  width: auto;
+  height: 80px;
+  line-height: 32px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -webkit-appearance: none;
+  border: 0;
+  outline: 0;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+/* line 279, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .formNewEntity .form-content .form-buttons {
+  overflow: hidden;
+  position: relative;
+  text-align: right;
+  line-height: 32px;
+}
+/* line 284, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .formNewEntity .form-content .form-buttons .form-buttons div {
+  margin: 0 !important;
+}
+/* line 288, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .formNewEntity .form-content .form-buttons .kakoona-submit {
+  background: url("/assets/arrow-to-right2-7b2502f87ae806be53d01566d7d0c6b6.png") no-repeat scroll 390px 29px #00ADEE;
+  font-size: 24px;
+  font-weight: bold;
+  height: 80px;
+  text-indent: 25px;
+  width: 480px;
+  -webkit-appearance: none;
+  border-radius: 0;
+  border: 0;
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  margin-right: 0;
+}
+/* line 303, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .formNewEntity .form-content .form-buttons .kakoona-submit:hover {
+  background-color: #000 !important;
+}
+/* line 308, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .formNewEntity .form-content input[type="text"],
+.full-content .formNewEntity .form-content input[type="password"] {
+  font-size: 24px;
+  font-weight: bold;
+  height: 60px;
+  margin-top: 5px;
+  overflow: hidden;
+  padding: 0 20px;
+  width: 100%;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+/* line 320, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .formNewEntity .form-content input[type="password"] {
+  margin-bottom: 10px;
+}
+/* line 323, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .formNewEntity .form-content input:-moz-placeholder {
+  color: #9ba8b6;
+  font-size: 24px;
+  letter-spacing: 0px;
+  font-style: none;
+}
+/* line 329, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .formNewEntity .form-content input:-ms-input-placeholder {
+  color: #9ba8b6;
+  font-style: none;
+  letter-spacing: 0px;
+  font-size: 24px;
+}
+/* line 335, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .formNewEntity .form-content input::-webkit-input-placeholder {
+  color: #9ba8b6;
+  font-style: none;
+  letter-spacing: 0px;
+  font-size: 24px;
+}
+/* line 347, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .bg-switch {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  top: 60px;
+  border-radius: 0px 10px 10px 0px;
+  padding: 10px 10px 0px 10px;
+  z-index: 999;
+}
+/* line 355, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .bg-switch .bgs .bg {
+  text-align: center;
+  margin-bottom: 13px;
+  text-decoration: none;
+  display: block;
+}
+/* line 361, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .bg-switch .bgs .bg.active img {
+  border-color: #000;
+}
+/* line 364, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+.full-content .bg-switch .bgs .bg img {
+  width: 80px;
+  height: 60px;
+  border: 2px solid #9fcef1;
+  cursor: pointer;
+}
+
+/* responsive */
+@media (max-width: 767px) {
+  /* line 377, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+  .login-content .login-wrapper .box {
+    width: 350px;
+  }
+}
+@media (max-width: 480px) {
+  /* line 384, /Users/agentlogic/RocketLauncher/VISION/Kakoona/_AdPortal/Kakoona_AdPortal/app/assets/stylesheets/kakoona_custom/fullbase.scss.erb */
+  .login-content .login-wrapper .box {
+    width: 90%;
+  }
+}
