@@ -5,6 +5,7 @@ gem 'rails',                '4.2.0.beta2'
 gem 'autoprefixer-rails',   '~> 5.0.0.3'
 gem 'bootstrap-sass',       '~> 3.3.3'
 gem 'sprockets',            '~> 2.12.3'
+gem 'bcrypt-ruby',          '~> 3.1.5'
 gem 'will_paginate',        '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 gem 'bootstrap-datepicker-rails', '~> 1.3.1.1'
@@ -32,6 +33,8 @@ gem 'raphael-rails',        '~> 2.1.2'
 gem 'fullcalendar-rails',   '~> 2.2.5.1'
 gem 'momentjs-rails',       '~> 2.9.0'
 gem 'gcal-ruby',            '~> 0.1.3'
+
+gem 'seed-fu',              '~> 2.3'
 
 
 

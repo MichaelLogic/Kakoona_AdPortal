@@ -9,7 +9,7 @@
 			    <%= form_for(@merch_representative) do |f| %>
 			      <%= render 'sessions/error_messages', object: f.object %>
 
-				  <% sys_merchants = [['Ambercrombie & Finch', 1], ['American Eagle', 2], ['Bose', 3], ['Hasbro', 2],] %>
+				  <% sys_merchants = [['Abercrombie & Fitch', 1], ['American Eagle', 2], ['Bose', 3], ['Hasbro', 2],] %>
 			      <%= f.select(:merchant_id, options_for_select(sys_merchants), {include_blank: "Select Your Merchant"}, {'data-toggle' => "select", required: "true", autofocus: "true", class: "kakoona-select"})%>
 
 			      <%= f.text_field :first_name, autofocus: true, placeholder: 'First Name' %>
