@@ -1,7 +1,32 @@
-# SQLEditor export: Rails Migration
-# id columns are removed
-class BuildDatavault < ActiveRecord::Migration 
+#ERD DIAGRAM OUTPUT
+class BuildDataVault < ActiveRecord::Migration
   def change
+
+    create_table :delayed_jobs, :force => true do |table|
+      table.integer  :priority, :default => 0, :null => false # Allows some jobs to jump to the front of the queue
+      table.integer  :attempts, :default => 0, :null => false # Provides for retries, but still fail eventually.
+      table.text     :handler, :null => false                 # YAML-encoded string of the object that will do work
+      table.text     :last_error                              # reason for last failure (See Note below)
+      table.datetime :run_at                                  # When to run. Could be Time.zone.now for immediately, or sometime in the future.
+      table.datetime :locked_at                               # Set when a client is working on this object
+      table.datetime :failed_at                               # Set when all retries have failed (actually, by default, the record is deleted instead)
+      table.string   :locked_by                               # Who is working on this object (if locked)
+      table.string   :queue                                   # The name of the queue this job is in
+      table.timestamps
+    end
+    add_index :delayed_jobs, [:priority, :run_at], :name => 'delayed_jobs_priority'
+
+    create_table :avatar_grffks do |t|
+      t.references :merch_representative
+      t.string :direct_upload_url, null: false
+      t.string :upload_file_path
+      t.attachment :upload
+      t.boolean :processed, default: false, null: false
+      t.timestamps :null=> false
+    end
+    add_index :avatar_grffks, :processed
+    add_index :avatar_grffks, [:merch_representative_id]
+
     create_table :addresses do |t|
       t.integer :location_nickname
       t.string :address_type, :null => false
@@ -13,13 +38,6 @@ class BuildDatavault < ActiveRecord::Migration
       t.string :country_region
       t.float :lat
       t.float :lng
-    end
-
-    create_table :avatar_grffks do |t|
-      t.string :avatar_type
-      t.datetime :time_created
-      t.string :file_type
-      t.string :grffk_url
     end
 
     create_table :campaign_brand_grffks do |t|
@@ -65,8 +83,12 @@ class BuildDatavault < ActiveRecord::Migration
       t.string :auth_token
       t.datetime :last_session_time
       t.string :last_session_ip
+      t.string :password_digest
+      t.string :remember_token
+      t.boolean :admin, :null => false
       t.timestamps :null=> false
     end
+    add_index :content_providers, [:email, :remember_token]
 
     create_table :content_provider_avatars, :id => false do |t|
       t.references :avatar_grffk
@@ -125,9 +147,14 @@ class BuildDatavault < ActiveRecord::Migration
       t.string :auth_token
       t.datetime :last_session_time
       t.string :last_session_ip
+      t.string :password_digest
+      t.string :remember_token
+      t.boolean :admin, :null => false
       t.timestamps :null=> false
     end
+    add_index :merch_representatives, [:email, :remember_token]
     add_index :merch_representatives, [:merchant_id, :created_at]
+
 
     create_table :ad_portal_overviews do |t|
       t.references :merchant, index: true
@@ -277,5 +304,4 @@ class BuildDatavault < ActiveRecord::Migration
     add_index :kakoona_videos, [:tender_video_thum_id, :created_at]
 
   end
-
 end

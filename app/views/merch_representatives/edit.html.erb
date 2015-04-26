@@ -1,6 +1,67 @@
-<h1>Editing Merch Representative</h1>
+<% provide(:title, 'Become a Representative') %>
+<div class="container">
+	<div class="row">
+	  <div class="span6 offset3">
+	  	<div class='formNewEntity'>
+	  		<div class='form-content'>
 
-<%= render 'form' %>
+				<h1>Sign up</h1>
+				<%= render 'avatar_grffks/form' %>
+				
+			    <%= form_for(@merch_representative) do |f| %>
+			      <%= render 'sessions/error_messages', object: f.object %>
 
-<%= link_to 'Show', @merch_representative %> |
-<%= link_to 'Back', merch_representatives_path %>
+			      <%= f.fields_for :avatar_grffk do |lavatar| %>
+				  	<% if @avatar_grffk.errors.any? %>
+					  <ul>
+					    <% @avatar_grffk.errors.full_messages.each do |msg| %>
+					      <li><%= msg %></li>
+					    <% end %>
+					  </ul>
+					<% end %>
+				      <%= lavatar.hidden_field :direct_upload_url %>
+
+				      <%= lavatar.hidden_field :upload_file_name %>
+				      <%= lavatar.hidden_field :upload_file_size %>
+				      <%= lavatar.hidden_field :upload_content_type %>
+				   
+				      <%= lavatar.hidden_field :upload_file_path %>
+				  <% end %>
+
+				  <% sys_merchants = [['Abercrombie & Fitch', 1], ['American Eagle', 2], ['Bose', 3], ['Hasbro', 2],] %>
+			      <%= f.select(:merchant_id, options_for_select(sys_merchants), {include_blank: "Select Your Merchant"}, {'data-toggle' => "select", required: "true", autofocus: "true", class: "kakoona-select"})%>
+
+			      <%= f.text_field :first_name, autofocus: true, placeholder: 'First Name' %>
+
+			      <%= f.text_field :last_name, autofocus: true, placeholder: 'Last Name' %>
+
+			      <%= f.text_field :email, autofocus: true, placeholder: 'Email' %>
+
+			      <%= f.text_field :phone, autofocus: true, value: '312.555.5555', placeholder: 'Phone' %>
+
+			      <%= f.hidden_field :team_role, value: 'representative' %>
+			      <%= f.hidden_field :is_active, value: 1 %>
+
+			      <%= f.text_field :screen_name, autofocus: true, placeholder: 'ScreenName' %>
+
+			      <%= f.password_field :password, autofocus: true, placeholder: 'password' %>
+
+			      <%= f.password_field :password_confirmation, autofocus: true, placeholder: 'confirm password' %>
+
+			      <%= f.hidden_field :admin, value: 1 %>
+			      
+				  <div class="form-buttons">
+	                <div class="button">
+			      		<%= f.submit "Register", class: "kakoona-submit" %>
+			      	</div>
+			      </div>
+			    <% end %>
+				<%= link_to 'Show', @merch_representative %> |
+				<%= link_to 'Back', merch_representatives_path %>
+			</div>
+		</div>
+	  </div>
+	</div>
+</div>
+
+

@@ -25,7 +25,7 @@
   <tbody>
     <% @merch_representatives.each do |merch_representative| %>
       <tr>
-        <td><%= merch_representative.merchant %></td>
+        <td><%= merch_representative.merchant.id %></td>
         <td><%= merch_representative.email %></td>
         <td><%= merch_representative.screen_name %></td>
         <td><%= merch_representative.first_name %></td>

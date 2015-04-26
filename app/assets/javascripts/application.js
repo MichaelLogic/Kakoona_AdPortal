@@ -33,4 +33,6 @@
 // require fullcalendar
 // require fullcalendar/gcal
 //= require turbolinks
+//= require s3_direct_upload
+
 //= require_tree .

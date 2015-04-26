@@ -15,22 +15,26 @@ class MerchRepresentativesController < ApplicationController
   # GET /merch_representatives/1
   # GET /merch_representatives/1.json
   def show
+    @merch_representative = MerchRepresentative.find(params[:id])
+    @avatar_grffk = @merch_representative.build_avatar_grffk
   end
 
   # GET /merch_representatives/new
   def new
     @merch_representative = MerchRepresentative.new
+    @avatar_grffk = @merch_representative.build_avatar_grffk
   end
 
   # GET /merch_representatives/1/edit
   def edit
+    @merch_representative = MerchRepresentative.find(params[:id])
+    @avatar_grffk = @merch_representative.build_avatar_grffk
   end
 
   # POST /merch_representatives
   # POST /merch_representatives.json
   def create
     @merch_representative = MerchRepresentative.new(merch_representative_params)
-
     respond_to do |format|
       if @merch_representative.save
         format.html { redirect_to @merch_representative, notice: 'Merch representative was successfully created.' }
@@ -74,6 +78,12 @@ class MerchRepresentativesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def merch_representative_params
-      params.require(:merch_representative).permit(:merchant_id, :email, :screen_name, :first_name, :middle_name, :last_name, :phone, :team_role, :rep_about, :is_active, :auth_token, :last_session_time, :last_session_ip, :password, :password_confirmation, :admin)
+      params.require(:merch_representative).permit(:merchant_id, :email, :screen_name, :first_name, :middle_name, :last_name, :phone, :team_role, :rep_about, :is_active, :auth_token, :last_session_time, :last_session_ip, :password, :password_confirmation, :admin, avatar_grffk_attributes: [:id, :direct_upload_url, :processed])
     end
+
+    def correct_user
+      @merch_representative = current_user
+      redirect_to root_url if @merch_representative.nil?
+    end
+
 end

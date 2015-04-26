@@ -1,4 +1,10 @@
  KakoonaAdportal::Application.routes.draw do
+  resources :merchants
+
+  resources :merch_representatives
+
+  resources :avatar_grffks, only: [:new, :create, :destroy]
+
   resources :products
 
   resources :kakoona_videos
@@ -13,11 +19,8 @@
 
   resources :content_providers
 
-  resources :merch_representatives
-
-  resources :merchants
-
   resources :sessions, only: [:new, :create, :destroy]
+
 
   get 'statix/home'
 
@@ -27,11 +30,18 @@
 
   get 'statix/contact'
 
+  get 'avatar_grffks/:id/download/:filename', to: 'avatar_grffks#download', constraints: { filename: /.+/ }, as: 'download_avatar_grffk'
+
+  post 'merch_representatives/:id/edit', to: 'merch_representatives#edit', constraints: { }, as: 'edit_merch_respresentive'
+
+  post 'merch_representatives/:id', to: 'merch_representatives#show', constraints: { }, as: 'merch_respresentives_url'
+
   root 'statix#home'
 
   match '/login',   to: 'sessions#new', via: :get
   match '/logout',  to: 'sessions#destroy', via: :delete
   match '/signup',  to: 'merch_representatives#new', via: :get
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

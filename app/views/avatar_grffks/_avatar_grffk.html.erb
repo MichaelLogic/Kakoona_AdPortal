@@ -1,0 +1,11 @@
+
+<div class="avatar">
+<% if avatar_grffk.upload_updated_at %>
+  <%= link_to image_tag(avatar_grffk.direct_upload_url), avatar_grffk if avatar_grffk.direct_upload_url? %>
+  <div class="name"><%= avatar_grffk.upload_file_name %></div>
+  <div class="actions">
+    <%= link_to "edit", edit_avatar_grffk_path(avatar_grffk) %> |
+    <%= link_to "remove", avatar_grffk, :confirm => 'Are you sure?', :method => :delete %>
+  </div>
+<% end %>
+</div>

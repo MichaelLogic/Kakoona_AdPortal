@@ -36,6 +36,11 @@ gem 'gcal-ruby',            '~> 0.1.3'
 
 gem 'seed-fu',              '~> 2.3'
 
+gem 'aws-sdk-v1'
+gem 'aws-sdk',              '~> 2'
+gem 'delayed_job_active_record'
+gem 'paperclip',            '~> 3.5'
+gem 's3_direct_upload',     github: 'RobotsAndPencils/s3_direct_upload'
 
 
 group :development, :test do

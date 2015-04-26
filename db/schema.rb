@@ -62,11 +62,20 @@ ActiveRecord::Schema.define(version: 20141217124941) do
   end
 
   create_table "avatar_grffks", force: true do |t|
-    t.string   "avatar_type"
-    t.datetime "time_created"
-    t.string   "file_type"
-    t.string   "grffk_url"
+    t.integer  "merch_representative_id"
+    t.string   "direct_upload_url",                       null: false
+    t.string   "upload_file_path"
+    t.string   "upload_file_name"
+    t.string   "upload_content_type"
+    t.integer  "upload_file_size"
+    t.datetime "upload_updated_at"
+    t.boolean  "processed",               default: false, null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
   end
+
+  add_index "avatar_grffks", ["merch_representative_id"], name: "index_avatar_grffks_on_merch_representative_id", using: :btree
+  add_index "avatar_grffks", ["processed"], name: "index_avatar_grffks_on_processed", using: :btree
 
   create_table "campaign_audio", id: false, force: true do |t|
     t.integer "ad_campaign_id"
@@ -158,6 +167,22 @@ ActiveRecord::Schema.define(version: 20141217124941) do
   end
 
   add_index "content_providers", ["email", "remember_token"], name: "index_content_providers_on_email_and_remember_token", using: :btree
+
+  create_table "delayed_jobs", force: true do |t|
+    t.integer  "priority",   default: 0, null: false
+    t.integer  "attempts",   default: 0, null: false
+    t.text     "handler",                null: false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
   create_table "kakoona_audio", force: true do |t|
     t.string   "audio_title"
