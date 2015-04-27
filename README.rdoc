@@ -1,5 +1,7 @@
-# Kakoona AdPortal v1.0:  Evolved Point-Of-Sale Video Admin System
+# Kakoona AdPortal v1.1:  Evolved Point-Of-Sale Video Admin System
 
 All System documentation will be added here.
+
+- This branch is for an alternate S3 protocol
 
 [*Kakoona*](http://www.Kakoona.com)
