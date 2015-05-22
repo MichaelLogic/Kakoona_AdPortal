@@ -19,6 +19,11 @@
 
   resources :sessions, only: [:new, :create, :destroy]
 
+  #resources :avatar_grffks
+  
+  
+  get 'pspost', to: 's3#new'
+
   get 'statix/home'
 
   get 'statix/about'

@@ -15,11 +15,13 @@ class MerchRepresentativesController < ApplicationController
   # GET /merch_representatives/1
   # GET /merch_representatives/1.json
   def show
+    #@merch_representative.build_avatar_grffk
   end
 
   # GET /merch_representatives/new
   def new
     @merch_representative = MerchRepresentative.new
+    @merch_representative.build_avatar_grffk
   end
 
   # GET /merch_representatives/1/edit
@@ -67,6 +69,7 @@ class MerchRepresentativesController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_merch_representative
       @merch_representative = MerchRepresentative.find(params[:id])
@@ -74,6 +77,6 @@ class MerchRepresentativesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def merch_representative_params
-      params.require(:merch_representative).permit(:merchant_id, :email, :screen_name, :first_name, :middle_name, :last_name, :phone, :team_role, :rep_about, :is_active, :auth_token, :last_session_time, :last_session_ip, :password, :password_confirmation, :admin)
+      params.require(:merch_representative).permit(:merchant_id, :email, :screen_name, :first_name, :middle_name, :last_name, :phone, :team_role, :rep_about, :is_active, :auth_token, :last_session_time, :last_session_ip, :password, :password_confirmation, :admin, avatar_grffk_attributes: [ :id, :name, :description, :temp_file, :cloud_asset_url ])
     end
 end

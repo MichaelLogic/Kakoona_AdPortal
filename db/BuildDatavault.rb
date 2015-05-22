@@ -16,10 +16,12 @@ class BuildDatavault < ActiveRecord::Migration
     end
 
     create_table :avatar_grffks do |t|
-      t.string :avatar_type
-      t.datetime :time_created
-      t.string :file_type
-      t.string :grffk_url
+      t.belongs_to :merch_representative, index: true
+      t.string   :name
+      t.string   :description
+      t.string   :temp_file
+      t.string   :cloud_asset_url
+      t.timestamps :null=> false
     end
 
     create_table :campaign_brand_grffks do |t|
@@ -68,11 +70,6 @@ class BuildDatavault < ActiveRecord::Migration
       t.timestamps :null=> false
     end
 
-    create_table :content_provider_avatars, :id => false do |t|
-      t.references :avatar_grffk
-      t.references :content_provider
-    end
-
     create_table :kakoona_audio do |t|
       t.string :audio_title
       t.string :source
@@ -89,16 +86,6 @@ class BuildDatavault < ActiveRecord::Migration
       t.timestamps :null=> false
     end
 
-    create_table :campaign_audio, :id => false do |t|
-      t.references :ad_campaign
-      t.references :kakoona_audio
-    end
-
-    create_table :campaign_videos, :id => false do |t|
-      t.references :ad_campaign
-      t.references :kakoona_video
-    end
-
     create_table :merchants do |t|
       t.string :merchant_name, :null => false
       t.string :merchant_website, :null => false
@@ -112,7 +99,7 @@ class BuildDatavault < ActiveRecord::Migration
     end
 
     create_table :merch_representatives do |t|
-      t.references :merchant, index: true
+      t.belongs_to :merchant, index: true
       t.string :email, :null => false
       t.string :screen_name, :null => false
       t.string :first_name, :null => false
@@ -125,8 +112,12 @@ class BuildDatavault < ActiveRecord::Migration
       t.string :auth_token
       t.datetime :last_session_time
       t.string :last_session_ip
+      t.string :password_digest
+      t.string :remember_token
+      t.boolean :admin, :null => false
       t.timestamps :null=> false
     end
+    add_index :merch_representatives, [:email, :remember_token]
     add_index :merch_representatives, [:merchant_id, :created_at]
 
     create_table :ad_portal_overviews do |t|
@@ -155,16 +146,6 @@ class BuildDatavault < ActiveRecord::Migration
     end
     add_index :ad_campaigns, [:merchant_id, :created_at]
 
-    create_table :merch_addresses, :id => false do |t|
-      t.references :merchant
-      t.references :address
-    end
-
-    create_table :merchant_avatar, :id => false do |t|
-      t.references :avatar_grffk
-      t.references :merchant
-    end
-
     create_table :precious do |t|
       t.string :precious_hash
       t.string :precious_salt
@@ -172,11 +153,6 @@ class BuildDatavault < ActiveRecord::Migration
       t.string :precious_hint_answer01
       t.string :precious_hint_quest02
       t.timestamps :null=> false
-    end
-
-    create_table :content_provider_precious, :id => false do |t|
-      t.references :content_provider
-      t.references :precious
     end
 
     create_table :products do |t|
@@ -193,11 +169,6 @@ class BuildDatavault < ActiveRecord::Migration
     end
     add_index :products, [:merchant_id, :created_at]
 
-    create_table :provider_addresses, :id => false do |t|
-      t.references :content_provider
-      t.references :address
-    end
-
     create_table :product_inventory, :id => false do |t|
       t.references :ad_campaign, index: true
       t.references :product, index: true
@@ -205,30 +176,10 @@ class BuildDatavault < ActiveRecord::Migration
       t.timestamps :null=> false
     end
 
-    create_table :rep_ad_campaigns, :id => false do |t|
-      t.references :merch_representative
-      t.references :ad_campaign
-    end
-
-    create_table :rep_avatars, :id => false do |t|
-      t.references :avatar_grffk
-      t.references :merch_representative
-    end
-
-    create_table :rep_precious, :id => false do |t|
-      t.references :merch_representative
-      t.references :precious
-    end
-
     create_table :sessions do |t|
       t.string :curr_ip
       t.string :device_token
       t.string :device_spec
-    end
-
-    create_table :content_provider_sessions, :id => false do |t|
-      t.references :content_provider
-      t.references :session
     end
 
     create_table :social_media do |t|
@@ -238,26 +189,11 @@ class BuildDatavault < ActiveRecord::Migration
       t.boolean :twitter_autopush
     end
 
-    create_table :rep_sessions, :id => false do |t|
-      t.references :session
-      t.references :merch_representative
-    end
-
     create_table :tender_video_thums do |t|
       t.string :raw_file_name
       t.string :meta_description
       t.string :file_type
       t.string :grffk_url
-    end
-
-    create_table :rep_social_media, :id => false do |t|
-      t.references :social_media
-      t.references :merch_representative
-    end
-
-    create_table :content_provider_social_media, :id => false do |t|
-      t.references :content_provider
-      t.references :social_media
     end
 
     create_table :kakoona_videos do |t|

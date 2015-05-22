@@ -6,11 +6,15 @@
 	  		<div class='form-content'>
 
 				<h1>Sign up</h1>
-			    <%= form_for(@merch_representative) do |f| %>
+			    <%= form_for(@merch_representative, multipart: true, html: { class: "direct-upload"}) do |f| %>
 			      <%= render 'sessions/error_messages', object: f.object %>
 
-				  <% sys_merchants = [['Abercrombie & Fitch', 1], ['American Eagle', 2], ['Bose', 3], ['Hasbro', 2],] %>
+				  <% sys_merchants = [['Abercrombie & Fitch', 1], ['American Eagle', 2], ['Bose', 3], ['Hasbro', 4],] %>
 			      <%= f.select(:merchant_id, options_for_select(sys_merchants), {include_blank: "Select Your Merchant"}, {'data-toggle' => "select", required: "true", autofocus: "true", class: "kakoona-select"})%>
+
+				 <%= f.fields_for :avatar_grffk do |avatar_for_form| %>
+				 		<%= render 'upload', avi: avatar_for_form %>
+				 <% end %>
 
 			      <%= f.text_field :first_name, autofocus: true, placeholder: 'First Name' %>
 
@@ -29,7 +33,7 @@
 
 			      <%= f.password_field :password_confirmation, autofocus: true, placeholder: 'confirm password' %>
 
-			      <%= f.hidden_field :admin, value: 1 %>
+			      <%= f.hidden_field :admin, value: 0 %>
 			      
 				  <div class="form-buttons">
 	                <div class="button">

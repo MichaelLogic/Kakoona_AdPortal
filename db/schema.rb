@@ -62,16 +62,16 @@ ActiveRecord::Schema.define(version: 20141217124941) do
   end
 
   create_table "avatar_grffks", force: true do |t|
-    t.string   "avatar_type"
-    t.datetime "time_created"
-    t.string   "file_type"
-    t.string   "grffk_url"
+    t.integer  "merch_representative_id"
+    t.string   "name"
+    t.string   "description"
+    t.string   "temp_file"
+    t.string   "cloud_asset_url"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
-  create_table "campaign_audio", id: false, force: true do |t|
-    t.integer "ad_campaign_id"
-    t.integer "kakoona_audio_id"
-  end
+  add_index "avatar_grffks", ["merch_representative_id"], name: "index_avatar_grffks_on_merch_representative_id", using: :btree
 
   create_table "campaign_brand_grffks", force: true do |t|
     t.integer  "ad_campaign_id"
@@ -112,31 +112,6 @@ ActiveRecord::Schema.define(version: 20141217124941) do
   add_index "campaign_preload_grffks", ["ad_campaign_id", "created_at"], name: "index_campaign_preload_grffks_on_ad_campaign_id_and_created_at", using: :btree
   add_index "campaign_preload_grffks", ["ad_campaign_id"], name: "index_campaign_preload_grffks_on_ad_campaign_id", using: :btree
 
-  create_table "campaign_videos", id: false, force: true do |t|
-    t.integer "ad_campaign_id"
-    t.integer "kakoona_video_id"
-  end
-
-  create_table "content_provider_avatars", id: false, force: true do |t|
-    t.integer "avatar_grffk_id"
-    t.integer "content_provider_id"
-  end
-
-  create_table "content_provider_precious", id: false, force: true do |t|
-    t.integer "content_provider_id"
-    t.integer "precious_id"
-  end
-
-  create_table "content_provider_sessions", id: false, force: true do |t|
-    t.integer "content_provider_id"
-    t.integer "session_id"
-  end
-
-  create_table "content_provider_social_media", id: false, force: true do |t|
-    t.integer "content_provider_id"
-    t.integer "social_media_id"
-  end
-
   create_table "content_providers", force: true do |t|
     t.string   "email",             null: false
     t.string   "screen_name",       null: false
@@ -150,14 +125,9 @@ ActiveRecord::Schema.define(version: 20141217124941) do
     t.string   "auth_token"
     t.datetime "last_session_time"
     t.string   "last_session_ip"
-    t.string   "password_digest"
-    t.string   "remember_token"
-    t.boolean  "admin",             null: false
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
-
-  add_index "content_providers", ["email", "remember_token"], name: "index_content_providers_on_email_and_remember_token", using: :btree
 
   create_table "kakoona_audio", force: true do |t|
     t.string   "audio_title"
@@ -194,11 +164,6 @@ ActiveRecord::Schema.define(version: 20141217124941) do
 
   add_index "kakoona_videos", ["tender_video_thum_id", "created_at"], name: "index_kakoona_videos_on_tender_video_thum_id_and_created_at", using: :btree
 
-  create_table "merch_addresses", id: false, force: true do |t|
-    t.integer "merchant_id"
-    t.integer "address_id"
-  end
-
   create_table "merch_representatives", force: true do |t|
     t.integer  "merchant_id"
     t.string   "email",             null: false
@@ -223,11 +188,6 @@ ActiveRecord::Schema.define(version: 20141217124941) do
   add_index "merch_representatives", ["email", "remember_token"], name: "index_merch_representatives_on_email_and_remember_token", using: :btree
   add_index "merch_representatives", ["merchant_id", "created_at"], name: "index_merch_representatives_on_merchant_id_and_created_at", using: :btree
   add_index "merch_representatives", ["merchant_id"], name: "index_merch_representatives_on_merchant_id", using: :btree
-
-  create_table "merchant_avatar", id: false, force: true do |t|
-    t.integer "avatar_grffk_id"
-    t.integer "merchant_id"
-  end
 
   create_table "merchants", force: true do |t|
     t.string   "merchant_name",      null: false
@@ -279,36 +239,6 @@ ActiveRecord::Schema.define(version: 20141217124941) do
 
   add_index "products", ["merchant_id", "created_at"], name: "index_products_on_merchant_id_and_created_at", using: :btree
   add_index "products", ["merchant_id"], name: "index_products_on_merchant_id", using: :btree
-
-  create_table "provider_addresses", id: false, force: true do |t|
-    t.integer "content_provider_id"
-    t.integer "address_id"
-  end
-
-  create_table "rep_ad_campaigns", id: false, force: true do |t|
-    t.integer "merch_representative_id"
-    t.integer "ad_campaign_id"
-  end
-
-  create_table "rep_avatars", id: false, force: true do |t|
-    t.integer "avatar_grffk_id"
-    t.integer "merch_representative_id"
-  end
-
-  create_table "rep_precious", id: false, force: true do |t|
-    t.integer "merch_representative_id"
-    t.integer "precious_id"
-  end
-
-  create_table "rep_sessions", id: false, force: true do |t|
-    t.integer "session_id"
-    t.integer "merch_representative_id"
-  end
-
-  create_table "rep_social_media", id: false, force: true do |t|
-    t.integer "social_media_id"
-    t.integer "merch_representative_id"
-  end
 
   create_table "sessions", force: true do |t|
     t.string "curr_ip"

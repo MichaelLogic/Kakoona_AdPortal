@@ -5,12 +5,21 @@ class MerchRepresentative < ActiveRecord::Base
   before_save { self.email = email.downcase }
 
   before_create :create_remember_token
-  validates :name, presence: true, length: { maximum: 50 }
+  validates :first_name, presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, length: { minimum: 6 }
+
+  #Nested Avatar
+  has_one :avatar_grffk, inverse_of: :merch_representative
+  accepts_nested_attributes_for :avatar_grffk, allow_destroy: true
+
+  def avatar_for_form
+    avi = avatar_grffk.where(merch_representative_id: id)
+    avi.any? ? avi : avatar_grffk.build
+  end
 
   def MerchRepresentative.new_remember_token
     SecureRandom.urlsafe_base64

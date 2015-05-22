@@ -1,0 +1,12 @@
+<fieldset class: 'upload-fields' id: 'upload-fields'>
+	<!--<div class="photoPreview">
+      <%= icon('upload', '', class: 'photoUpload') %>
+      <p id="uploadClick">Click to Upload</p>
+    </div>
+    <p class="deletePhoto">Delete</p>-->
+	<%= avi.file_field :temp_file, accept: 'image/png,image/gif,image/jpeg, image/jpg' %>
+	<%= avi.hidden_field :cloud_asset_url, value: "upload" %>
+	<%= avi.hidden_field :name, value: "default" %>
+	<%= avi.hidden_field :description, value: "avatar" %>
+</fieldset>
+

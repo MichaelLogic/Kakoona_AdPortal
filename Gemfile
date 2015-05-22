@@ -36,6 +36,11 @@ gem 'gcal-ruby',            '~> 0.1.3'
 
 gem 'seed-fu',              '~> 2.3'
 
+gem 'aws-sdk-v1'
+gem 'bitters'
+gem 'bourbon'
+gem 'neat'
+gem 'refills'
 
 
 group :development, :test do
