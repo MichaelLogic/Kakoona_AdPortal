@@ -22135,11 +22135,6 @@ $(function () {
   };
 
 }).call(this);
-function handleLocationData( responseData ) {
-    // do what you want with the data
-    console.log("Location:  " + responseData);
-}
-
 $(function() {
   if ($('.direct-upload').length > 0) {
     $.get( "/pspost", function( s3params ) {
@@ -22155,7 +22150,7 @@ $(function() {
 
         fileInput.fileupload({
           fileInput:       fileInput,
-          url:             "http://" + s3params.url.host,
+          url:             "https://" + s3params.url.host,
           type:            'POST',
           autoUpload:       true,
           formData:         s3params.fields,
@@ -22183,10 +22178,9 @@ $(function() {
 
             //populate hidden file fields for grffks
             $("#merch_representative_avatar_grffk_attributes_name").val("merch_rep_avi");
-            //$("#merch_representative_avatar_grffk_cloud_asset_url").val(location);
+            $("#merch_representative_avatar_grffk_attributes_cloud_asset_url").val(location);
             $("#merch_representative_avatar_grffk_attributes_description").val("cloud avatar");
 
-            handleLocationData(location);
             alert("Upload Complete to: " + location);
 
           },

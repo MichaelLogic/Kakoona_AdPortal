@@ -13,7 +13,7 @@ $(function() {
 
         fileInput.fileupload({
           fileInput:       fileInput,
-          url:             "http://" + s3params.url.host,
+          url:             "https://" + s3params.url.host,
           type:            'POST',
           autoUpload:       true,
           formData:         s3params.fields,
