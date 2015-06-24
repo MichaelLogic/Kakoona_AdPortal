@@ -28,7 +28,7 @@ KakoonaAdportal::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-  config.assets.debug = false
+  config.assets.debug = true
 
   # Generate digests for assets URLs.
   config.assets.digest = true
@@ -38,7 +38,7 @@ KakoonaAdportal::Application.configure do
   config.static_cache_control = "public, max-age=31536000"
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'

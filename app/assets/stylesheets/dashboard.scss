@@ -1,4 +1,4 @@
-/* Main stats up of screen */
+/* Dashboard Stats screen */
 #main-stats {
 	background-color: #fdfdfd;
 	border-bottom: 1px solid #efeef3;
@@ -167,6 +167,14 @@
 	margin-top: 65px;
 }
 
+#legendContainer, .legend table {
+	max-width: 100px;
+	margin: 0px 0px 0px 0px;
+	position: absolute;
+	top: 35px;
+	right: 18px;
+}
+
 /* specific chart styles */
 .legendLabel {
 	font-size: 12px;
@@ -175,6 +183,9 @@
 }
 
 /* UI elements section */
+#pad-wrapper{
+	margin-top: 5px;
+}
 
 #pad-wrapper .ui-elements {
 	h4 {

@@ -67,8 +67,6 @@ GEM
       json (~> 1.4)
       nokogiri (>= 1.4.4)
     bcrypt (3.1.10)
-    bcrypt-ruby (3.1.5)
-      bcrypt (>= 3.1.3)
     binding_of_caller (0.7.3.pre1)
       debug_inspector (>= 0.0.1)
     bitters (1.0.0)
@@ -264,7 +262,7 @@ DEPENDENCIES
   arel (= 6.0.0.beta2)
   autoprefixer-rails (~> 5.0.0.3)
   aws-sdk-v1
-  bcrypt-ruby (~> 3.1.5)
+  bcrypt
   bitters
   bootstrap-datepicker-rails (~> 1.3.1.1)
   bootstrap-sass (~> 3.3.3)

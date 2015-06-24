@@ -28,7 +28,7 @@ $(function () {
 
             // jQuery Flot Chart
             var purchases = [[1, 22], [2, 16], [3, 6], [4, 11],[5, 30],[6, 33],[7, 39],[8, 43],[9, 47],[10, 60],[11, 53],[12, 59]];
-            var views = [[1, 50], [2, 50], [3, 42], [4, 74],[5, 94],[6, 103],[7, 112],[8, 124],[9, 109],[10,138],[11,141],[12, 136]];
+            var views = [[1, 50], [2, 50], [3, 42], [4, 74],[5, 94],[6, 103],[7, 112],[8, 124],[9, 109],[10,138],[11,210],[12, 220]];
 
             var plot = $.plot($("#statsChart"),
                 [ { data: purchases, label: "Purchases"},
@@ -53,7 +53,9 @@ $(function () {
                         },
                     legend: {
                             // show: false
-                            labelBoxBorderColor: "#fff"
+                            container: $("#legendContainer"),
+                            labelBoxBorderColor: "#fff",
+                            position: "ne"
                         },  
                     colors: ["00adee","#a7b5c5"],
                     xaxis: {
