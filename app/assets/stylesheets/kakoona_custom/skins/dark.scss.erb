@@ -1,6 +1,6 @@
 //= depend_on_asset "bgs/back-orange.png"
 
-html .statix {
+html .dashboard {
 	background: transparent url('<%= asset_path("bgs/back-orange.png") %>') repeat-x 0 0;
 	min-height: 100%;
 	background-size: 100% 100%;
@@ -9,7 +9,7 @@ html .statix {
 		background-size: auto !important;
 	}
 }
-body .statix {
+body .dashboard {
 	background: none;
 
 	&.menu {
@@ -20,7 +20,7 @@ body .statix {
 		}
 	}
 }
-.navbar-inverse {
+.dashboard-nav {
 	background: #fff;
 	border: 1px solid transparent;
 	border-left: 1px solid #dae3e9;
@@ -30,6 +30,13 @@ body .statix {
 	.notification-dropdown .count {
 		background: rgb(252, 130, 123);
 	}
+}
+
+.login-nav  {
+	margin-left: 0px;
+	background: #00adee;
+	border: 1px solid transparent;
+	box-shadow: none;
 }
 
 

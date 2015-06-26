@@ -18,21 +18,19 @@
   resources :merchants
 
   resources :sessions, only: [:new, :create, :destroy]
-
-  #resources :avatar_grffks
   
+
+  root 'dashboard#home'
   
   get 'pspost', to: 's3#new'
 
-  get 'statix/home'
+  get 'dashboard/about'
 
-  get 'statix/about'
+  get 'dashboard/future'
 
-  get 'statix/future'
+  get 'dashboard/contact'
 
-  get 'statix/contact'
-
-  root 'statix#home'
+  
 
   match '/login',   to: 'sessions#new', via: :get
   match '/logout',  to: 'sessions#destroy', via: :delete
