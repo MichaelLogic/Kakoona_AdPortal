@@ -1,47 +1,147 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Kakoona Videos</h1>
+<%= render 'layouts/upper_main' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Ad campaign</th>
-      <th>Duration</th>
-      <th>Raw file name</th>
-      <th>Format type</th>
-      <th>File size</th>
-      <th>Vid views</th>
-      <th>Vid url</th>
-      <th>Genre</th>
-      <th>Vid description</th>
-      <th>Meta tags</th>
-      <th>Tender video thum</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div id="pad-wrapper" class="gallery">
+    <!-- gallery wrapper -->
+    <div class="gallery-wrapper">
+        <div class="row gallery-row">
+            <!-- new image button -->
+            <div class="col-md-4 new-img">
+                <a data-toggle="modal" href="#myModal">
+                    <%= image_tag "new-video-img.jpg", alt: "New Product", title: "Add New Product" , class: 'img-responsive' %>
+                </a>
+            </div>
 
-  <tbody>
-    <% @kakoona_videos.each do |kakoona_video| %>
-      <tr>
-        <td><%= kakoona_video.ad_campaign %></td>
-        <td><%= kakoona_video.duration %></td>
-        <td><%= kakoona_video.raw_file_name %></td>
-        <td><%= kakoona_video.format_type %></td>
-        <td><%= kakoona_video.file_size %></td>
-        <td><%= kakoona_video.vid_views %></td>
-        <td><%= kakoona_video.vid_url %></td>
-        <td><%= kakoona_video.genre %></td>
-        <td><%= kakoona_video.vid_description %></td>
-        <td><%= kakoona_video.meta_tags %></td>
-        <td><%= kakoona_video.tender_video_thum %></td>
-        <td><%= link_to 'Show', kakoona_video %></td>
-        <td><%= link_to 'Edit', edit_kakoona_video_path(kakoona_video) %></td>
-        <td><%= link_to 'Destroy', kakoona_video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+            <!-- single image -->
+            <div class="col-md-4 img-container">
+                <div class="img-box">
+                    <span class="icon edit">
+                        <a data-toggle="modal" href="#myModal"><i class="gallery-edit"></i></a>
+                    </span>
+                    <span class="icon trash">
+                        <i class="gallery-trash"></i>
+                    </span>
+                    <%= image_tag "thum-video-default.jpg", alt: "Demo Product 03", title: "Product Name" , class: 'img-responsive' %>
+                    <p class="title">
+                        Demo Video 01
+                    </p>
+                </div>
+            </div>
+            <!-- single image -->
+            <div class="col-md-4 img-container">
+                <div class="img-box">
+                    <span class="icon edit">
+                        <a data-toggle="modal" href="#myModal"><i class="gallery-edit"></i></a>
+                    </span>
+                    <span class="icon trash">
+                        <i class="gallery-trash"></i>
+                    </span>
+                    <%= image_tag "thum-video-default.jpg", alt: "Demo Product 02", title: "Product Name" , class: 'img-responsive' %>
+                    <p class="title">
+                        Demo Video 02 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row gallery-row">
+            <!-- single image -->
+            <div class="col-md-4 img-container">
+                <div class="img-box">
+                    <span class="icon edit">
+                        <a data-toggle="modal" href="#myModal"><i class="gallery-edit"></i></a>
+                    </span>
+                    <span class="icon trash">
+                        <i class="gallery-trash"></i>
+                    </span>
+                    <%= image_tag "thum-video-default.jpg", alt: "Demo Product 02", title: "Product Name" , class: 'img-responsive' %>
+                    <p class="title">
+                        Demo Video 03 
+                    </p>
+                </div>
+            </div>
+            <!-- single image -->
+            <div class="col-md-4 img-container">
+                <div class="img-box">
+                    <span class="icon edit">
+                        <a data-toggle="modal" href="#myModal"><i class="gallery-edit"></i></a>
+                    </span>
+                    <span class="icon trash">
+                        <i class="gallery-trash"></i>
+                    </span>
+                    <%= image_tag "thum-video-default.jpg", alt: "Demo Product 01", title: "Product Name" , class: 'img-responsive' %>
+                    <p class="title">
+                        Demo Video 04
+                    </p>
+                </div>
+            </div>
+            <!-- single image -->
+            <div class="col-md-4 img-container">
+                <div class="img-box">
+                    <span class="icon edit">
+                        <a data-toggle="modal" href="#myModal"><i class="gallery-edit"></i></a>
+                    </span>
+                    <span class="icon trash">
+                        <i class="gallery-trash"></i>
+                    </span>
+                    <%= image_tag "thum-video-default.jpg", alt: "Demo Product 01", title: "Product Name" , class: 'img-responsive' %>
+                    <p class="title">
+                        Demo Video 05
+                    </p>
+                </div>
+            </div>                    
+        </div>
+    </div>
+    <!-- end gallery wrapper -->
 
-<br>
+    <!-- blank state -->
+    <div class="no-gallery">
+        <div class="row header">
+            <div class="col-md-12">
+                <h3>Gallery Blank State</h3>
+            </div>
+        </div>
+        <div class="center">
+            <%= image_tag "no-img-gallery.png", alt: "no-gallery", title: "No Images" %>
 
-<%= link_to 'New Kakoona video', new_kakoona_video_path %>
+            <h6>You don't have any images</h6>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
+            <a data-toggle="modal" href="#myModal" class="btn-glow primary">ADD NEW PRODUCT</a>
+        </div>
+    </div>
+    <!-- end blank state -->
+    <%= link_to 'New Kakoona Video', new_kakoona_video_path %>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Add new image</h4>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="input1" class="col-lg-2 control-label">Image:</label>
+                    <div class="col-lg-10">
+                        <input type="file" id="input1" class="pull-left" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="input1" class="col-lg-2 control-label">Description:</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputPassword1" placeholder="Description">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+

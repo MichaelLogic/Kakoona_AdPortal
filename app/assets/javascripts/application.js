@@ -14,8 +14,9 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery-tmpl
-//= require bootstrap
-// require bootstrap-datepicker
+//= require moment
+//= require bootstrap-datetimepicker
+//= require bootstrap-sprockets
 //= require jquery-ui-1.10.2.custom.min
 //= require jquery.knob
 //= require select2
@@ -28,10 +29,12 @@
 //= require jquery.flot.stack
 //= require theme
 // require raphael
-// require morris
-// require moment
 // require fullcalendar
 // require fullcalendar/gcal
 //= require turbolinks
 
-//= require_tree .
+//= require fileupload
+//= require jquery.ui.widget
+//= require kakoona.ui
+//= require z.jquery.fileupload
+

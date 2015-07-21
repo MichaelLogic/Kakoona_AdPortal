@@ -1,12 +1,7 @@
 .user-profile {
 	.header {
-		.avatar{
-			float: left;
-			margin-right: 25px;
-			border: 2px solid #e9ecee;
-			position: relative;
-			top: 3px;
-		}
+		margin-bottom: 0px;
+
 		.name {
 			font-weight: 600;
 			margin: 20px 0 8px 0;
@@ -29,12 +24,12 @@
 	}
 	.profile {
 		.profile-box {
-			border-top: 1px solid #dde2e9;
 			padding-top: 23px;
 			width: 90%;
 		}
 		.section {
 			margin-bottom: 80px;
+			margin-top: 10px;
 
 			&.comment {
 				margin-bottom: 100px;

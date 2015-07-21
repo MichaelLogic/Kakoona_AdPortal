@@ -3,15 +3,11 @@
 
   resources :kakoona_videos
 
-  resources :kakoona_audios
-
   resources :campaign_preload_grffks
 
   resources :campaign_brand_grffks
 
   resources :ad_campaigns
-
-  resources :content_providers
 
   resources :merch_representatives
 
@@ -29,12 +25,14 @@
   get 'dashboard/future'
 
   get 'dashboard/contact'
-
   
 
   match '/login',   to: 'sessions#new', via: :get
   match '/logout',  to: 'sessions#destroy', via: :delete
   match '/signup',  to: 'merch_representatives#new', via: :get
+
+  match '/products-gallery',   to: 'products#index', via: :get
+  match '/videos-gallery',   to: 'kakoona_videos#index', via: :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

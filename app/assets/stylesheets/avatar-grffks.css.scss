@@ -10,3 +10,39 @@
   position: relative;
   bottom: 80px;
 }
+
+.campaign-brand {
+	//position: relative;
+	//display: block;
+	//margin: 0px auto;
+}
+
+.video-add {
+	background-color: #00adee;
+	min-width: 352px;
+	min-height: 200px;
+	line-height: 200px;
+
+	.glyphicon.glyphicon-upload {
+	    font-size: 75px;
+	    vertical-align: middle;
+    	display: inline-block;
+	}
+
+}
+
+.product-add {
+	background-color: #fff;
+	border: 2px solid #CCC;
+	min-width: 350px;
+	min-height: 350px;
+	line-height: 350px;
+
+	.glyphicon.glyphicon-camera {
+	    font-size: 75px;
+	    vertical-align: middle;
+    	display: inline-block;
+	}
+}
+
+

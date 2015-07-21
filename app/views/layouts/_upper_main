@@ -1,0 +1,21 @@
+<!-- upper main -->
+<div id="main-stats">
+    <div class="row stats-row">
+        <div class="col-md-6 col-sm-6 merch-subheader">
+            <div class="merch-thum">
+                <%= link_to image_tag("logo_hasbro.jpg", alt: "Hasbro", title: "Merchant Info"), "#" , class: 'img-responsive', id: 'merch-logo' %>
+            </div>
+            <span class="day">Sunday</span>
+            <span class="date">
+                February 22, 2015
+            </span>
+        </div>
+        <div class="col-md-6 col-sm-6 merch-subheader">
+            <div class="action-title">
+                <i class="fa fa-bullhorn fa-2x"></i>
+                <span class="action-subtitle"><%= action_name %> <%= controller_name %></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end upper main -->

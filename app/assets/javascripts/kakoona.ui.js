@@ -1,6 +1,7 @@
 $(function () {
 
             // jQuery Knobs
+            /*
             $(".knob").knob();
 
 
@@ -23,9 +24,10 @@ $(function () {
                 max: 500,
                 values: [ 40, 170 ],
             });
-
+            */
+        /***************  DASHBOARD  ************/
+        if($("html").hasClass("dashboard")){
             
-
             // jQuery Flot Chart
             var purchases = [[1, 22], [2, 16], [3, 6], [4, 11],[5, 30],[6, 33],[7, 39],[8, 43],[9, 47],[10, 60],[11, 53],[12, 59]];
             var views = [[1, 50], [2, 50], [3, 42], [4, 74],[5, 94],[6, 103],[7, 112],[8, 124],[9, 109],[10,138],[11,210],[12, 220]];
@@ -110,4 +112,30 @@ $(function () {
                     previousPoint = null;
                 }
             });
-        });
+        }
+        /***************  END OF DASHBOARD  ************/
+
+        /***************  AD CAMPAIGNS  ************/
+        if($("html").hasClass("ad_campaigns")){
+
+            var current = Date.now();
+
+            $('#start_datetimepicker').datetimepicker({
+                    defaultDate: moment(current).format("YYYY-MM-DDTHH:mm:ssZZ")
+                    
+                });
+
+            $('#end_datetimepicker').datetimepicker({
+                    defaultDate: moment(current).add(90, 'days').format("YYYY-MM-DDTHH:mm:ssZZ")
+            });
+            $("#start_datetimepicker").on("dp.change", function (e) {
+                $('#end_datetimepicker').data("DateTimePicker").minDate(e.date);
+            });
+            $("#end_datetimepicker").on("dp.change", function (e) {
+                $('#start_datetimepicker').data("DateTimePicker").maxDate(e.date);
+            });
+
+        }
+        /***************  END OF CAMPAIGNS  ************/
+
+    });

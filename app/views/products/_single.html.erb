@@ -1,0 +1,73 @@
+<div class="row head">
+    <div class="col-md-9">
+        <span class="section-title">Product</span>
+        <p>Create your product for this campaign.</p>
+    </div>
+    <div class="col-md-3 btn-add-campaign">
+        <%= link_to "+ Select From Product Gallery", new_ad_campaign_path, class:"btn-flat new-product" %>
+    </div>
+</div>
+<div class="row display-table">
+  <div class="col-md-3 col-xs-12 display-cell">
+    <div class="product-add text-center">
+      <span class="glyphicon glyphicon-camera"></span>
+    </div>
+  </div>
+  <div class="col-md-9 col-xs-12 display-cell">
+    <div class="row bottom10">
+      <div class="col-md-12 col-xs-12">
+        <input class="form-control" type="text" placeholder="Video Title">
+      </div>
+    </div>
+    <div class="row display-table bottom10">
+      <div class="col-md-12 col-xs-12 display-cell">
+          <%= prod.hidden_field :merchant_id, value: "99" %>
+          <%= prod.hidden_field :grffk_url, value: "na" %>
+          <% product_types = [['Simple Product', 1], ['Digital Product', 2], ['Configurable Product', 3], ['Event Tickets', 4],] %>
+          <%= prod.select(:product_type, options_for_select(product_types), {include_blank: "Select Product Type"}, {'data-toggle' => "select", required: "true", autofocus: "true", class: "kakoona-select"})%>
+      </div>
+    </div>
+     <div class="row display-table bottom10">
+      <div class="col-md-6 col-xs-12 display-cell">
+        <%= prod.label "Price" %>
+        <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <%= prod.text_field :price, class: "form-control", placeholder: '000.00' %>
+        </div>
+      </div>
+      <div class="col-md-6 col-xs-12 display-cell">
+        <%= prod.label "In Stock" %>
+        <div class="input-group">
+            <%= prod.text_field :in_stock, class: "form-control", placeholder: '0' %>
+            <span class="input-group-addon">count</span>
+        </div>
+      </div>
+    </div>
+    <div class="row bottom10">
+      <div class="col-md-12 col-xs-12">
+        <%= prod.label :description %>
+        <%= prod.text_area :description, rows: 5, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="row">
+      <h4 class="config-subtitle">Configurable Attributes</h4>
+      <%= link_to "+ More Fields", "#", class:"btn-add-fields" %>
+    </div>
+    <div class="row display-table bottom10">
+      <div class="col-md-5 col-xs-5 display-cell">
+        <span>attribute name:</span>
+        <input class="form-control" type="text">
+      </div>
+      <div class="col-md-6 col-xs-6 display-cell">
+        <span>values:</span>
+        <input class="form-control" type="text">
+      </div>
+      <div class="col-md-1 col-xs-1 display-cell">
+        <a class="btn-remove-attr" href="#" role="button">
+          <i class="fa fa-times fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,6 +1,7 @@
 //= depend_on_asset "bgs/back-orange.png"
 
-html .dashboard {
+html.dashboard, html.ad_campaigns, 
+html.products, html.kakoona_videos, html.merchants {
 	background: transparent url('<%= asset_path("bgs/back-orange.png") %>') repeat-x 0 0;
 	min-height: 100%;
 	background-size: 100% 100%;
@@ -9,7 +10,8 @@ html .dashboard {
 		background-size: auto !important;
 	}
 }
-body .dashboard {
+body.dashboard, body.ad_campaigns, 
+body.products, body.kakoona_videos, body.merchants {
 	background: none;
 
 	&.menu {

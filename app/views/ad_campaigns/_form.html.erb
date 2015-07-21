@@ -1,4 +1,4 @@
-<%= form_for(@ad_campaign) do |f| %>
+<%= form_for(@ad_campaign, multipart: true,) do |f| %>
   <% if @ad_campaign.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@ad_campaign.errors.count, "error") %> prohibited this ad_campaign from being saved:</h2>
@@ -11,47 +11,146 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :campaign_title %><br>
-    <%= f.text_field :campaign_title %>
+<div class="row">
+  <div class="col-md-8 col-sm-12">
+    <div class="form-group">  
+      <%= f.text_field :campaign_title, autofocus: true, placeholder: 'Your Campaign Title'  %>
+    </div>
+    <div class="form-group">
+      <span>Campaign Address: </span><span>https://www.kakoona.com/v1/campaigns/load_cocoon/38746837</span>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="form-group">
+          <%= f.label :start_date %><br>
+          <div class='input-group date' id='start_datetimepicker'>
+              <%= f.text_field :start_date, class: "form-control" %>
+              <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+          </div> 
+        </div> 
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="form-group">
+          <%= f.label :end_date %><br>
+          <div class='input-group date' id='end_datetimepicker'>
+              <%= f.text_field :end_date, class: "form-control" %>
+              <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+          </div> 
+        </div> 
+      </div>
+      <div class="col-md-12 col-sm-12">
+        <div class="form-group">
+          <%= f.text_field :merchant_info_url, placeholder: 'www.hasbro.com/new-hotness'  %>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :start_date %><br>
-    <%= f.datetime_select :start_date %>
+  <div class="col-md-4 col-sm-12 text-center">
+      <div class="campaign-brand">
+          <%= image_tag "default_uploadgrffk_btn.png", alt: "Upload Pad", title: "campaign brand logo" , class: 'img-responsive center-block', id: 'brand-grffk' %>
+      </div>
+      <p>Upload Your Brand Graphic</p>
   </div>
-  <div class="field">
-    <%= f.label :end_date %><br>
-    <%= f.datetime_select :end_date %>
+</div>
+<div class="separator"></div>
+<div class="row head">
+    <div class="col-md-9">
+        <span class="section-title">Campaign Video</span>
+        <p>Upload a Video and Select A Thumbnail.</p>
+    </div>
+    <div class="col-md-3 btn-add-campaign">
+        <%= link_to "+ Select From Video Gallery", new_ad_campaign_path, class:"btn-flat new-product" %>
+    </div>
+</div>
+<div class="row display-table">
+  <div class="col-md-3 col-xs-12 display-cell">
+    <div class="video-add text-center">
+      <span class="glyphicon glyphicon-upload"></span>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :slug %><br>
-    <%= f.text_field :slug %>
+  <div class="col-md-9 col-xs-12 display-cell">
+
+    <div class="row bottom10">
+      <div class="col-md-12 col-xs-12">
+        <input class="form-control" type="text" placeholder="Video Title">
+      </div>
+    </div>
+    <div class="row bottom10">
+      <div class="col-md-12 col-xs-12">
+        <label>Description of Video:</label>
+        <textarea class="form-control" rows="5"></textarea>
+      </div>
+    </div>
+
+    <!--- THUMBNAIL GENERATOR ---->
+    <div class="row display-table bottom5">
+      <div class="col-md-3 col-xs-6 display-cell">
+        <div class="campaign-thum">
+            <%= link_to image_tag("thum-campaign-default.jpg", alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-6 display-cell">
+        <div class="campaign-thum">
+            <%= link_to image_tag("thum-campaign-default.jpg", alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-6 display-cell">
+        <div class="campaign-thum">
+            <%= link_to image_tag("thum-campaign-default.jpg", alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-6 display-cell">
+        <div class="campaign-thum">
+            <%= link_to image_tag("thum-campaign-default.jpg", alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
+        </div>
+      </div>
+    </div>
+    <div class="row display-table">
+      <div class="col-md-3 col-xs-6 display-cell">
+        <div class="campaign-thum">
+            <%= link_to image_tag("thum-campaign-default.jpg", alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-6 display-cell">
+        <div class="campaign-thum">
+            <%= link_to image_tag("thum-campaign-default.jpg", alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-6 display-cell">
+        <div class="campaign-thum">
+            <%= link_to image_tag("thum-campaign-default.jpg", alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-6 display-cell">
+        <div class="campaign-thum">
+            <%= link_to image_tag("thum-campaign-default.jpg", alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :merchant_info_url %><br>
-    <%= f.text_field :merchant_info_url %>
+</div>
+<div class="row top5">
+  <div class="col-md-3 pull-right">
+    <%= link_to "OR Upload Custom Thumbnail", new_ad_campaign_path, class:"btn-flat btn-yellowlink pull-right" %>
   </div>
-  <div class="field">
-    <%= f.label :campaign_reach %><br>
-    <%= f.text_field :campaign_reach %>
-  </div>
-  <div class="field">
-    <%= f.label :campaign_plays %><br>
-    <%= f.number_field :campaign_plays %>
-  </div>
-  <div class="field">
-    <%= f.label :clickthru %><br>
-    <%= f.number_field :clickthru %>
-  </div>
-  <div class="field">
-    <%= f.label :campaign_price %><br>
-    <%= f.text_field :campaign_price %>
-  </div>
-  <div class="field">
-    <%= f.label :merchant_id %><br>
-    <%= f.text_field :merchant_id %>
-  </div>
+</div>
+
+<div class="separator"></div>
+<%= f.fields_for :product do |product_for_form| %>
+  <%= render 'products/single', prod: product_for_form %>
+<% end %>
+  
+
   <div class="actions">
-    <%= f.submit %>
+    <div class="form-buttons">
+      <div class="button">
+        <%= f.submit "Save", class: "kakoona-submit" %>
+      </div>
+    </div>
   </div>
+
 <% end %>

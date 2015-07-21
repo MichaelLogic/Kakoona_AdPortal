@@ -2,6 +2,7 @@
 @import "base/grid-settings";
 @import "neat";
 @import "base/base";
+@import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-overrides";
 
@@ -11,16 +12,21 @@
 @import "kakoona_custom/layout";
 @import "kakoona_custom/elements";
 @import "kakoona_custom/icons";
+@import "kakoona_custom/skins/dark";
+@import "kakoona_custom/fullbase";
+@import "kakoona_custom/gallery";
+@import "kakoona_custom/user-profile";
 
 @import "select2";
 @import "fullcalendar";
 @import "fullcalendar.print";
 @import "dashboard.scss";
-@import "kakoona_custom/skins/dark";
-
-//Conditionals
-@import "kakoona_custom/fullbase";
 
 //Components
 @import "refills/grid-items";
 @import "refills/progress-bar";
+
+@import 'bootstrap-datetimepicker';
+
+@import 'avatar-grffks';
+@import 'products';

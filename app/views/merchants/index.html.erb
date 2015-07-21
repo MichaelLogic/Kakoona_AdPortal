@@ -1,41 +1,143 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Merchants</h1>
+<%= render 'layouts/upper_main' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Merchant name</th>
-      <th>Merchant website</th>
-      <th>Business license</th>
-      <th>Chargeback email</th>
-      <th>Support email</th>
-      <th>Custom order init</th>
-      <th>Curr monthly sales</th>
-      <th>Registered since</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div id="pad-wrapper" class="user-profile">
+            <!-- header -->
+            <div class="row header">
+                <div class="col-md-8">
+                    <h3 class="name">Hasbro Inc.</h3>
+                </div>
+                <!--
+                <a class="btn-flat icon pull-right delete-user" data-toggle="tooltip" title="Delete user" data-placement="top">
+                    <i class="icon-trash"></i>
+                </a>
+                 <a class="btn-flat icon large pull-right edit">
+                    Edit this person
+                </a>
+                -->
+            </div>
 
-  <tbody>
-    <% @merchants.each do |merchant| %>
-      <tr>
-        <td><%= merchant.merchant_name %></td>
-        <td><%= merchant.merchant_website %></td>
-        <td><%= merchant.business_license %></td>
-        <td><%= merchant.chargeback_email %></td>
-        <td><%= merchant.support_email %></td>
-        <td><%= merchant.custom_order_init %></td>
-        <td><%= merchant.curr_monthly_sales %></td>
-        <td><%= merchant.registered_since %></td>
-        <td><%= link_to 'Show', merchant %></td>
-        <td><%= link_to 'Edit', edit_merchant_path(merchant) %></td>
-        <td><%= link_to 'Destroy', merchant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+            <div class="row profile">
+                <!-- bio, new note & orders column -->
+                <div class="col-md-9 bio">
+                    <div class="profile-box">
+                        <!-- biography -->
+                        <div class="col-md-12 section">
+                            <h6>Merchant Description</h6>
+                            <p>There are many variations of passages of Lorem Ipsum available but the majority have humour suffered alteration in believable some formhumour , by injected humour, or randomised words which don't look even slightly believable. </p>
+                            
+                            <div class="row bottom10 display-table">
+                              <div class="col-md-6 col-xs-12 display-cell">
+                                <strong>Website:</strong>  www.hasbro.com
+                              </div>
+                              <div class="col-md-6 col-xs-12 display-cell">
+                                <strong>Representatives:</strong>  12
+                              </div>
+                            </div>
+                            <div class="row bottom10 display-table">
+                              <div class="col-md-6 col-xs-12 display-cell">
+                                <strong>Chargeback Email:</strong>  refunds@hasbro.com
+                              </div>
+                              <div class="col-md-6 col-xs-12 display-cell">
+                                <strong>Support Email:</strong>  customerservice@hasbro.com
+                              </div>
+                            </div>
+                        </div>
 
-<br>
+                        <h6>Recent Orders</h6>
+                        <br>
+                        <!-- recent orders table -->
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="col-md-2">
+                                        Order ID
+                                    </th>
+                                    <th class="col-md-3">
+                                        <span class="line"></span>
+                                        Date
+                                    </th>
+                                    <th class="col-md-3">
+                                        <span class="line"></span>
+                                        Items
+                                    </th>
+                                    <th class="col-md-3">
+                                        <span class="line"></span>
+                                        Total amount
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- row -->
+                                <tr class="first">
+                                    <td>
+                                        <a href="#">#459</a>
+                                    </td>
+                                    <td>
+                                        Jan 03, 2013
+                                    </td>
+                                    <td>
+                                        3
+                                    </td>
+                                    <td>
+                                        $ 3,500.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">#510</a>
+                                    </td>
+                                    <td>
+                                        Feb 22, 2013
+                                    </td>
+                                    <td>
+                                        5
+                                    </td>
+                                    <td>
+                                        $ 800.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">#618</a>
+                                    </td>
+                                    <td>
+                                        Jan 03, 2013
+                                    </td>
+                                    <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        $ 3,499.99
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-<%= link_to 'New Merchant', new_merchant_path %>
+                        
+                    </div>
+                </div>
+
+                <!-- side address column -->
+                <div class="col-md-3 col-xs-12 address pull-right">
+                    <h6>Address</h6>
+                    <iframe width="300" height="150" scrolling="no" src="https://maps.google.com.mx/?ie=UTF8&amp;t=m&amp;ll=19.715081,-155.071421&amp;spn=0.010746,0.025749&amp;z=14&amp;output=embed"></iframe>
+                    <ul>
+                        <li>2301 East Lamar Blvd. Suite 140. </li>
+                        <li>City, Arlington. United States,</li>
+                        <li>Zip Code, TX 76006.</li>
+                        <li class="ico-li">
+                            <i class="ico-phone"></i>
+                            1817 274 2933
+                        </li>
+                         <li class="ico-li">
+                            <i class="ico-mail"></i>
+                            <a href="#">scotttiger@hasbro.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end main container -->
