@@ -3,9 +3,6 @@
         <span class="section-title">Product</span>
         <p>Create your product for this campaign.</p>
     </div>
-    <div class="col-md-3 btn-add-campaign">
-        <%= link_to "+ Select From Product Gallery", new_ad_campaign_path, class:"btn-flat new-product" %>
-    </div>
 </div>
 <div class="row display-table">
   <div class="col-md-3 col-xs-12 display-cell">
@@ -51,16 +48,16 @@
     </div>
     <div class="row">
       <h4 class="config-subtitle">Configurable Attributes</h4>
-      <%= link_to "+ More Fields", "#", class:"btn-add-fields" %>
+      <div class="col-md-3 col-xs-6">
+        <%= link_to "+ More Fields", "#", class:"btn-flat btn-add-fields" %>
+      </div>
     </div>
     <div class="row display-table bottom10">
       <div class="col-md-5 col-xs-5 display-cell">
-        <span>attribute name:</span>
-        <input class="form-control" type="text">
+        <input class="form-control" type="text" placeholder="attribute name">
       </div>
       <div class="col-md-6 col-xs-6 display-cell">
-        <span>values:</span>
-        <input class="form-control" type="text">
+        <input class="form-control" type="text" placeholder="values (ex: s,m,l,xl)">
       </div>
       <div class="col-md-1 col-xs-1 display-cell">
         <a class="btn-remove-attr" href="#" role="button">
