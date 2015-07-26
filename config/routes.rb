@@ -1,5 +1,7 @@
  KakoonaAdportal::Application.routes.draw do
   resources :products
+  get "/add_attribute", to: 'products#add_attribute', as: :add_attribute
+  get "/remove_attribute", to: 'products#remove_attribute', as: :remove_attribute
 
   resources :kakoona_videos
 

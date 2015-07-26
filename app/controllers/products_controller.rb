@@ -37,6 +37,18 @@ class ProductsController < ApplicationController
     end
   end
 
+  def add_attribute
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def remove_attribute
+    respond_to do |format|
+      format.js
+    end
+  end
+
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update

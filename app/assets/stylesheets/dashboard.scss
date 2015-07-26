@@ -96,6 +96,15 @@
 
 }
 
+.row-no-padding {
+  margin-left: 0;
+  margin-right: 0;
+  [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 5px !important;
+  }
+}
+
 .campaign-row {
 	border-bottom: 1px solid #e8e9ee;
 	padding-top: 10px;

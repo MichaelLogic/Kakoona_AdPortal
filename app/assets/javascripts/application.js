@@ -33,6 +33,7 @@
 // require fullcalendar/gcal
 //= require turbolinks
 
+//= require products
 //= require fileupload
 //= require jquery.ui.widget
 //= require kakoona.ui
