@@ -40,11 +40,25 @@ $(function() {
             location   = $(data.jqXHR.responseXML).find("Location").text();
 
             //populate hidden file fields for grffks
-            $("#merch_representative_avatar_grffk_attributes_name").val("merch_rep_avi");
-            $("#merch_representative_avatar_grffk_attributes_cloud_asset_url").val(location);
-            $("#merch_representative_avatar_grffk_attributes_description").val("cloud avatar");
+            field_id = fileInput.attr('id');
 
-            alert("Upload Complete to: " + location);
+            if(field_id == "merch_representative_avatar_grffk_attributes_grffk")
+            {
+              $("#merch_representative_avatar_grffk_attributes_cloud_asset_url").val(location);
+              alert("Merch Rep Avi Complete to: " + location);
+
+            }else if(field_id == "ad_campaign_campaign_brand_grffk_attributes_grffk"){
+              $("#ad_campaign_campaign_brand_grffk_attributes_cloud_asset_url").val(location);
+              alert("Campaign Graphic Complete to: " + location);
+
+            }else if(field_id == "ad_campaign_kakoona_video_attributes_movie"){
+              $("#ad_campaign_kakoona_video_attributes_cloud_asset_url").val(location);
+              alert("Campaign Video Complete to: " + location);
+
+            }else if(field_id == "ad_campaign_product_attributes_grffk"){
+              $("#ad_campaign_product_attributes_cloud_asset_url").val(location);
+              alert("Campaign Video Complete to: " + location);
+            }
 
           },
           fail: function(e, data) {

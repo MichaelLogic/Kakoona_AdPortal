@@ -6,11 +6,17 @@
 </div>
 <div class="row display-table">
   <div class="col-md-3 col-xs-12 display-cell">
-    <div class="product-add text-center">
-      <span class="glyphicon glyphicon-camera"></span>
-    </div>
+    <fieldset class: 'product_upload-fields' id: 'product_upload-fields'>
+      <%= prod.label :grffk, capture { %>
+        <div class="product-add text-center">
+          <span class="glyphicon glyphicon-camera"></span>
+        </div>
+      <% } %>
+      <%= prod.file_field :grffk, accept: 'image/png,image/gif,image/jpeg,image/jpg', class: "form-control" %>
+      <%= prod.hidden_field :cloud_asset_url, value: "upload" %>
+    </fieldset>
   </div>
-  <div class="col-md-9 col-xs-12 display-cell" id="product-detail-wrap">
+  <div class="col-md-9 col-xs-12 display-cell attributeContainer" id="product-detail-wrap">
 
 
     <div class="row bottom10">
@@ -20,10 +26,8 @@
     </div>
     <div class="row display-table bottom10">
       <div class="col-md-12 col-xs-12 display-cell">
-          <%= prod.hidden_field :merchant_id, value: "99" %>
-          <%= prod.hidden_field :grffk_url, value: "na" %>
-          <% product_types = [['Simple Product', 1], ['Digital Product', 2], ['Configurable Product', 3], ['Event Tickets', 4],] %>
-          <%= prod.select(:product_type, options_for_select(product_types), {include_blank: "Select Product Type"}, {'data-toggle' => "select", required: "true", autofocus: "true", class: "kakoona-select"})%>
+          <% product_types = [['Simple Product', 1], ['Digital Product', 2], ['Configurable Product', 3]] %>
+          <%= prod.select(:product_type, options_for_select(product_types, prod.object.product_type), {include_blank: false}, {'data-toggle' => "select", required: "true", autofocus: "true", class: "kakoona-select"})%>
       </div>
     </div>
      <div class="row display-table bottom10">
@@ -48,14 +52,15 @@
         <%= prod.text_area :description, rows: 5, class: 'form-control' %>
       </div>
     </div>
+    
     <div class="row">
       <h4 class="config-subtitle">Configurable Attributes</h4>
       <div class="col-md-3 col-xs-6">
-        <%= link_to "+ More Fields", add_attribute_path, class:"btn-flat btn-add-fields", remote: true %>
+        <%= link_to "+ More Fields", '#', class:"btn-flat btn-add-fields addAttribute" %>
       </div>
     </div>
     
-    <!--- First Config Attribute Fields -->
+    <!--- First Config Attribute Fields 
     <div class="row display-table bottom10 row-no-padding attr-fieldset">
       <div class="col-md-5 col-xs-5 display-cell">
         <input class="form-control" type="text" placeholder="attribute name">
@@ -71,7 +76,43 @@
         </div>
       </div>
     </div>
+    -->
+    <%= prod.fields_for :config_vars, @config_var do |d| %>
+          <% @config_var.try(:each) do |key, value| %>
+            <div class="row display-table bottom10 row-no-padding attr-fieldset">
+              <div class="col-md-5 col-xs-5 display-cell">
+                <%= text_field_tag key, key, :class => 'text_field dynamicAttributeName' %>
+              </div>
+              <div class="col-md-6 col-xs-6 display-cell">
+                <%= d.text_field key, :class => 'text_field', :value => value %>
+              </div>
+              <div class="col-md-1 col-xs-1">
+                <div class="btn-remove-attr">
+                  <a href="#" class="btn-remove-fields removeRow">
+                    <i class="fa fa-times fa-2x"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+      <% end %>
+    <%- end -%>
 
+    <!--- Attribute Template -->
+    <div class='row attributeTemplate display-table bottom10 row-no-padding attr-fieldset <%= 'hide' if @config_var.present? %>'>
+      <div class="col-md-5 col-xs-5 display-cell">
+        <input class='form-control text_field dynamicAttributeName' id='' name='' placeholder='New Attribute name' type='text' />
+      </div>
+      <div class="col-md-6 col-xs-6 display-cell">
+        <input class='form-control text_field' id='bar' name='' placeholder='values(ex: s,m,l,xl)'  type='text'  />
+      </div>
+      <div class="col-md-1 col-xs-1 display-cell">
+        <div class="btn-remove-attr">
+          <a href="#" class="btn-remove-fields removeRow">
+            <i class="fa fa-times fa-2x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
 
   </div>
 </div>

@@ -1,6 +1,13 @@
 class AdCampaignsController < ApplicationController
   before_action :set_ad_campaign, only: [:show, :edit, :update, :destroy]
 
+  before_action :signed_in_user,
+                only: [:edit, :update, :destroy]
+  before_action :correct_user,   only: [:edit, :update]
+  before_action :admin_user,     only: :destroy
+
+  #respond_to :json
+
   # GET /ad_campaigns
   # GET /ad_campaigns.json
   def index
@@ -10,11 +17,17 @@ class AdCampaignsController < ApplicationController
   # GET /ad_campaigns/1
   # GET /ad_campaigns/1.json
   def show
+    @ad_campaign = AdCampaign.find(params[:id])
+    render json: @ad_campaign
   end
 
   # GET /ad_campaigns/new
   def new
     @ad_campaign = AdCampaign.new
+    @ad_campaign.build_campaign_brand_grffk
+    @ad_campaign.build_campaign_preload_grffk
+    @ad_campaign.build_kakoona_video
+    @ad_campaign.build_product
   end
 
   # GET /ad_campaigns/1/edit
@@ -69,6 +82,10 @@ class AdCampaignsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ad_campaign_params
-      params.require(:ad_campaign).permit(:campaign_title, :start_date, :end_date, :slug, :merchant_info_url, :campaign_reach, :campaign_plays, :clickthru, :campaign_price, :merchant_id)
+      params.require(:ad_campaign).permit(:merch_representative_id, :campaign_title, :start_date, :end_date, :slug, :merchant_info_url, 
+                                          campaign_brand_grffk_attributes: [ :id, :grffk, :cloud_asset_url ],
+                                          campaign_preload_grffk_attributes: [ :id, :grffk, :cloud_asset_url ],
+                                          kakoona_video_attributes: [:id, :movie, :length, :title, :description, :cloud_asset_url, :selected_thum  ],
+                                          product_attributes: [:id, :product_type, :name, :price, :in_stock, :description, :grffk, :cloud_asset_url, :config_vars => []])
     end
 end

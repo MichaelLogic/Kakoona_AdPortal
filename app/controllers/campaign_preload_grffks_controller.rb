@@ -1,25 +1,5 @@
 class CampaignPreloadGrffksController < ApplicationController
-  before_action :set_campaign_preload_grffk, only: [:show, :edit, :update, :destroy]
-
-  # GET /campaign_preload_grffks
-  # GET /campaign_preload_grffks.json
-  def index
-    @campaign_preload_grffks = CampaignPreloadGrffk.all
-  end
-
-  # GET /campaign_preload_grffks/1
-  # GET /campaign_preload_grffks/1.json
-  def show
-  end
-
-  # GET /campaign_preload_grffks/new
-  def new
-    @campaign_preload_grffk = CampaignPreloadGrffk.new
-  end
-
-  # GET /campaign_preload_grffks/1/edit
-  def edit
-  end
+  #before_action :set_campaign_preload_grffk, only: [:show, :edit, :update, :destroy]
 
   # POST /campaign_preload_grffks
   # POST /campaign_preload_grffks.json
@@ -40,13 +20,14 @@ class CampaignPreloadGrffksController < ApplicationController
   # PATCH/PUT /campaign_preload_grffks/1
   # PATCH/PUT /campaign_preload_grffks/1.json
   def update
+    @ad_campaign = current_ad_campaign.find(params[:ad_campaign_id])
+    @preload_grffk = @ad_campaign.preload_brand_grffk.find(params[:id])
+
     respond_to do |format|
-      if @campaign_preload_grffk.update(campaign_preload_grffk_params)
-        format.html { redirect_to @campaign_preload_grffk, notice: 'Campaign preload grffk was successfully updated.' }
-        format.json { render :show, status: :ok, location: @campaign_preload_grffk }
+      if @preload_grffk.update(campaign_preload_grffk_params)
+        flash[:success]= 'Campaign brand grffk was successfully updated.'
       else
-        format.html { render :edit }
-        format.json { render json: @campaign_preload_grffk.errors, status: :unprocessable_entity }
+        flash[:error] = @preload_grffk.errors.full_messages[0] if @preload_grffk.errors.count > 0
       end
     end
   end
@@ -54,10 +35,13 @@ class CampaignPreloadGrffksController < ApplicationController
   # DELETE /campaign_preload_grffks/1
   # DELETE /campaign_preload_grffks/1.json
   def destroy
-    @campaign_preload_grffk.destroy
-    respond_to do |format|
-      format.html { redirect_to campaign_preload_grffks_url, notice: 'Campaign preload grffk was successfully destroyed.' }
-      format.json { head :no_content }
+    @ad_campaign = current_ad_campaign.find(params[:ad_campaign_id])
+    @preload_grffk = @ad_campaign.campaign_preload_grffk.find(params[:id])
+
+    if @preload_grffk.destroy
+        flash[:success]= 'Campaign Preload Graphic destroyed'
+    else
+      flash[:error] = @preload_grffk.errors.full_messages[0] if @preload_grffk.errors.count > 0
     end
   end
 
@@ -69,6 +53,6 @@ class CampaignPreloadGrffksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def campaign_preload_grffk_params
-      params.require(:campaign_preload_grffk).permit(:ad_campaign_id, :raw_file_name, :meta_description, :file_type, :grffk_url)
+      params.require(:campaign_preload_grffk).permit(:ad_campaign_id, :grffk, :cloud_asset_url )
     end
 end

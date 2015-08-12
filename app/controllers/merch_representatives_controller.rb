@@ -77,6 +77,6 @@ class MerchRepresentativesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def merch_representative_params
-      params.require(:merch_representative).permit(:merchant_id, :email, :screen_name, :first_name, :middle_name, :last_name, :phone, :team_role, :rep_about, :is_active, :auth_token, :last_session_time, :last_session_ip, :password, :password_confirmation, :admin, avatar_grffk_attributes: [ :id, :name, :description, :temp_file, :cloud_asset_url ])
+      params.require(:merch_representative).permit(:merchant_id, :email, :screen_name, :first_name, :middle_name, :last_name, :phone, :team_role, :rep_about, :is_active, :auth_token, :last_session_time, :last_session_ip, :password, :password_confirmation, :admin, avatar_grffk_attributes: [ :id, :grffk, :cloud_asset_url ])
     end
 end

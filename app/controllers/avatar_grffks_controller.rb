@@ -7,7 +7,7 @@ class AvatarGrffksController < ApplicationController
     if @avatar_grffk.save
       flash[:success]= 'File successfully uploaded'
     else
-      flash.now[:notice] = 'There was an error'
+      flash.now[:notice] = 'Error Occurred'
     end
 
   end
@@ -18,7 +18,7 @@ class AvatarGrffksController < ApplicationController
     
 
     if @avatar_grffk.update_attributes(params[:avatar_grffk])
-      flash[:success]= 'Avatar Graphic uploaded successfully'
+      flash[:success]= 'Avatar Graphic updated successfully'
     else
       flash[:error] = @avatar_grffk.errors.full_messages[0] if @avatar_grffk.errors.count > 0
     end
@@ -43,6 +43,6 @@ class AvatarGrffksController < ApplicationController
   end
 
   def avatar_grffk_params
-    params.require(:avatar_grffk).permit( :merch_representative_id, :name, :description, :temp_file, :cloud_asset_url )
+    params.require(:avatar_grffk).permit( :merch_representative_id, :grffk, :cloud_asset_url )
   end
 end

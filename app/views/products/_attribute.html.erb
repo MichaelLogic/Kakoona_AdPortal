@@ -1,9 +1,9 @@
 <div class="row display-table bottom10 row-no-padding attr-fieldset">
   <div class="col-md-5 col-xs-5 display-cell">
-    <input class="form-control" type="text" placeholder="attribute name">
+    <%= prod.text_field :attr, class: "form-control", placeholder: 'attribute name' %>
   </div>
   <div class="col-md-6 col-xs-6 display-cell">
-    <input class="form-control" type="text" placeholder="values (ex: s,m,l,xl)">
+    <%= prod.text_field :val, class: "form-control", placeholder: 'values(ex: s,m,l,xl)' %>
   </div>
   <div class="col-md-1 col-xs-1 display-cell">
     <div class="btn-remove-attr">

@@ -1,6 +1,7 @@
  KakoonaAdportal::Application.routes.draw do
   resources :products
   get "/add_attribute", to: 'products#add_attribute', as: :add_attribute
+  #get "/add_config", to: 'products#add_attribute', as: :add_attribute
 
   resources :kakoona_videos
 

@@ -1,0 +1,8 @@
+<fieldset class: 'brand_grffk_upload-fields' id: 'brand_grffk_upload-fields'>
+    <%= up.label :grffk, capture { %>
+	  <%= image_tag "default_uploadgrffk_btn.png", alt: "Upload Pad", title: "campaign brand logo" , class: 'img-responsive center-block', id: 'brand-grffk' %>
+	<% } %>
+	<%= up.file_field :grffk, accept: 'image/png,image/gif,image/jpeg,image/jpg' %>
+	<%= up.hidden_field :cloud_asset_url, value: "upload" %>
+</fieldset>
+

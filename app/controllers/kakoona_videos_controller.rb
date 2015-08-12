@@ -1,25 +1,5 @@
 class KakoonaVideosController < ApplicationController
-  before_action :set_kakoona_video, only: [:show, :edit, :update, :destroy]
-
-  # GET /kakoona_videos
-  # GET /kakoona_videos.json
-  def index
-    @kakoona_videos = KakoonaVideo.all
-  end
-
-  # GET /kakoona_videos/1
-  # GET /kakoona_videos/1.json
-  def show
-  end
-
-  # GET /kakoona_videos/new
-  def new
-    @kakoona_video = KakoonaVideo.new
-  end
-
-  # GET /kakoona_videos/1/edit
-  def edit
-  end
+  #before_action :set_kakoona_video, only: [:show, :edit, :update, :destroy]
 
   # POST /kakoona_videos
   # POST /kakoona_videos.json
@@ -28,11 +8,9 @@ class KakoonaVideosController < ApplicationController
 
     respond_to do |format|
       if @kakoona_video.save
-        format.html { redirect_to @kakoona_video, notice: 'Kakoona video was successfully created.' }
-        format.json { render :show, status: :created, location: @kakoona_video }
+        flash[:success]= 'Kakoona video was successfully created.'
       else
-        format.html { render :new }
-        format.json { render json: @kakoona_video.errors, status: :unprocessable_entity }
+        flash.now[:notice] = 'Error Occurred'
       end
     end
   end
@@ -40,13 +18,14 @@ class KakoonaVideosController < ApplicationController
   # PATCH/PUT /kakoona_videos/1
   # PATCH/PUT /kakoona_videos/1.json
   def update
+    @ad_campaign = current_ad_campaign.find(params[:ad_campaign_id])
+    @video = @ad_campaign.kakoona_video.find(params[:id])
+
     respond_to do |format|
-      if @kakoona_video.update(kakoona_video_params)
-        format.html { redirect_to @kakoona_video, notice: 'Kakoona video was successfully updated.' }
-        format.json { render :show, status: :ok, location: @kakoona_video }
+      if @video.update(campaign_preload_grffk_params)
+        flash[:success]= 'Kakoona Video was successfully updated.'
       else
-        format.html { render :edit }
-        format.json { render json: @kakoona_video.errors, status: :unprocessable_entity }
+        flash[:error] = @video.errors.full_messages[0] if @video.errors.count > 0
       end
     end
   end
@@ -54,10 +33,13 @@ class KakoonaVideosController < ApplicationController
   # DELETE /kakoona_videos/1
   # DELETE /kakoona_videos/1.json
   def destroy
-    @kakoona_video.destroy
-    respond_to do |format|
-      format.html { redirect_to kakoona_videos_url, notice: 'Kakoona video was successfully destroyed.' }
-      format.json { head :no_content }
+    @ad_campaign = current_ad_campaign.find(params[:ad_campaign_id])
+    @video = @ad_campaign.kakoona_video.find(params[:id])
+
+    if @video.destroy
+        flash[:success]= 'Kakoona Video destroyed'
+    else
+      flash[:error] = @video.errors.full_messages[0] if @video.errors.count > 0
     end
   end
 
@@ -69,6 +51,6 @@ class KakoonaVideosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def kakoona_video_params
-      params.require(:kakoona_video).permit(:ad_campaign_id, :duration, :raw_file_name, :format_type, :file_size, :vid_views, :vid_url, :genre, :vid_description, :meta_tags, :tender_video_thum_id)
+      params.require(:kakoona_video).permit(:ad_campaign_id, :movie, :length, :title, :description, :movie_views, :cloud_asset_url, :selected_thum )
     end
 end

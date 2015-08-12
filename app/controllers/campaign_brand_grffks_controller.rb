@@ -1,25 +1,5 @@
 class CampaignBrandGrffksController < ApplicationController
-  before_action :set_campaign_brand_grffk, only: [:show, :edit, :update, :destroy]
-
-  # GET /campaign_brand_grffks
-  # GET /campaign_brand_grffks.json
-  def index
-    @campaign_brand_grffks = CampaignBrandGrffk.all
-  end
-
-  # GET /campaign_brand_grffks/1
-  # GET /campaign_brand_grffks/1.json
-  def show
-  end
-
-  # GET /campaign_brand_grffks/new
-  def new
-    @campaign_brand_grffk = CampaignBrandGrffk.new
-  end
-
-  # GET /campaign_brand_grffks/1/edit
-  def edit
-  end
+  #before_action :set_campaign_brand_grffk, only: [:show, :edit, :update, :destroy]
 
   # POST /campaign_brand_grffks
   # POST /campaign_brand_grffks.json
@@ -40,13 +20,14 @@ class CampaignBrandGrffksController < ApplicationController
   # PATCH/PUT /campaign_brand_grffks/1
   # PATCH/PUT /campaign_brand_grffks/1.json
   def update
+    @ad_campaign = current_ad_campaign.find(params[:ad_campaign_id])
+    @brand_grffk = @ad_campaign.campaign_brand_grffk.find(params[:id])
+
     respond_to do |format|
-      if @campaign_brand_grffk.update(campaign_brand_grffk_params)
-        format.html { redirect_to @campaign_brand_grffk, notice: 'Campaign brand grffk was successfully updated.' }
-        format.json { render :show, status: :ok, location: @campaign_brand_grffk }
+      if @brand_grffk.update(campaign_brand_grffk_params)
+        flash[:success]= 'Campaign brand grffk was successfully updated.'
       else
-        format.html { render :edit }
-        format.json { render json: @campaign_brand_grffk.errors, status: :unprocessable_entity }
+        flash[:error] = @brand_grffk.errors.full_messages[0] if @brand_grffk.errors.count > 0
       end
     end
   end
@@ -54,10 +35,13 @@ class CampaignBrandGrffksController < ApplicationController
   # DELETE /campaign_brand_grffks/1
   # DELETE /campaign_brand_grffks/1.json
   def destroy
-    @campaign_brand_grffk.destroy
-    respond_to do |format|
-      format.html { redirect_to campaign_brand_grffks_url, notice: 'Campaign brand grffk was successfully destroyed.' }
-      format.json { head :no_content }
+    @ad_campaign = current_ad_campaign.find(params[:ad_campaign_id])
+    @brand_grffk = @ad_campaign.campaign_brand_grffk.find(params[:id])
+
+    if @brand_grffk.destroy
+        flash[:success]= 'Campaign Brand Graphic destroyed'
+    else
+      flash[:error] = @brand_grffk.errors.full_messages[0] if @brand_grffk.errors.count > 0
     end
   end
 
@@ -69,6 +53,6 @@ class CampaignBrandGrffksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def campaign_brand_grffk_params
-      params.require(:campaign_brand_grffk).permit(:ad_campaign_id, :raw_file_name, :meta_description, :file_type, :grffk_url)
+      params.require(:campaign_brand_grffk).permit(:ad_campaign_id, :grffk, :cloud_asset_url )
     end
 end

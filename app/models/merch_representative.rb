@@ -16,10 +16,13 @@ class MerchRepresentative < ActiveRecord::Base
   has_one :avatar_grffk, inverse_of: :merch_representative
   accepts_nested_attributes_for :avatar_grffk, allow_destroy: true
 
-  def avatar_for_form
-    avi = avatar_grffk.where(merch_representative_id: id)
-    avi.any? ? avi : avatar_grffk.build
-  end
+  #Ad Campaigns
+  has_many :ad_campaigns
+
+  #def avatar_for_form
+    #avi = avatar_grffk.where(merch_representative_id: id)
+    #avi.any? ? avi : avatar_grffk.build
+  #end
 
   def MerchRepresentative.new_remember_token
     SecureRandom.urlsafe_base64
