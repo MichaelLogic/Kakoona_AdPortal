@@ -5,7 +5,7 @@
     </div>
 </div>
 <div class="row display-table">
-  <div class="col-md-3 col-xs-12 display-cell">
+  <div class="col-md-3 col-xs-12 display-cell grffk-wrap">
     <fieldset class: 'product_upload-fields' id: 'product_upload-fields'>
       <%= prod.label :grffk, capture { %>
         <div class="product-add text-center">
@@ -21,7 +21,7 @@
 
     <div class="row bottom10">
       <div class="col-md-12 col-xs-12">
-        <input class="form-control" type="text" placeholder="Video Title">
+        <%= prod.text_field :name, class: "form-control", placeholder: 'Video Title' %>
       </div>
     </div>
     <div class="row display-table bottom10">

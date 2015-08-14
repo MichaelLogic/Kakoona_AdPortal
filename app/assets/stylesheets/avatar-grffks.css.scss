@@ -1,3 +1,12 @@
+.grffk-wrap input
+{
+    display: none;
+}
+
+.grffk-bottom30 {
+	margin-bottom: 30px;
+}
+
 .new_photo, .edit_photo {
   padding: 0 0 30px 0;
 
@@ -45,9 +54,5 @@
 	}
 }
 
-.brand_grffk_upload-fields > input
-{
-    display: none;
-}
 
 

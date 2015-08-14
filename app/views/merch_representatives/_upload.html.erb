@@ -1,4 +1,7 @@
-<fieldset class: 'upload-fields' id: 'upload-fields'>
+<fieldset class: 'avatar_grffk-fields' id: 'avatar_grffk-fields'>
+	<%= avi.label :grffk, capture { %>
+	  <%= image_tag "default_uploadgrffk_btn.png", alt: "Brand Graphic", title: "campaign brand logo" , class: 'img-responsive center-block', id:'avatar_prevu' %>
+	<% } %>
 	<%= avi.file_field :grffk, accept: 'image/png,image/gif,image/jpeg, image/jpg' %>
 	<%= avi.hidden_field :cloud_asset_url, value: "upload" %>
 </fieldset>

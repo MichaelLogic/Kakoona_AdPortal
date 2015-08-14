@@ -9,12 +9,17 @@
 			    <%= form_for(@merch_representative, multipart: true, html: { class: "direct-upload"}) do |f| %>
 			      <%= render 'sessions/error_messages', object: f.object %>
 
-				  <% sys_merchants = [['Abercrombie & Fitch', 1], ['American Eagle', 2], ['Bose', 3], ['Hasbro', 4],] %>
-			      <%= f.select(:merchant_id, options_for_select(sys_merchants), {include_blank: "Select Your Merchant"}, {'data-toggle' => "select", required: "true", autofocus: "true", class: "kakoona-select"})%>
+			     <div class="row display-table">
+					<div class="col-md-3 col-xs-12 display-cell text-center grffk-bottom30 grffk-wrap">
+					 <%= f.fields_for :avatar_grffk do |avatar_for_form| %>
+					 		<%= render 'upload', avi: avatar_for_form %>
+					 <% end %>
+					</div>
+				 </div>
+				 
 
-				 <%= f.fields_for :avatar_grffk do |avatar_for_form| %>
-				 		<%= render 'upload', avi: avatar_for_form %>
-				 <% end %>
+				 <% sys_merchants = [['Abercrombie & Fitch', 1], ['American Eagle', 2], ['Bose', 3], ['Hasbro', 4],] %>
+			      <%= f.select(:merchant_id, options_for_select(sys_merchants), {include_blank: "Select Your Merchant"}, {'data-toggle' => "select", required: "true", autofocus: "true", class: "kakoona-select"})%>
 
 			      <%= f.text_field :first_name, autofocus: true, placeholder: 'First Name' %>
 

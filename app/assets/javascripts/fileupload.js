@@ -4,6 +4,8 @@ $(function() {
 
       $('.direct-upload').find("input:file").each(function(i, elem) {
         var fileInput    = $(elem);
+        var uploadWrap = $(fileInput.parents('fieldset:first'));
+        var prevu = uploadWrap.find('label');
         var form         = $(fileInput.parents('form:first'));
         var submitButton = form.find('input[type="submit"]');
         var progressBar  = $("<div class='meter'></div>");
@@ -25,6 +27,7 @@ $(function() {
             progressBar.css('width', progress + '%')
           },
           start: function (e) {
+            barContainer.slideDown("normal");
             submitButton.prop('disabled', true);
             barContainer.css('display', 'block');
             progressBar.
@@ -45,19 +48,23 @@ $(function() {
             if(field_id == "merch_representative_avatar_grffk_attributes_grffk")
             {
               $("#merch_representative_avatar_grffk_attributes_cloud_asset_url").val(location);
-              alert("Merch Rep Avi Complete to: " + location);
+              $("#avatar_prevu").attr('src', location);
+              barContainer.slideUp("normal");
 
             }else if(field_id == "ad_campaign_campaign_brand_grffk_attributes_grffk"){
               $("#ad_campaign_campaign_brand_grffk_attributes_cloud_asset_url").val(location);
-              alert("Campaign Graphic Complete to: " + location);
+              $("#brand_prevu").attr('src', location);
+              barContainer.slideUp("normal");
 
             }else if(field_id == "ad_campaign_kakoona_video_attributes_movie"){
               $("#ad_campaign_kakoona_video_attributes_cloud_asset_url").val(location);
-              alert("Campaign Video Complete to: " + location);
+              prevu.html('<img alt="Kakoona Video" class="img-responsive center-block" id="video_prevu" src="' + location + '" title="video preview">')
+              barContainer.slideUp("normal");
 
             }else if(field_id == "ad_campaign_product_attributes_grffk"){
               $("#ad_campaign_product_attributes_cloud_asset_url").val(location);
-              alert("Campaign Video Complete to: " + location);
+              prevu.html('<img alt="Kakoona Video" class="img-responsive center-block" id="video_prevu" src="' + location + '" title="video preview">')
+              barContainer.slideUp("normal");
             }
 
           },
