@@ -21,7 +21,7 @@
 
     <div class="row bottom10">
       <div class="col-md-12 col-xs-12">
-        <%= prod.text_field :name, class: "form-control", placeholder: 'Video Title' %>
+        <%= prod.text_field :name, class: "form-control", placeholder: 'Product Name' %>
       </div>
     </div>
     <div class="row display-table bottom10">
@@ -77,14 +77,14 @@
       </div>
     </div>
     -->
-    <%= prod.fields_for :config_vars, @config_var do |d| %>
-          <% @config_var.try(:each) do |key, value| %>
+    <%= prod.fields_for :config_vars, @config_vars do |d| %>
+          <% @config_vars.try(:each) do |key, value| %>
             <div class="row display-table bottom10 row-no-padding attr-fieldset">
               <div class="col-md-5 col-xs-5 display-cell">
-                <%= text_field_tag key, key, :class => 'text_field dynamicAttributeName' %>
+                <%= text_field_tag key, key, class: 'text_field dynamicAttributeName' %>
               </div>
               <div class="col-md-6 col-xs-6 display-cell">
-                <%= d.text_field key, :class => 'text_field', :value => value %>
+                <%= d.text_field key, class: 'text_field', value: value %>
               </div>
               <div class="col-md-1 col-xs-1">
                 <div class="btn-remove-attr">
@@ -103,7 +103,7 @@
         <input class='form-control text_field dynamicAttributeName' id='' name='' placeholder='New Attribute name' type='text' />
       </div>
       <div class="col-md-6 col-xs-6 display-cell">
-        <input class='form-control text_field' id='bar' name='' placeholder='values(ex: s,m,l,xl)'  type='text'  />
+        <input class='form-control text_field' id='' name='' placeholder='values(ex: s,m,l,xl)'  type='text'  />
       </div>
       <div class="col-md-1 col-xs-1 display-cell">
         <div class="btn-remove-attr">

@@ -6,6 +6,9 @@ class Product < ActiveRecord::Base
   validates_attachment_content_type :grffk, :content_type => /\Aimage\/.*\Z/
 
   after_initialize :init
+
+  store_accessor :config_vars
+
  
   private
     def init

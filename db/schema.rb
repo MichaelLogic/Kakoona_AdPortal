@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20141217124941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pg_trgm"
   enable_extension "hstore"
 
   create_table "ad_campaigns", force: true do |t|

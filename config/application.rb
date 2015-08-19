@@ -28,7 +28,14 @@ module KakoonaAdportal
     # Don't load resources when precompiling
     config.assets.initialize_on_precompile = false
 
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif ad_campaigns.js dashboard.js)
+
+    config.filter_parameters += [:password]
+
+    # Enable escaping HTML in JSON.
+    config.active_support.escape_html_entities_in_json = true
+
+    #config.active_record.schema_format = :sql
 
   end
 end

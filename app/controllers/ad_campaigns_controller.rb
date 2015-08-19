@@ -82,10 +82,12 @@ class AdCampaignsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ad_campaign_params
+      nested_keys = params[:ad_campaign][:product_attributes].fetch(:config_vars).keys
+      logger.debug "AD CAMPAIGN Config Var Keys: #{nested_keys.inspect}"
       params.require(:ad_campaign).permit(:merch_representative_id, :campaign_title, :start_date, :end_date, :slug, :merchant_info_url, 
                                           campaign_brand_grffk_attributes: [ :id, :grffk, :cloud_asset_url ],
                                           campaign_preload_grffk_attributes: [ :id, :grffk, :cloud_asset_url ],
                                           kakoona_video_attributes: [:id, :movie, :length, :title, :description, :cloud_asset_url, :selected_thum  ],
-                                          product_attributes: [:id, :product_type, :name, :price, :in_stock, :description, :grffk, :cloud_asset_url, :config_vars => []])
+                                          product_attributes: [:id, :product_type, :name, :price, :in_stock, :description, :grffk, :cloud_asset_url, config_vars: [nested_keys]])
     end
 end

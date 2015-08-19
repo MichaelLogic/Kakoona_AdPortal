@@ -86,6 +86,7 @@ $(function () {
     e.stopPropagation();
     $("body").toggleClass("menu");
   });
+  
   $(window).resize(function() { 
     $(this).width() > 769 && $("body.menu").removeClass("menu")
   })

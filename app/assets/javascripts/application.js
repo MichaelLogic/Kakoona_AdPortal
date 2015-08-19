@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery.turbolinks
-//= require jquery_ujs
+// require jquery_ujs
 //= require jquery-tmpl
 //= require moment
 //= require bootstrap-datetimepicker
@@ -36,6 +36,7 @@
 //= require products
 //= require fileupload
 //= require jquery.ui.widget
-//= require kakoona.ui
-//= require z.jquery.fileupload
 
+// require ad_campaigns
+
+//= require z.jquery.fileupload

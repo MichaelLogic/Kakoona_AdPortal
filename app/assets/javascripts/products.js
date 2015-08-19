@@ -9,11 +9,16 @@ $(function () {
 
 	$('.attributeContainer').delegate('.dynamicAttributeName', 'keyup', function(event){
      nameElem  = $(this);
-     valueElem = nameElem.closest('.row').children('p').children('.text_field')
-     value     = nameElem.val().toLowerCase();
-     valueElem.attr('id',          'product_data_' + value       );
-     valueElem.attr('name',        'product[data][' + value + ']');
-     valueElem.attr('placeholder', 'value for ' + value          );
+     keyElem = nameElem.closest('.row').children('div:nth-child(1)').children('.text_field')
+     key     = nameElem.val().toLowerCase();
+     keyElem.attr('id',          'ad_campaign_product_attributes_config_vars_' + key       );
+     keyElem.attr('name',        'ad_campaign[product_attributes][config_vars][' + key + ']');
+     keyElem.attr('placeholder', 'New Attribute name');
+
+     valueElem = nameElem.closest('.row').children('div:nth-child(2)').children('.text_field')
+     valueElem.attr('id',          'ad_campaign_product_attributes_config_vars_' + key       );
+     valueElem.attr('name',        'ad_campaign[product_attributes][config_vars][' + key + ']');
+     valueElem.attr('placeholder', 'values(ex: s,m,l,xl)');
    })
 	
    $('.attributeContainer').delegate('.removeRow', 'click', function(e){
