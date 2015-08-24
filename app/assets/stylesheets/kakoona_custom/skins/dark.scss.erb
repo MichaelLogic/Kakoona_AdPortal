@@ -1,8 +1,9 @@
 //= depend_on_asset "bgs/back-orange.png"
 
 html.dashboard, html.ad_campaigns, 
-html.products, html.kakoona_videos, html.merchants {
-	background: transparent url('<%= asset_path("bgs/back-orange.png") %>') repeat-x 0 0;
+html.products, html.kakoona_videos, html.merchants, html.rep_show {
+	/* background: transparent url('<%= asset_path("bgs/back-orange.png") %>') repeat-x 0 0; */
+	background-color: black;
 	min-height: 100%;
 	background-size: 100% 100%;
 
@@ -10,18 +11,21 @@ html.products, html.kakoona_videos, html.merchants {
 		background-size: auto !important;
 	}
 }
-body.dashboard, body.ad_campaigns, 
-body.products, body.kakoona_videos, body.merchants {
-	background: none;
 
+body.dashboard, body.ad_campaigns, 
+body.products, body.kakoona_videos, body.merchants, body.rep_show {
+	background: none;
+	
 	&.menu {
 		#sidebar-nav {
-			background: transparent url('<%= asset_path("bgs/back-orange.png") %>') repeat-x 0 0;
+			/* background: transparent url('<%= asset_path("bgs/back-orange.png") %>') repeat-x 0 0; */
+			background-color: black;
 			background-size: 100% 100%;
 			box-shadow: none;
 		}
 	}
 }
+
 .dashboard-nav {
 	background: #fff;
 	border: 1px solid transparent;

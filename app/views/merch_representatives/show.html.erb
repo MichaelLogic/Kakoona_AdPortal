@@ -1,70 +1,105 @@
-<p id="notice"><%= notice %></p>
-<%= render 'avatar_grffk' %>
+<div id="pad-wrapper">
+  <div class="row">
+    
+    <!-- avatar column -->
+    <div class="col-md-3 col-md-offset-1 avatar-box">
+        <div class="personal-image">
+            <%= render 'avatar_grffk' %>
+            <p>Upload a different photo...</p>
+            <!--<input type="file" />-->
+        </div>
+    </div>
 
-<p>
-  <strong>Merchant:</strong>
-  <%= @merch_representative.merchant_id %>
-</p>
+    <!-- edit form column -->
+    <div class="col-md-7 personal-info">
+        <div class="alert alert-info">
+            <p id="notice">
+              <i class="fa fa-lightbulb"></i>
+              <%= notice %>
+            </p>
+        </div>
+        <h5 class="personal-title">Personal info</h5>
 
-<p>
-  <strong>Email:</strong>
-  <%= @merch_representative.email %>
-</p>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Screen Name:</label>
+                <div class="col-lg-8">
+                    <%= @merch_representative.screen_name %>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">First name:</label>
+                <div class="col-lg-8">
+                    <%= @merch_representative.first_name %>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Last name:</label>
+                <div class="col-lg-8">
+                    <%= @merch_representative.last_name %>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Merchant:</label>
+                <div class="col-lg-8">
+                    <%= @merch_representative.merchant_id %>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Email:</label>
+                <div class="col-lg-8">
+                    <%= @merch_representative.email %>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Time Zone:</label>
+                <div class="col-lg-8">
+                    <div class="ui-select">
+                        <select id="user_time_zone" name="user[time_zone]">
+                            <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                            <option value="Alaska">(GMT-09:00) Alaska</option>
+                            <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                            <option value="Arizona">(GMT-07:00) Arizona</option>
+                            <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                            <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
+                            <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                            <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Team Role:</label>
+                <div class="col-lg-8">
+                    <%= @merch_representative.team_role %>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Bio:</label>
+                <div class="col-lg-8">
+                    <p><%= @merch_representative.rep_about %></p>
+                </div>
+            </div>
+            <!--
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Password:</label>
+                <div class="col-lg-8">
+                    <input class="form-control" type="password" value="blablablabla" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Confirm password:</label>
+                <div class="col-lg-8">
+                    <input class="form-control" type="password" value="blablablabla" />
+                </div>
+            </div>-->
+            <div class="actions">
+                <%= link_to 'Edit', edit_merch_representative_path(@merch_representative) %> |
+                <%= link_to 'Back', merch_representatives_path %>
+            </div>
+        </form>
+    </div>
 
-<p>
-  <strong>Screen name:</strong>
-  <%= @merch_representative.screen_name %>
-</p>
+  </div>
 
-<p>
-  <strong>First name:</strong>
-  <%= @merch_representative.first_name %>
-</p>
-
-<p>
-  <strong>Middle name:</strong>
-  <%= @merch_representative.middle_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @merch_representative.last_name %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @merch_representative.phone %>
-</p>
-
-<p>
-  <strong>Team role:</strong>
-  <%= @merch_representative.team_role %>
-</p>
-
-<p>
-  <strong>Rep about:</strong>
-  <%= @merch_representative.rep_about %>
-</p>
-
-<p>
-  <strong>Is active:</strong>
-  <%= @merch_representative.is_active %>
-</p>
-
-<p>
-  <strong>Auth token:</strong>
-  <%= @merch_representative.auth_token %>
-</p>
-
-<p>
-  <strong>Last session time:</strong>
-  <%= @merch_representative.last_session_time %>
-</p>
-
-<p>
-  <strong>Last session ip:</strong>
-  <%= @merch_representative.last_session_ip %>
-</p>
-
-<%= link_to 'Edit', edit_merch_representative_path(@merch_representative) %> |
-<%= link_to 'Back', merch_representatives_path %>
+</div>

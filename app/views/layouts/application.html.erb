@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="<%= controller_name %>">
+<html class="<%= controller_name %> <%= action_name %> <% if controller_name == 'merch_representatives' && action_name == 'show' %> rep_show <% end %>">
 <head>
   <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -9,10 +9,16 @@
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
 </head>
-<body class="<%= controller_name %> <%= action_name %>">
+<body class="<%= controller_name %> <%= action_name %> <% if controller_name == 'merch_representatives' && action_name == 'show' %> rep_show <% end %>">
   <% if controller_name == 'sessions' || controller_name == 'merch_representatives'  %>
-    <%= render 'layouts/loginheader' %>
-    <div class="full-content">
+    <% if action_name == 'new' %>
+      <%= render 'layouts/loginheader' %>
+      <div class="full-content">
+    <% else %>
+      <%= render 'layouts/header' %>
+      <%= render 'layouts/sidebar' %>
+      <div class="content">
+    <% end %>
   <% else %>
   	<%= render 'layouts/header' %>
   	<%= render 'layouts/sidebar' %>

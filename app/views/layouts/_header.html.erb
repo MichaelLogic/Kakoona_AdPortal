@@ -103,7 +103,7 @@
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-                <li><a href="personal-info.html">Personal info</a></li>
+                <li><%= link_to "Rep Info", merch_representative_path(current_user.id) %></li>
                 <li><a href="#">Account settings</a></li>
                 <li><a href="#">Billing</a></li>
                 <!--<li><a href="#">Export your data</a></li>-->

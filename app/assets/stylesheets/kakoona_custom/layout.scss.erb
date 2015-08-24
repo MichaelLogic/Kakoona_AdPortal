@@ -80,7 +80,8 @@ input.search{
 		height: 27px;
 		width: 220px;
 		padding: 3px 6px;
-		background: url('<%= asset_path("lens.png") %>') #192c44 no-repeat 95%;
+		/* background: url('<%= asset_path("lens.png") %>') #192c44 no-repeat 95%; */
+		background-color: #000;
 		border: 1px solid #0f1217;
 		position: relative;
 		border-radius: 4px;
@@ -305,12 +306,12 @@ input.search{
 			display: block;
 			padding: 19px 14px 15px 14px;
 			margin-left: -10px;
-			margin-bottom: 10px;
+			margin-bottom: 50px;
 			border-bottom: 1px solid #dae1e8;
 			box-shadow: 0 2px 1px -1px #FFFFFF;
 			color: rgb(110, 130, 155);
 			outline: 0px;
-			line-height: 30px;
+			line-height: 50px;
 		}
 		> li {
 			position: relative;
@@ -319,7 +320,8 @@ input.search{
 				font-size: 30px;
 			}
 			i {
-				font-size: 30px;
+				margin-left: 10px;
+				font-size: 50px;
 				top: 17px;
 			}
 			&:hover i{
@@ -499,7 +501,7 @@ input.search{
 
 .content {
 	min-width: 400px;
-	min-height: 620px;
+	min-height: 800px;
 	margin-bottom: 0px;
 	padding-bottom: 50px;
 	overflow: hidden;

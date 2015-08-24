@@ -1,6 +1,3 @@
-<div class="avatar">
 <% if @merch_representative.avatar_grffk.cloud_asset_url.present? %>
-  <%= image_tag @merch_representative.avatar_grffk.cloud_asset_url %>
-  <div class="name"><%= @merch_representative.first_name %> </div>
+  <%= image_tag @merch_representative.avatar_grffk.cloud_asset_url, alt: "Merch Rep Avi", title: @merch_representative.screen_name , class: 'avatar img-circle img-responsive', id:'avatar_prevu' %>
 <% end %>
-</div>
