@@ -3,7 +3,7 @@ class KakoonaVideo < ActiveRecord::Base
 
   has_attached_file :movie, :styles => {
     :medium => { :geometry => "640x480", :format => 'mp4' },
-    :thumb => { :geometry => "100x100#", :format => 'jpg', :time => 10 }
+    :thumb_1 => { :geometry => "100x100#", :format => 'jpg', :time => 10 }
   }, :processors => [:transcoder]
-  validates_attachment_content_type :movie, :content_type => ["video/mp4", "video/m4v", "video/mpeg"]
+  validates_attachment_content_type :movie, :content_type => ["video/mp4", "video/m4v", "video/mpeg", "video/quicktime"]
 end

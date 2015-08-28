@@ -4,7 +4,7 @@ class MerchRepresentativesController < ApplicationController
   before_action :signed_in_user,
                 only: [:index, :edit, :update, :destroy, :following, :followers]
   before_action :correct_user,   only: [:edit, :update]
-  before_action :admin_user,     only: :destroy
+  before_action :admin_user,     only: [:index, :destroy]
 
   # GET /merch_representatives
   # GET /merch_representatives.json
@@ -78,5 +78,15 @@ class MerchRepresentativesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def merch_representative_params
       params.require(:merch_representative).permit(:merchant_id, :email, :screen_name, :first_name, :middle_name, :last_name, :phone, :team_role, :rep_about, :is_active, :auth_token, :last_session_time, :last_session_ip, :password, :password_confirmation, :admin, avatar_grffk_attributes: [ :id, :grffk, :cloud_asset_url ])
+    end
+
+    def correct_user
+      @user = MerchRepresentative.find(params[:id])
+      redirect_to(root_path) unless current_user?(@user)
+    end
+    
+    def admin_user
+      @user = MerchRepresentative.find(session[:merch_representative_id])
+      redirect_to(root_path) if !current_user.admin? || current_user?(@user)
     end
 end

@@ -1,6 +1,54 @@
 <h1>Editing Merch Representative</h1>
 
-<%= render 'form' %>
+<div class="row">
+	  <div class="span6 offset3">
+	  	<div class='formNewEntity'>
+	  		<div class='form-content'>
 
-<%= link_to 'Show', @merch_representative %> |
-<%= link_to 'Back', merch_representatives_path %>
+				<h1>Sign up</h1>
+			    <%= form_for(@merch_representative, multipart: true, html: { class: "direct-upload"}) do |f| %>
+			      <%= render 'sessions/error_messages', object: f.object %>
+
+			     <div class="row display-table">
+					<div class="col-md-3 col-xs-12 display-cell text-center grffk-bottom30 grffk-wrap">
+					 <%= f.fields_for :avatar_grffk do |avatar_for_form| %>
+					 		<%= render 'upload', avi: avatar_for_form %>
+					 <% end %>
+					</div>
+				 </div>
+				 
+
+				 <% sys_merchants = [['Abercrombie & Fitch', 1], ['American Eagle', 2], ['Bose', 3], ['Hasbro', 4],] %>
+			      <%= f.select(:merchant_id, options_for_select(sys_merchants), {include_blank: "Select Your Merchant"}, {'data-toggle' => "select", required: "true", autofocus: "true", class: "kakoona-select"})%>
+
+			      <%= f.text_field :first_name, autofocus: true, placeholder: 'First Name' %>
+
+			      <%= f.text_field :last_name, autofocus: true, placeholder: 'Last Name' %>
+
+			      <%= f.text_field :email, autofocus: true, placeholder: 'Email' %>
+
+			      <%= f.text_field :phone, autofocus: true, value: '312.555.5555', placeholder: 'Phone' %>
+
+			      <%= f.hidden_field :team_role, value: 'representative' %>
+			      <%= f.hidden_field :is_active, value: 1 %>
+
+			      <%= f.text_field :screen_name, autofocus: true, placeholder: 'ScreenName' %>
+
+			      <%= f.password_field :password, autofocus: true, placeholder: 'password' %>
+
+			      <%= f.password_field :password_confirmation, autofocus: true, placeholder: 'confirm password' %>
+
+			      <%= f.hidden_field :admin, value: 0 %>
+			      
+				  <div class="form-buttons">
+	                <div class="button">
+			      		<%= f.submit "Register", class: "kakoona-submit" %>
+			      	</div>
+			      	<%= link_to 'Cancel', merch_representative_path(current_user.id) %>
+			      </div>
+			    <% end %>
+
+			</div>
+		</div>
+	  </div>
+	</div>

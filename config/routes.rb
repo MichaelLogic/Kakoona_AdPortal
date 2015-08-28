@@ -1,7 +1,6 @@
  KakoonaAdportal::Application.routes.draw do
   resources :products
   get "/add_attribute", to: 'products#add_attribute', as: :add_attribute
-  #get "/add_config", to: 'products#add_attribute', as: :add_attribute
 
   resources :kakoona_videos
 
@@ -10,6 +9,7 @@
   resources :campaign_brand_grffks
 
   resources :ad_campaigns
+  match 'load_campaign/:id', to: 'ad_campaigns#load', via: :get
 
   resources :merch_representatives
 

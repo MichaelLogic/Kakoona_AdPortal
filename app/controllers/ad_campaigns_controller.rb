@@ -21,6 +21,15 @@ class AdCampaignsController < ApplicationController
     render json: @ad_campaign
   end
 
+  # GET /load_campaigns/1
+  # GET /load_campaigns/1.json
+  def load
+    @ad_campaign = AdCampaign.find(params[:id])
+    @ad_campaign.campaign_plays += 1
+    @ad_campaign.save
+    render json: @ad_campaign
+  end
+
   # GET /ad_campaigns/new
   def new
     @ad_campaign = AdCampaign.new

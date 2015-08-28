@@ -15,7 +15,7 @@
             <span class="glyphicon glyphicon-upload"></span>
           </div>
       <% } %>
-      <%= vid.file_field :movie, accept: 'application/ogg,video/ogg,audio/ogg,video/mpeg,video/mp4,audio/mpeg', class: "form-control" %>
+      <%= vid.file_field :movie, accept: 'application/ogg,video/ogg,audio/ogg,video/mpeg,video/mp4,audio/mpeg,video/quicktime', class: "form-control" %>
       <%= vid.hidden_field :cloud_asset_url, value: "upload" %>
     </fieldset>
   </div>
