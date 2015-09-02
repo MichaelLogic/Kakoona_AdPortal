@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141217124941) do
+ActiveRecord::Schema.define(version: 20150831011341) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20141217124941) do
     t.string   "cloud_asset_url"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.boolean  "grffk_processing"
   end
 
   add_index "avatar_grffks", ["merch_representative_id"], name: "index_avatar_grffks_on_merch_representative_id", using: :btree
@@ -88,6 +89,7 @@ ActiveRecord::Schema.define(version: 20141217124941) do
     t.string   "cloud_asset_url"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.boolean  "grffk_processing"
   end
 
   add_index "campaign_brand_grffks", ["ad_campaign_id", "created_at"], name: "index_campaign_brand_grffks_on_ad_campaign_id_and_created_at", using: :btree
@@ -102,6 +104,7 @@ ActiveRecord::Schema.define(version: 20141217124941) do
     t.string   "cloud_asset_url"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.boolean  "grffk_processing"
   end
 
   add_index "campaign_preload_grffks", ["ad_campaign_id", "created_at"], name: "index_campaign_preload_grffks_on_ad_campaign_id_and_created_at", using: :btree
@@ -124,6 +127,22 @@ ActiveRecord::Schema.define(version: 20141217124941) do
     t.datetime "updated_at",        null: false
   end
 
+  create_table "delayed_jobs", force: true do |t|
+    t.integer  "priority",   default: 0, null: false
+    t.integer  "attempts",   default: 0, null: false
+    t.text     "handler",                null: false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+
   create_table "kakoona_videos", force: true do |t|
     t.integer  "ad_campaign_id"
     t.string   "movie_file_name"
@@ -138,6 +157,7 @@ ActiveRecord::Schema.define(version: 20141217124941) do
     t.string   "selected_thum"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
+    t.boolean  "movie_processing"
   end
 
   add_index "kakoona_videos", ["ad_campaign_id", "created_at"], name: "index_kakoona_videos_on_ad_campaign_id_and_created_at", using: :btree

@@ -28,7 +28,7 @@ class MerchantsController < ApplicationController
 
     respond_to do |format|
       if @merchant.save
-        format.html { redirect_to @merchant, notice: 'Merchant was successfully created.' }
+        format.html { redirect_to @merchant, notice: 'Merchant was successfully created.'}
         format.json { render :show, status: :created, location: @merchant }
       else
         format.html { render :new }

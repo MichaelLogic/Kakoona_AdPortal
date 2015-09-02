@@ -35,7 +35,7 @@ class MerchRepresentativesController < ApplicationController
 
     respond_to do |format|
       if @merch_representative.save
-        format.html { redirect_to @merch_representative, notice: 'Merch representative was successfully created.' }
+        format.html { redirect_to login_path, notice: 'Merch representative was successfully created.  Now Sign in!' }
         format.json { render :show, status: :created, location: @merch_representative }
       else
         format.html { render :new }

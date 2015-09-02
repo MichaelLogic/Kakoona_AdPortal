@@ -106,6 +106,13 @@ GEM
     columnize (0.9.0)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
+    delayed_job (4.0.6)
+      activesupport (>= 3.0, < 5.0)
+    delayed_job_active_record (4.0.3)
+      activerecord (>= 3.0, < 5.0)
+      delayed_job (>= 3.0, < 4.1)
+    delayed_paperclip (2.9.1)
+      paperclip (>= 3.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     ethon (0.7.4)
@@ -292,6 +299,8 @@ DEPENDENCIES
   bourbon
   byebug (= 3.4.0)
   coffee-rails (= 4.0.1)
+  delayed_job_active_record
+  delayed_paperclip
   font-awesome-sass (~> 4.3.0)
   fullcalendar-rails (~> 2.2.5.1)
   gcal-ruby (~> 0.1.3)

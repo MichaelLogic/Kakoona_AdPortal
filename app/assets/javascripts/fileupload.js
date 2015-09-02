@@ -24,7 +24,7 @@ $(function() {
           replaceFileInput: false,
           progressall: function (e, data) {
             var progress = parseInt(data.loaded / data.total * 100, 10);
-            progressBar.css('width', progress + '%')
+            progressBar.css('width', progress + '%');
           },
           start: function (e) {
             barContainer.slideDown("normal");
@@ -32,7 +32,16 @@ $(function() {
             barContainer.css('display', 'block');
             progressBar.
               css('display', 'block').
-              css('width', '0%')
+              css('width', '0%');
+
+            //get File Input ID for loading alert
+            field_id = fileInput.attr('id');
+            if(field_id == "ad_campaign_kakoona_video_attributes_movie"){
+              $("#vid-upload-icon").removeClass('glyphicon-upload');
+              $("#vid-upload-icon").addClass('glyphicon-refresh glyphicon-spin');
+              $("#vid-upload-notice").html("Uploading ...");
+            }
+
           },
           done: function(e, data) {
             submitButton.prop('disabled', false);
@@ -58,7 +67,11 @@ $(function() {
 
             }else if(field_id == "ad_campaign_kakoona_video_attributes_movie"){
               $("#ad_campaign_kakoona_video_attributes_cloud_asset_url").val(location);
-              prevu.html('<img alt="Kakoona Video" class="img-responsive center-block" id="video_prevu" src="' + location + '" title="video preview">')
+              $("#vid-upload-icon").removeClass('glyphicon-refresh');
+              $("#vid-upload-icon").removeClass('glyphicon-spin');
+              $("#vid-upload-icon").addClass('glyphicon-film');
+              $("#vid-upload-notice").html("Upload Complete :: Ready for Transcoding");
+              //prevu.html('<img alt="Kakoona Video" class="img-responsive center-block" id="video_prevu" src="' + location + '" title="video preview">')
               barContainer.slideUp("normal");
 
             }else if(field_id == "ad_campaign_product_attributes_grffk"){

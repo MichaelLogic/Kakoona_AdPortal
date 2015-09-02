@@ -40,6 +40,8 @@ gem 'seed-fu',              '~> 2.3'
 gem 'aws-sdk-v1'
 gem "paperclip-ffmpeg"
 gem 'paperclip-av-transcoder'
+gem 'delayed_paperclip'
+gem 'delayed_job_active_record'
 
 gem 'bitters'
 gem 'bourbon'

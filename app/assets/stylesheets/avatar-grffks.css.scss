@@ -38,6 +38,25 @@
     	display: inline-block;
 	}
 
+	.glyphicon.glyphicon-spin {
+	    font-size: 75px;
+	    vertical-align: middle;
+    	display: inline-block;
+	}
+
+	.glyphicon.glyphicon-film {
+	    font-size: 75px;
+	    vertical-align: middle;
+    	display: inline-block;
+	}
+
+	.vid-upload-notice{
+		position: absolute;
+		display: block;
+		line-height: 75px;
+		margin-top: 10px;
+	}
+
 }
 
 .product-add {
@@ -52,6 +71,32 @@
 	    vertical-align: middle;
     	display: inline-block;
 	}
+}
+
+/* ---- Icon Spinnin ---- */
+.glyphicon-spin {
+    -webkit-animation: spin 1000ms infinite linear;
+    animation: spin 1000ms infinite linear;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
 }
 
 
