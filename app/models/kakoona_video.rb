@@ -9,6 +9,7 @@ class KakoonaVideo < ActiveRecord::Base
 
   validates_attachment_content_type :movie, :content_type => ["video/mp4", "video/m4v", "video/mpeg", "video/quicktime"]
 
-  #process_in_background :movie, processing_image_url: "/images/processing.gif"
+  process_in_background :movie, processing_image_url: "/images/processing.gif"
+
 
 end
