@@ -36,8 +36,8 @@ class MerchRepresentativesController < ApplicationController
     respond_to do |format|
       if @merch_representative.save
         logger.debug "Avatar PROCESSING?? #{@merch_representative.avatar_grffk.grffk_processing}"
-        Delayed::Worker.new.work_off
-        
+        #Delayed::Worker.new.work_off
+
         format.html { redirect_to login_path, notice: 'Merch representative was successfully created.  Now Sign in!' }
         format.json { render :show, status: :created, location: @merch_representative }
       else
