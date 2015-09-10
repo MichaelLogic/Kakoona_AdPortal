@@ -36,7 +36,6 @@ class MerchRepresentativesController < ApplicationController
     respond_to do |format|
       if @merch_representative.save
         logger.debug "Avatar PROCESSING?? #{@merch_representative.avatar_grffk.grffk_processing}"
-        #Delayed::Worker.new.work_off
 
         format.html { redirect_to login_path, notice: 'Merch representative was successfully created.  Now Sign in!' }
         format.json { render :show, status: :created, location: @merch_representative }
@@ -84,12 +83,13 @@ class MerchRepresentativesController < ApplicationController
     end
 
     def correct_user
-      @user = MerchRepresentative.find(params[:id])
+      @merch_representative = MerchRepresentative.find(params[:id])
       redirect_to(root_path) unless current_user?(@user)
     end
     
     def admin_user
-      @user = MerchRepresentative.find(session[:merch_representative_id])
+      @merch_representative = MerchRepresentative.find(session[:merch_representative_id])
       redirect_to(root_path) if !current_user.admin? || current_user?(@user)
     end
+
 end

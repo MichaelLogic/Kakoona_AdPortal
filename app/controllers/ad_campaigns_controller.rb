@@ -51,7 +51,7 @@ class AdCampaignsController < ApplicationController
     respond_to do |format|
       if @ad_campaign.save
         logger.debug "VIDEO PROCESSING?? #{@ad_campaign.kakoona_video.movie_processing}"
-        Delayed::Worker.new.work_off
+        #Delayed::Worker.new.work_off
 
         format.html { redirect_to @ad_campaign, notice: 'Ad campaign was successfully created.' }
         format.json { render :show, status: :created, location: @ad_campaign }

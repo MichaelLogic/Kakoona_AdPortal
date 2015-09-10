@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
+#DB
+gem 'pg',             '0.17.1'
+
 gem 'rails',                '4.2.0.beta2'
 gem 'autoprefixer-rails',   '~> 5.0.0.3'
 gem 'bootstrap-sass',       '~> 3.3.3'
@@ -52,7 +55,6 @@ gem 'active_model_serializers', '~> 0.9.3'
 
 
 group :development, :test do
-  gem 'pg',             '0.17.1'
   gem 'byebug',         '3.4.0'
   gem 'web-console',    '2.0.0.beta3'
   gem 'spring',         '1.1.3'
@@ -60,7 +62,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
   gem 'unicorn' # make sure you follow installation instructions for this gem
   gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'

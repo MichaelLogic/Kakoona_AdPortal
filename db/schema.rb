@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150831011341) do
+ActiveRecord::Schema.define(version: 20150910055554) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -149,7 +149,7 @@ ActiveRecord::Schema.define(version: 20150831011341) do
     t.string   "movie_content_type"
     t.integer  "movie_file_size"
     t.datetime "movie_updated_at"
-    t.integer  "length"
+    t.float    "length"
     t.string   "title"
     t.string   "description"
     t.integer  "movie_views",        default: 0, null: false

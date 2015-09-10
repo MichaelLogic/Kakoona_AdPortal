@@ -3,7 +3,7 @@ Paperclip::Storage::S3.class_eval do
     @queued_for_write.each do |style, file|
     retries = 0
       begin
-        log("saving #{path(style)}")
+        log("DECORATOR saving #{path(style)}")
         acl = @s3_permissions[style] || @s3_permissions[:default]
         acl = acl.call(self, style) if acl.respond_to?(:call)
         write_options = {
@@ -29,7 +29,7 @@ Paperclip::Storage::S3.class_eval do
         write_options[:metadata] = @s3_metadata unless @s3_metadata.empty?
         write_options.merge!(@s3_headers)
 
-        s3_object(style).write(file, write_options) unless style.to_s == "original" and @queued_for_write[:your_processed_style].present?
+        s3_object(style).write(file, write_options) unless style.to_s == "original"
       rescue AWS::S3::Errors::NoSuchBucket
         create_bucket
         retry
