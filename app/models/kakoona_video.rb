@@ -29,18 +29,32 @@ def self.finalize_and_cleanup(id)
     paperclip_file_path = vid.movie.path
     paperclip_no_slash = paperclip_file_path[1..-1]
 
-    cloud_asset_url_data = URI.parse(CGI.unescape(vid.cloud_asset_url))
-    cloud_asset_no_slash = cloud_asset_url_data.path[1..-1]
+    #Uploaded Asset Process ****
+    #Extracts raw filename 
+    #Creates unescaped URL with encode filename
+    upload_url = CGI.unescape(avi.cloud_asset_url)
+    file_name = upload_url.split("/").last
+    upload_info = upload_url.split("/")
+    upload_info.pop
+    full_upload_url = upload_info.join("/") + ("/") + URI.encode(file_name)
 
-    #obj = S3_BUCKET.objects[cloud_asset_url_data.path]
-    logger.debug "SOURCE PATH::  #{cloud_asset_no_slash}" 
+    #Uploaded Asset Process ****
+    #Convert URL to URI Object 
+    #replace URL-encoded filename with Raw filename
+    cloud_asset_url_data = URI.parse(full_upload_url)
+    cloud_asset_no_slash = cloud_asset_url_data.path[1..-1]
+    cloud_asset_info = cloud_asset_no_slash.split("/")
+    cloud_asset_info.pop
+    full_asset_path = cloud_asset_info.join("/") + ("/") + file_name
+
+    logger.debug "SOURCE PATH::  #{full_asset_path}" 
 
     logger.debug "PAPERCLIP PATH::  #{paperclip_no_slash}"
 
-    S3_BUCKET.objects[paperclip_no_slash].copy_from(cloud_asset_no_slash, {acl: 'public-read'})
+    S3_BUCKET.objects[paperclip_no_slash].copy_from(full_asset_path, {acl: 'public-read'})
     
     #Delete Direct Uploaded Temp Asset
-    #S3_BUCKET.objects[cloud_asset_no_slash].delete
+    #S3_BUCKET.objects[full_asset_path].delete
 
     #Save Selected Video Thumb
     vid.selected_thum = vid.movie.url(:thumb_small, timestamp: false)
