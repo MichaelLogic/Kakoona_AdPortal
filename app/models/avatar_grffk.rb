@@ -59,7 +59,7 @@ class AvatarGrffk < ActiveRecord::Base
 
   # Queue final file processing
   def queue_finalize_and_cleanup
-    AvatarGrffk.delay.finalize_and_cleanup(id)
+    AvatarGrffk.delay(queue: "grffk_process").finalize_and_cleanup(id)
   end
 
 end

@@ -73,7 +73,7 @@ def self.finalize_and_cleanup(id)
 
   # Queue final file processing
   def queue_finalize_and_cleanup
-    KakoonaVideo.delay.finalize_and_cleanup(id)
+    KakoonaVideo.delay(queue: "video_transcode").finalize_and_cleanup(id)
   end
 
 end

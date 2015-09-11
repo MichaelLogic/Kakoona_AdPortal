@@ -45,6 +45,7 @@ gem "paperclip-ffmpeg"
 gem 'paperclip-av-transcoder'
 gem 'delayed_paperclip'
 gem 'delayed_job_active_record'
+gem 'daemons'
 
 gem 'bitters'
 gem 'bourbon'
