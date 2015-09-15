@@ -7,9 +7,11 @@ class KakoonaVideo < ActiveRecord::Base
     :thum_small => { :geometry => "352x200#", :format => 'jpg', :time => 10 }
   }, :processors => [:transcoder]
 
-  validates_attachment_content_type :movie, :content_type => ["video/mp4", "video/m4v", "video/mpeg", "video/quicktime"]
+  validates_attachment_content_type :movie, :content_type => ["video/mp4", "video/m4v", "video/mpeg", "video/quicktime", /\Aimage\/.*\Z/]
 
   process_in_background :movie, processing_image_url: "/images/processing.gif"
+
+  before_post_process :skip_process
 
   before_create do
 	  file = movie.queued_for_write[:original].path
@@ -36,7 +38,7 @@ def self.finalize_and_cleanup(id)
     #Uploaded Asset Process ****
     #Extracts raw filename 
     #Creates unescaped URL with encode filename
-    upload_url = CGI.unescape(avi.cloud_asset_url)
+    upload_url = CGI.unescape(vid.cloud_asset_url)
     file_name = upload_url.split("/").last
     upload_info = upload_url.split("/")
     upload_info.pop
@@ -59,6 +61,8 @@ def self.finalize_and_cleanup(id)
     
     #Delete Direct Uploaded Temp Asset
     #S3_BUCKET.objects[full_asset_path].delete
+
+    vid.movie.reprocess!
 
     #Save Selected Video Thumb
     vid.selected_thum = vid.movie.url(:thumb_small, timestamp: false)
@@ -108,6 +112,10 @@ def self.finalize_and_cleanup(id)
         logger.debug "******** PERMANENT ASSET LOCATION VERIFIED ******** "
       end
     end
+  end
+
+  def skip_process
+    !self.movie_processing?
   end
 
 end
