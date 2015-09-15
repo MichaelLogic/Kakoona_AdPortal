@@ -9,6 +9,7 @@ class CampaignPreloadGrffk < ActiveRecord::Base
 
   after_create :queue_finalize_and_cleanup
 
+
   S3_BUCKET =  AWS::S3.new.buckets[ENV['S3_BUCKET']]
 
 
@@ -72,4 +73,20 @@ class CampaignPreloadGrffk < ActiveRecord::Base
   def queue_finalize_and_cleanup
     CampaignPreloadGrffk.delay(queue: "grffk_process").finalize_and_cleanup(id)
   end
+
+  def verify_asset_loc
+    logger.debug "****** VERIFYING PRELOAD GRAPHIC ASSET LOCATION ******* "
+
+    if self.grffk_processing == false
+      logger.debug "PRELOAD GRAPHIC HAS BEEN PROCESSED"
+      if self.cloud_asset_url != self.grffk.url(:converted, timestamp: false)
+        self.cloud_asset_url = self.grffk.url(:converted, timestamp: false)
+        self.save
+        logger.debug "******** NEW PRELOAD GRAPHIC ASSET LOCATIONS SAVED ******** "
+      else
+        logger.debug "******** PERMANENT PRELOAD GRAPHIC ASSET LOCATION VERIFIED ******** "
+      end
+    end
+  end
+
 end

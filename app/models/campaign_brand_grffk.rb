@@ -9,6 +9,8 @@ class CampaignBrandGrffk < ActiveRecord::Base
 
   after_create :queue_finalize_and_cleanup
 
+  after_find :verify_asset_loc
+
   S3_BUCKET =  AWS::S3.new.buckets[ENV['S3_BUCKET']]
 
 
@@ -71,6 +73,21 @@ class CampaignBrandGrffk < ActiveRecord::Base
   # Queue final file processing
   def queue_finalize_and_cleanup
     CampaignBrandGrffk.delay(queue: "grffk_process").finalize_and_cleanup(id)
+  end
+
+  def verify_asset_loc
+    logger.debug "****** VERIFYING ASSET LOCATION ******* "
+
+    if self.grffk_processing == false
+      logger.debug "BRAND GRAPHIC HAS BEEN PROCESSED"
+      if self.cloud_asset_url != self.grffk.url(:converted, timestamp: false)
+        self.cloud_asset_url = self.grffk.url(:converted, timestamp: false)
+        self.save
+        logger.debug "******** NEW ASSET LOCATIONS SAVED ******** "
+      else
+        logger.debug "******** PERMANENT ASSET LOCATION VERIFIED ******** "
+      end
+    end
   end
 
 end

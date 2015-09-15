@@ -13,6 +13,8 @@ class AvatarGrffk < ActiveRecord::Base
 
 	after_create :queue_finalize_and_cleanup
 
+  after_find :verify_asset_loc
+
 	S3_BUCKET =  AWS::S3.new.buckets[ENV['S3_BUCKET']]
 
 
@@ -75,6 +77,21 @@ class AvatarGrffk < ActiveRecord::Base
   # Queue final file processing
   def queue_finalize_and_cleanup
     AvatarGrffk.delay(queue: "grffk_process").finalize_and_cleanup(id)
+  end
+
+  def verify_asset_loc
+    logger.debug "****** VERIFYING AVATAR LOCATION ******* "
+
+    if self.grffk_processing == false
+      logger.debug "AVATAR HAS BEEN PROCESSED"
+      if self.cloud_asset_url != self.grffk.url(:converted, timestamp: false)
+        self.cloud_asset_url = self.grffk.url(:converted, timestamp: false)
+        self.save
+        logger.debug "******** NEW AVATAR LOCATIONS SAVED ******** "
+      else
+        logger.debug "******** PERMANENT AVATAR LOCATION VERIFIED ******** "
+      end
+    end
   end
 
 end
