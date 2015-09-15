@@ -79,8 +79,8 @@ class CampaignPreloadGrffk < ActiveRecord::Base
 
     if self.grffk_processing == false
       logger.debug "PRELOAD GRAPHIC HAS BEEN PROCESSED"
-      if self.cloud_asset_url != self.grffk.url(:converted, timestamp: false)
-        self.cloud_asset_url = self.grffk.url(:converted, timestamp: false)
+      if self.cloud_asset_url != self.grffk.url(:medium, timestamp: false)
+        self.cloud_asset_url = self.grffk.url(:medium, timestamp: false)
         self.save
         logger.debug "******** NEW PRELOAD GRAPHIC ASSET LOCATIONS SAVED ******** "
       else
