@@ -54,6 +54,9 @@ gem 'refills'
 
 gem 'active_model_serializers', '~> 0.9.3'
 
+gem "rack-timeout"
+gem 'newrelic_rpm', '~> 3.13.0.299'
+
 
 group :development, :test do
   gem 'byebug',         '3.4.0'
