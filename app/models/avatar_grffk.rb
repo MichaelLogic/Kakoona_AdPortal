@@ -78,7 +78,11 @@ class AvatarGrffk < ActiveRecord::Base
 
   # Queue final file processing
   def queue_finalize_and_cleanup
-    AvatarGrffk.delay(queue: "grffk_process").finalize_and_cleanup(id)
+    if self.cloud_asset_url == "upload"
+      logger.debug "******** DO NOT PROCESS. No Graphic Uploaded ******** "
+    else
+      AvatarGrffk.delay(queue: "grffk_process").finalize_and_cleanup(id)
+    end
   end
 
   def verify_asset_loc
