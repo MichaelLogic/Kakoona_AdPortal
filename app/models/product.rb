@@ -9,9 +9,15 @@ class Product < ActiveRecord::Base
 
   store_accessor :config_vars
 
+  process_in_background :grffk
+
+  before_post_process :skip_process
+
   before_create :set_grffk_attributes
 
   after_create :queue_finalize_and_cleanup
+
+  after_find :verify_asset_loc
 
   S3_BUCKET =  AWS::S3.new.buckets[ENV['S3_BUCKET']]
 
@@ -77,12 +83,31 @@ class Product < ActiveRecord::Base
     Product.delay(queue: "product_process").finalize_and_cleanup(id)
   end
 
- 
-  private
-    def init
-      if self.new_record? && self.product_type.nil?
-        self.product_type = 1
+  def verify_asset_loc
+    logger.debug "****** VERIFYING PRODUCT IMAGE LOCATION ******* "
+
+    if self.grffk_processing == false
+      logger.debug "PRODUCT IMAGE HAS BEEN PROCESSED"
+      if self.cloud_asset_url != self.grffk.url(:medium, timestamp: false)
+        self.cloud_asset_url = self.grffk.url(:medium, timestamp: false)
+        self.save
+        logger.debug "******** PRODUCT IMAGE LOCATIONS SAVED ******** "
+      else
+        logger.debug "******** PERMANENT PRODUCT IMAGE LOCATION VERIFIED ******** "
       end
     end
+  end
+
+  def skip_process
+    !self.grffk_processing?
+  end
+ 
+  private
+
+  def init
+    if self.new_record? && self.product_type.nil?
+      self.product_type = 1
+    end
+  end
 
 end

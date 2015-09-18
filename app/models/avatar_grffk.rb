@@ -7,7 +7,9 @@ class AvatarGrffk < ActiveRecord::Base
 				  :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
 	validates_attachment_content_type :grffk, :content_type => /\Aimage\/.*\Z/
 
-	process_in_background :grffk, processing_image_url: "/images/processing.gif"
+	process_in_background :grffk
+
+  before_post_process :skip_process
 
 	before_create :set_grffk_attributes
 
@@ -92,6 +94,10 @@ class AvatarGrffk < ActiveRecord::Base
         logger.debug "******** PERMANENT AVATAR LOCATION VERIFIED ******** "
       end
     end
+  end
+
+  def skip_process
+    !self.grffk_processing?
   end
 
 end

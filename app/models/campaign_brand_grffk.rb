@@ -5,6 +5,10 @@ class CampaignBrandGrffk < ActiveRecord::Base
   					:styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :grffk, :content_type => /\Aimage\/.*\Z/
 
+  process_in_background :grffk
+
+  before_post_process :skip_process
+
   before_create :set_grffk_attributes
 
   after_create :queue_finalize_and_cleanup
@@ -88,6 +92,10 @@ class CampaignBrandGrffk < ActiveRecord::Base
         logger.debug "******** PERMANENT ASSET LOCATION VERIFIED ******** "
       end
     end
+  end
+
+  def skip_process
+    !self.grffk_processing?
   end
 
 end

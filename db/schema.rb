@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150910055554) do
+ActiveRecord::Schema.define(version: 20150917234223) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -227,6 +227,7 @@ ActiveRecord::Schema.define(version: 20150910055554) do
     t.hstore   "config_vars"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
+    t.boolean  "grffk_processing"
   end
 
   add_index "products", ["ad_campaign_id", "created_at"], name: "index_products_on_ad_campaign_id_and_created_at", using: :btree
