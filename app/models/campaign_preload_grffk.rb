@@ -6,8 +6,6 @@ class CampaignPreloadGrffk < ActiveRecord::Base
   validates_attachment_content_type :grffk, :content_type => /\Aimage\/.*\Z/
 
   process_in_background :grffk
- 
-  before_post_process :skip_process
 
   before_create :set_grffk_attributes
 
@@ -48,10 +46,17 @@ class CampaignPreloadGrffk < ActiveRecord::Base
 
     logger.debug "PAPERCLIP PATH::  #{paperclip_no_slash}"
 
-    S3_BUCKET.objects[paperclip_no_slash].copy_from(full_asset_path, {acl: 'public-read'})
-    
+    #S3_BUCKET.objects[paperclip_no_slash].copy_from(full_asset_path, {acl: 'public-read'})
+
+    obj = S3_BUCKET.objects[full_asset_path]
+    file = Paperclip.io_adapters.for(obj.public_url)
+    preload_grffk.grffk = file
+    preload_grffk.grffk_content_type = Paperclip::ContentTypeDetector.new(file.path).detect
+
+    preload_grffk.save
+
+    #Delete Direct Uploaded Temp Asset
     #S3_BUCKET.objects[full_asset_path].delete
-    
   end
   
   protected
@@ -61,10 +66,30 @@ class CampaignPreloadGrffk < ActiveRecord::Base
   def set_grffk_attributes
     tries ||= 5
 
-    self.grffk_file_name      = grffk_file_name
-    self.grffk_file_size      = grffk_file_size
-    self.grffk_content_type   = grffk_content_type
-    self.grffk_updated_at    = Time.now
+      #Uploaded Asset Process ****
+      #Extracts raw filename 
+      #Creates unescaped URL with encode filename
+      upload_url = CGI.unescape(cloud_asset_url)
+      file_name = upload_url.split("/").last
+      upload_info = upload_url.split("/")
+      upload_info.pop
+      full_upload_url = upload_info.join("/") + ("/") + URI.encode(file_name)
+
+      #Uploaded Asset Process ****
+      #Convert URL to URI Object 
+      #replace URL-encoded filename with Raw filename
+      cloud_asset_url_data = URI.parse(full_upload_url)
+      cloud_asset_no_slash = cloud_asset_url_data.path[1..-1]
+      cloud_asset_info = cloud_asset_no_slash.split("/")
+      cloud_asset_info.pop
+      full_asset_path = cloud_asset_info.join("/") + ("/") + file_name
+
+      direct_upload_head = S3_BUCKET.objects[full_asset_path].head 
+
+      self.grffk_file_name      = file_name
+      self.grffk_file_size      = direct_upload_head.content_length
+      self.grffk_content_type   = direct_upload_head.content_type
+      self.grffk_updated_at     = direct_upload_head.last_modified
   rescue AWS::S3::Errors::NoSuchKey => e
     tries -= 1
     if tries > 0
@@ -93,10 +118,6 @@ class CampaignPreloadGrffk < ActiveRecord::Base
         logger.debug "******** PERMANENT PRELOAD GRAPHIC ASSET LOCATION VERIFIED ******** "
       end
     end
-  end
-
-  def skip_process
-    !self.grffk_processing?
   end
 
 end

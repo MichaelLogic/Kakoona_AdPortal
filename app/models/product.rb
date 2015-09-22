@@ -11,8 +11,6 @@ class Product < ActiveRecord::Base
 
   process_in_background :grffk
 
-  before_post_process :skip_process
-
   before_create :set_grffk_attributes
 
   after_create :queue_finalize_and_cleanup
@@ -51,63 +49,86 @@ class Product < ActiveRecord::Base
 
     logger.debug "PAPERCLIP PATH::  #{paperclip_no_slash}"
 
-    S3_BUCKET.objects[paperclip_no_slash].copy_from(full_asset_path, {acl: 'public-read'})
-    
+    #S3_BUCKET.objects[paperclip_no_slash].copy_from(full_asset_path, {acl: 'public-read'})
+
+    obj = S3_BUCKET.objects[full_asset_path]
+    file = Paperclip.io_adapters.for(obj.public_url)
+    product_grffk.grffk = file
+    product_grffk.grffk_content_type = Paperclip::ContentTypeDetector.new(file.path).detect
+
+    product_grffk.save
+
+    #Delete Direct Uploaded Temp Asset
     #S3_BUCKET.objects[full_asset_path].delete
-    
   end
   
   protected
   
-  # Optional: Set attachment attributes from the direct upload instead of original upload callback params
-  # @note Retry logic handles occasional S3 "eventual consistency" lag.
-  def set_grffk_attributes
-    tries ||= 5
+    # Optional: Set attachment attributes from the direct upload instead of original upload callback params
+    # @note Retry logic handles occasional S3 "eventual consistency" lag.
+    def set_grffk_attributes
+      tries ||= 5
 
-    self.grffk_file_name      = grffk_file_name
-    self.grffk_file_size      = grffk_file_size
-    self.grffk_content_type   = grffk_content_type
-    self.grffk_updated_at    = Time.now
-  rescue AWS::S3::Errors::NoSuchKey => e
-    tries -= 1
-    if tries > 0
-      sleep(3)
-      retry
-    else
-      raise e
-    end
-  end
+        #Uploaded Asset Process ****
+        #Extracts raw filename 
+        #Creates unescaped URL with encode filename
+        upload_url = CGI.unescape(cloud_asset_url)
+        file_name = upload_url.split("/").last
+        upload_info = upload_url.split("/")
+        upload_info.pop
+        full_upload_url = upload_info.join("/") + ("/") + URI.encode(file_name)
 
-  # Queue final file processing
-  def queue_finalize_and_cleanup
-    Product.delay(queue: "product_process").finalize_and_cleanup(id)
-  end
+        #Uploaded Asset Process ****
+        #Convert URL to URI Object 
+        #replace URL-encoded filename with Raw filename
+        cloud_asset_url_data = URI.parse(full_upload_url)
+        cloud_asset_no_slash = cloud_asset_url_data.path[1..-1]
+        cloud_asset_info = cloud_asset_no_slash.split("/")
+        cloud_asset_info.pop
+        full_asset_path = cloud_asset_info.join("/") + ("/") + file_name
 
-  def verify_asset_loc
-    logger.debug "****** VERIFYING PRODUCT IMAGE LOCATION ******* "
+        direct_upload_head = S3_BUCKET.objects[full_asset_path].head 
 
-    if self.grffk_processing == false
-      logger.debug "PRODUCT IMAGE HAS BEEN PROCESSED"
-      if self.cloud_asset_url != self.grffk.url(:medium, timestamp: false)
-        self.cloud_asset_url = self.grffk.url(:medium, timestamp: false)
-        self.save
-        logger.debug "******** PRODUCT IMAGE LOCATIONS SAVED ******** "
+        self.grffk_file_name      = file_name
+        self.grffk_file_size      = direct_upload_head.content_length
+        self.grffk_content_type   = direct_upload_head.content_type
+        self.grffk_updated_at     = direct_upload_head.last_modified
+    rescue AWS::S3::Errors::NoSuchKey => e
+      tries -= 1
+      if tries > 0
+        sleep(3)
+        retry
       else
-        logger.debug "******** PERMANENT PRODUCT IMAGE LOCATION VERIFIED ******** "
+        raise e
       end
     end
-  end
 
-  def skip_process
-    !self.grffk_processing?
-  end
+    # Queue final file processing
+    def queue_finalize_and_cleanup
+      Product.delay(queue: "product_process").finalize_and_cleanup(id)
+    end
+
+    def verify_asset_loc
+      logger.debug "****** VERIFYING PRODUCT IMAGE LOCATION ******* "
+
+      if self.grffk_processing == false
+        logger.debug "PRODUCT IMAGE HAS BEEN PROCESSED"
+        if self.cloud_asset_url != self.grffk.url(:medium, timestamp: false)
+          self.cloud_asset_url = self.grffk.url(:medium, timestamp: false)
+          self.save
+          logger.debug "******** PRODUCT IMAGE LOCATIONS SAVED ******** "
+        else
+          logger.debug "******** PERMANENT PRODUCT IMAGE LOCATION VERIFIED ******** "
+        end
+      end
+    end
  
   private
 
-  def init
-    if self.new_record? && self.product_type.nil?
-      self.product_type = 1
+    def init
+      if self.new_record? && self.product_type.nil?
+        self.product_type = 1
+      end
     end
-  end
 
 end

@@ -12,6 +12,7 @@ $(function() {
         var barContainer = $("<div class='progress-bar'></div>").append(progressBar);
         fileInput.after(barContainer);
         var location = "upload-loc";
+        var key;
 
         fileInput.fileupload({
           fileInput:       fileInput,
@@ -50,6 +51,10 @@ $(function() {
 
             // extract key and generate URL from response
             location   = $(data.jqXHR.responseXML).find("Location").text();
+            key   = $(data.jqXHR.responseXML).find("Key").text();
+            var fileNameIndex = key.lastIndexOf("/") + 1;
+            var filename = key.substr(fileNameIndex);
+            var input;
 
             //populate hidden file fields for grffks
             field_id = fileInput.attr('id');
@@ -59,11 +64,17 @@ $(function() {
               $("#merch_representative_avatar_grffk_attributes_cloud_asset_url").val(location);
               $("#avatar_prevu").attr('src', location);
               barContainer.slideUp("normal");
+              //Delete file from Input Field
+              input = $("#merch_representative_avatar_grffk_attributes_grffk");
+              input.replaceWith(input.val('').clone(true));
 
             }else if(field_id == "ad_campaign_campaign_brand_grffk_attributes_grffk"){
               $("#ad_campaign_campaign_brand_grffk_attributes_cloud_asset_url").val(location);
               $("#brand_prevu").attr('src', location);
               barContainer.slideUp("normal");
+              //Delete file from Input Field
+              input = $("#ad_campaign_campaign_brand_grffk_attributes_grffk");
+              input.replaceWith(input.val('').clone(true));
 
             }else if(field_id == "ad_campaign_kakoona_video_attributes_movie"){
               $("#ad_campaign_kakoona_video_attributes_cloud_asset_url").val(location);
@@ -71,13 +82,18 @@ $(function() {
               $("#vid-upload-icon").removeClass('glyphicon-spin');
               $("#vid-upload-icon").addClass('glyphicon-film');
               $("#vid-upload-notice").html("Upload Complete :: Ready for Transcoding");
-              //prevu.html('<img alt="Kakoona Video" class="img-responsive center-block" id="video_prevu" src="' + location + '" title="video preview">')
               barContainer.slideUp("normal");
+              //Delete file from Input Field
+              input = $("#ad_campaign_kakoona_video_attributes_movie");
+              input.replaceWith(input.val('').clone(true));
 
             }else if(field_id == "ad_campaign_product_attributes_grffk"){
               $("#ad_campaign_product_attributes_cloud_asset_url").val(location);
               prevu.html('<img alt="Kakoona Video" class="img-responsive center-block" id="video_prevu" src="' + location + '" title="video preview">')
               barContainer.slideUp("normal");
+              //Delete file from Input Field
+              input = $("#ad_campaign_campaign_brand_grffk_attributes_grffk");
+              input.replaceWith(input.val('').clone(true));
             }
 
           },

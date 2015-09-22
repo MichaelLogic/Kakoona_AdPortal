@@ -56,6 +56,7 @@ gem 'active_model_serializers', '~> 0.9.3'
 
 gem "rack-timeout"
 gem 'newrelic_rpm', '~> 3.13.0.299'
+gem 'unicorn' # make sure you follow installation instructions for this gem
 
 
 group :development, :test do
@@ -67,7 +68,6 @@ end
 
 group :production do
   gem 'rails_12factor', '0.0.2'
-  gem 'unicorn' # make sure you follow installation instructions for this gem
   gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
   gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 end
