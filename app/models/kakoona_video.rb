@@ -2,12 +2,12 @@ class KakoonaVideo < ActiveRecord::Base
   belongs_to :ad_campaign, inverse_of: :kakoona_video
 
   has_attached_file :movie, :styles => {
-    :converted => { :geometry => "950x540", :format => 'mp4' },
-    :thum_medium => { :geometry => "950x540#", :format => 'jpg', :time => 10 },
-    :thum_small => { :geometry => "352x200#", :format => 'jpg', :time => 10 }
+    :converted => { :geometry => "950x540", :format => :mp4 },
+    :thum_medium => { :geometry => "950x540#", :format => :jpg, :time => 10 },
+    :thum_small => { :geometry => "352x200#", :format => :jpg, :time => 10 }
   }, :processors => [:transcoder]
 
-  validates_attachment_content_type :movie, :content_type => ["video/mp4", "video/m4v", "video/mpeg", "video/quicktime", /\Aimage\/.*\Z/]
+  validates_attachment_content_type :movie, :content_type => ["video/mp4", "video/m4v", "video/mpeg", "video/quicktime"]
 
   process_in_background :movie, processing_image_url: "/images/processing.gif"
 
@@ -59,8 +59,8 @@ class KakoonaVideo < ActiveRecord::Base
     vid.length = Paperclip.run("ffprobe", '-i %s -show_entries format=duration -v quiet -of csv="p=0"' % vid.movie.queued_for_write[:original].path).to_f
 
     #Save Selected Video Thumb
-    vid.selected_thum = vid.movie.url(:thumb_small, timestamp: false)
-    logger.debug "VIDEO THUMBNAIL URL:: #{vid.movie.url(:thumb_small, timestamp: false)}"
+    vid.selected_thum = vid.movie.url(:thum_small, timestamp: false)
+    logger.debug "VIDEO THUMBNAIL URL:: #{vid.movie.url(:thum_small, timestamp: false)}"
 
 
     vid.save
@@ -124,7 +124,7 @@ class KakoonaVideo < ActiveRecord::Base
         logger.debug "VIDEO HAS BEEN PROCESSED"
         if self.cloud_asset_url != self.movie.url(:converted, timestamp: false)
           self.cloud_asset_url = self.movie.url(:converted, timestamp: false)
-          self.selected_thum = self.movie.url(:thumb_small, timestamp: false)
+          self.selected_thum = self.movie.url(:thum_small, timestamp: false)
           self.save
           logger.debug "******** NEW ASSET LOCATIONS SAVED ******** "
         else
