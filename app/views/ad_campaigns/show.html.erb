@@ -1,54 +1,62 @@
-<p id="notice"><%= notice %></p>
+<!-- Pad Wrapper -->
+<div id="pad-wrapper" class="show-ad-campaigns">
 
-<p>
-  <strong>Campaign title:</strong>
-  <%= @ad_campaign.campaign_title %>
-</p>
+  <!-- Content -->
+  <div class="row">                        
+    <div class="col-sm-12 col-centered text-center">
+      <h3><%= @ad_campaign.campaign_title %></h3>
 
-<p>
-  <strong>Start date:</strong>
-  <%= @ad_campaign.start_date %>
-</p>
+      <h4>http://www.kakoona.com/view/xxxx</h4>
+      
+      <% if @ad_campaign.kakoona_video.movie_processing? %>
+        <div class="grffk-wrap">
+          <%= image_tag("processing.gif", alt: "processing", title: @ad_campaign.campaign_title) %>
+        </div>
+        <p>
+          <strong>Status: </strong>PROCESSING
+        </p>
+      <% else %>
+        <div class="grffk-wrap">
+          <%= image_tag(@ad_campaign.kakoona_video.movie.url(:thum_medium), alt: "video screenshot", title: @ad_campaign.campaign_title) %>
+        </div> 
+        <p>
+          <strong>Status: </strong>ACTIVE
+        </p>
+      <% end %>
+     
+      <p>
+        <strong>Start date:</strong>
+        <%= date_for_display(@ad_campaign.start_date) %>
+      </p>
 
-<p>
-  <strong>End date:</strong>
-  <%= @ad_campaign.end_date %>
-</p>
+      <p>
+        <strong>End date:</strong>
+        <%= date_for_display(@ad_campaign.end_date) %>
+      </p>
+      <p>
+        <strong>Merchant Info URL:</strong>
+        <%= @ad_campaign.merchant_info_url %>
+      </p>
 
-<p>
-  <strong>Slug:</strong>
-  <%= @ad_campaign.slug %>
-</p>
+      <p>
+        <strong>Campaign plays:</strong>
+        <%= @ad_campaign.campaign_plays %>
+      </p>
 
-<p>
-  <strong>Merchant info url:</strong>
-  <%= @ad_campaign.merchant_info_url %>
-</p>
+      <p>
+        <strong>Click Interactions:</strong>
+        <%= @ad_campaign.clickthru %>
+      </p>
 
-<p>
-  <strong>Campaign reach:</strong>
-  <%= @ad_campaign.campaign_reach %>
-</p>
+      <p>
+        <strong>Created by:</strong>
+        <%= @ad_campaign.merch_representative.screen_name %> 
+      </p>
 
-<p>
-  <strong>Campaign plays:</strong>
-  <%= @ad_campaign.campaign_plays %>
-</p>
+      <%= link_to "EDIT", edit_ad_campaign_path(@ad_campaign), class:"btn-flat btn-pad-small" %>
 
-<p>
-  <strong>Clickthru:</strong>
-  <%= @ad_campaign.clickthru %>
-</p>
+    </div>
+  </div>
 
-<p>
-  <strong>Campaign price:</strong>
-  <%= @ad_campaign.campaign_price %>
-</p>
-
-<p>
-  <strong>Merchant:</strong>
-  <%= @ad_campaign.merch_representative_id %>
-</p>
-
-<%= link_to 'Edit', edit_ad_campaign_path(@ad_campaign) %> |
-<%= link_to 'Back', ad_campaigns_path %>
+</div>
+<!-- /Pad Wrapper -->

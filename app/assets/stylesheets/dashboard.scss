@@ -1,4 +1,5 @@
 /* Dashboard Stats screen */
+
 #main-stats {
 	background-color: #fdfdfd;
 	border-bottom: 1px solid #efeef3;
@@ -194,7 +195,7 @@
 /* Stats chart */
 #statsChart {
 	height: 250px;
-	margin-top: 65px;
+	margin-top: 60px;
 }
 
 #legendContainer, .legend table {
@@ -218,8 +219,8 @@
 }
 
 /* UI elements section */
-#pad-wrapper{
-	margin-top: 5px;
+#pad-wrapper.dashboard{
+	padding: 0px 50px 0px 50px;
 }
 
 #pad-wrapper .ui-elements {
@@ -325,6 +326,7 @@
 			padding: 4px 14px;
 		}
 	}
+	
 	.table {
 		tr.first td {
 			border-top: 0 none;

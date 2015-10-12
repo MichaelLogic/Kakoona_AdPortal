@@ -1,0 +1,5 @@
+
+en:
+  time:
+    formats:
+      full: '%B %-d, %Y @ %l:%M %p'

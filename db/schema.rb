@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150917234223) do
+ActiveRecord::Schema.define(version: 20150927200445) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -200,6 +200,27 @@ ActiveRecord::Schema.define(version: 20150917234223) do
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end
+
+  create_table "orders", force: true do |t|
+    t.integer  "ad_campaign_id"
+    t.string   "selected_product_model"
+    t.integer  "quantity"
+    t.float    "total_sale"
+    t.boolean  "shipping_needed",        default: true, null: false
+    t.string   "consumer_id"
+    t.string   "address_line01"
+    t.string   "address_line02"
+    t.string   "city"
+    t.string   "state_province"
+    t.string   "postal_code"
+    t.string   "country_region"
+    t.float    "lat"
+    t.float    "lng"
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+  end
+
+  add_index "orders", ["ad_campaign_id"], name: "index_orders_on_ad_campaign_id", using: :btree
 
   create_table "product_inventory", id: false, force: true do |t|
     t.integer  "ad_campaign_id"

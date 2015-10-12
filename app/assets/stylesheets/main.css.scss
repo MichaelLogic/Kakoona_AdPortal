@@ -6,7 +6,7 @@
 @import "bootstrap";
 @import "bootstrap-overrides";
 
-@import "jquery-ui-1.10.2.custom";
+//@import "jquery-ui-1.10.2.custom";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "kakoona_custom/layout";
@@ -17,11 +17,20 @@
 @import "kakoona_custom/gallery";
 @import "kakoona_custom/user-profile";
 @import "kakoona_custom/rep-info";
+@import "kakoona_custom/datatables";
+@import "jquery-ui/core";
+@import "jquery-ui/theme";
+//@import "kakoona_custom/demo_table_jui";
+@import "dataTables/jquery.dataTables";
+//@import "dataTables/src/demo_table_jui";
+//@import "kakoona_custom/jquery.dataTables";
+@import "dataTables/bootstrap/3/jquery.dataTables.bootstrap";
+//@import "dataTables/extras/dataTables.responsive";
 
 @import "select2";
 @import "fullcalendar";
 @import "fullcalendar.print";
-@import "dashboard.scss";
+@import "dashboard";
 
 //Components
 @import "refills/grid-items";
@@ -32,3 +41,4 @@
 @import 'avatar-grffks';
 @import 'products';
 @import 'videos';
+@import 'ad-campaigns';

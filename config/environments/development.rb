@@ -25,6 +25,9 @@ KakoonaAdportal::Application.configure do
   # Raise an error on page load if there are pending migrations
   config.active_record.migration_error = :page_load
 
+  # Do not compress assets
+  config.assets.compress = false
+
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
@@ -45,8 +48,8 @@ KakoonaAdportal::Application.configure do
 
   config.paperclip_defaults = {
     :storage => :s3,
+    :bucket => ENV['S3_BUCKET'],
     :s3_credentials => {
-      :bucket => ENV['S3_BUCKET'],
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     },

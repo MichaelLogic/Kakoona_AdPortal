@@ -1,4 +1,6 @@
  KakoonaAdportal::Application.routes.draw do
+  resources :orders
+
   resources :products
   get "/add_attribute", to: 'products#add_attribute', as: :add_attribute
 

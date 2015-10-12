@@ -16,6 +16,7 @@ gem 'arel', 				        '6.0.0.beta2'
 gem 'uglifier',             '2.5.3'
 gem 'coffee-rails',         '4.0.1'
 gem 'jquery-rails',         '3.1.2'
+gem 'jquery-ui-rails'
 
 gem 'jquery-tmpl-rails',    '~> 1.1.0'
 gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
@@ -54,9 +55,8 @@ gem 'refills'
 
 gem 'active_model_serializers', '~> 0.9.3'
 
-gem "rack-timeout"
-gem 'newrelic_rpm', '~> 3.13.0.299'
-gem 'unicorn' # make sure you follow installation instructions for this gem
+#gem "rack-timeout"
+#gem 'newrelic_rpm', '~> 3.13.0.299'
 
 
 group :development, :test do
@@ -67,6 +67,7 @@ group :development, :test do
 end
 
 group :production do
+  gem 'unicorn' # make sure you follow installation instructions for this gem
   gem 'rails_12factor', '0.0.2'
   gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
   gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'

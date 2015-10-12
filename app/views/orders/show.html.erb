@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ad campaign:</strong>
+  <%= @order.ad_campaign %>
+</p>
+
+<p>
+  <strong>Selected product model:</strong>
+  <%= @order.selected_product_model %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @order.quantity %>
+</p>
+
+<p>
+  <strong>Total sale:</strong>
+  <%= @order.total_sale %>
+</p>
+
+<p>
+  <strong>Shipping needed:</strong>
+  <%= @order.shipping_needed %>
+</p>
+
+<p>
+  <strong>Consumer:</strong>
+  <%= @order.consumer %>
+</p>
+
+<p>
+  <strong>Address line01:</strong>
+  <%= @order.address_line01 %>
+</p>
+
+<p>
+  <strong>Address line02:</strong>
+  <%= @order.address_line02 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @order.city %>
+</p>
+
+<p>
+  <strong>State province:</strong>
+  <%= @order.state_province %>
+</p>
+
+<p>
+  <strong>Postal code:</strong>
+  <%= @order.postal_code %>
+</p>
+
+<p>
+  <strong>Country region:</strong>
+  <%= @order.country_region %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @order.lat %>
+</p>
+
+<p>
+  <strong>Lng:</strong>
+  <%= @order.lng %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

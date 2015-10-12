@@ -13,11 +13,21 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require jquery-ui/core
+//= require jquery-ui/widget
+//= require jquery-ui/mouse
+//= require jquery-ui/draggable
+//= require jquery-ui/droppable
+//= require jquery-ui/resizable
+//= require jquery-ui/slider
+//= require dataTables/jquery.dataTables
+// require dataTables/extras/dataTables.responsive
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require jquery-tmpl
 //= require moment
 //= require bootstrap-datetimepicker
 //= require bootstrap-sprockets
-//= require jquery-ui-1.10.2.custom.min
+// require jquery-ui-1.10.2.custom.min
 //= require jquery.knob
 //= require select2
 // require ace/ace
@@ -35,8 +45,9 @@
 
 //= require products
 //= require fileupload
-//= require jquery.ui.widget
 
 // require ad_campaigns
+
+//= require orders
 
 //= require z.jquery.fileupload

@@ -18,28 +18,5 @@ class AdCampaign < ActiveRecord::Base
   accepts_nested_attributes_for :product, allow_destroy: true
 
 
-  def start_date=(date)
-     begin
-       parsed = Date.strptime(date,'%m/%d/%Y %I:%M %p')
-       super parsed
-     rescue
-       date         
-     end
-  end
-
-  def end_date=(date)
-     begin
-       parsed = Date.strptime(date,'%m/%d/%Y %I:%M %p')
-       super parsed
-     rescue
-       date         
-     end
-  end
-
-
-  #def avatar_for_form
-    #avi = avatar_grffk.where(merch_representative_id: id)
-    #avi.any? ? avi : avatar_grffk.build
-  #end
   
 end

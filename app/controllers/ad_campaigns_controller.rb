@@ -18,7 +18,9 @@ class AdCampaignsController < ApplicationController
   # GET /ad_campaigns/1.json
   def show
     @ad_campaign = AdCampaign.find(params[:id])
-    render json: @ad_campaign
+    #render json: @ad_campaign
+    #format.html { redirect_to @ad_campaign }
+    #format.json { render :show, status: :created, location: @ad_campaign }
   end
 
   # GET /load_campaigns/1
@@ -46,7 +48,7 @@ class AdCampaignsController < ApplicationController
   # POST /ad_campaigns
   # POST /ad_campaigns.json
   def create
-    @ad_campaign = AdCampaign.new(ad_campaign_params)
+    @ad_campaign = current_user.ad_campaigns.build(ad_campaign_params)
 
     respond_to do |format|
       if @ad_campaign.save
@@ -99,5 +101,10 @@ class AdCampaignsController < ApplicationController
                                           campaign_preload_grffk_attributes: [ :id, :grffk, :cloud_asset_url ],
                                           kakoona_video_attributes: [:id, :movie, :length, :title, :description, :cloud_asset_url, :selected_thum  ],
                                           product_attributes: [:id, :product_type, :name, :price, :in_stock, :description, :grffk, :cloud_asset_url, config_vars: [nested_keys]])
+    end
+
+    def correct_user
+      @ad_campaign = current_user.ad_campaigns.find_by(id: params[:id])
+      redirect_to root_url if @ad_campaign.nil?
     end
 end

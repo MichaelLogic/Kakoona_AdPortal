@@ -16,3 +16,5 @@ $("#start_datetimepicker").on("dp.change", function (e) {
 $("#end_datetimepicker").on("dp.change", function (e) {
     $('#start_datetimepicker').data("DateTimePicker").maxDate(e.date);
 });
+
+//alert("DATE VAL:  " + $('start_datetimepicker').val());

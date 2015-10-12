@@ -10,4 +10,9 @@ module ApplicationHelper
 		  "#{base_title} | #{page_title}"
 		end
 	end
+
+	def date_for_display(date)
+	    fsdate = (date == nil)? date :  I18n.l( DateTime.parse(date.localtime.to_s), format: :full)
+	end
+
 end

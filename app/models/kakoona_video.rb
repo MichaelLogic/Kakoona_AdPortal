@@ -2,7 +2,16 @@ class KakoonaVideo < ActiveRecord::Base
   belongs_to :ad_campaign, inverse_of: :kakoona_video
 
   has_attached_file :movie, :styles => {
-    :converted => { :geometry => "950x540", :format => :mp4 },
+    :converted => { :geometry => "950x540", :format => :mp4, 
+                    :convert_options => {
+                        :input => {},
+                        :output => {
+                          :vcodec => 'libx264',
+                          :movflags => '+faststart',
+                          :strict => :experimental
+                        }
+                      } 
+                    },
     :thum_medium => { :geometry => "950x540#", :format => :jpg, :time => 10 },
     :thum_small => { :geometry => "352x200#", :format => :jpg, :time => 10 }
   }, :processors => [:transcoder]
@@ -101,6 +110,8 @@ class KakoonaVideo < ActiveRecord::Base
       self.movie_file_size      = direct_upload_head.content_length
       self.movie_content_type   = direct_upload_head.content_type
       self.movie_updated_at     = direct_upload_head.last_modified
+
+      self.movie_processing = true;
 
     rescue AWS::S3::Errors::NoSuchKey => e
       tries -= 1
