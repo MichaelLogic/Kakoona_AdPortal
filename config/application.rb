@@ -28,7 +28,7 @@ module KakoonaAdportal
     # Don't load resources when precompiling
     config.assets.initialize_on_precompile = false
 
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif ad_campaigns.js dashboard.js)
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif dashboard.js)
 
     config.filter_parameters += [:password]
 

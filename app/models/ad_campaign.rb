@@ -17,6 +17,22 @@ class AdCampaign < ActiveRecord::Base
   has_one :product, inverse_of: :ad_campaign
   accepts_nested_attributes_for :product, allow_destroy: true
 
+  def start_date=(date)   
+    begin   
+      parsed = Date.strptime(date,'%m/%d/%Y %I:%M %p')    
+      super parsed    
+    rescue    
+      date            
+    end   
+  end    
 
+  def end_date=(date)    
+    begin   
+      parsed = Date.strptime(date,'%m/%d/%Y %I:%M %p')    
+      super parsed    
+    rescue    
+      date            
+    end   
+  end
   
 end

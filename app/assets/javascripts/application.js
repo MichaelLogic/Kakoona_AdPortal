@@ -46,7 +46,7 @@
 //= require products
 //= require fileupload
 
-// require ad_campaigns
+//= require ad_campaigns
 
 //= require orders
 
