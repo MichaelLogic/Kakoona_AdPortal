@@ -3,3 +3,4 @@ en:
   time:
     formats:
       full: '%B %-d, %Y @ %l:%M %p'
+      edit_mode: '%m/%d/%Y %I:%M %p'

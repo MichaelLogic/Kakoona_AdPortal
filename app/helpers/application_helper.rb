@@ -15,4 +15,8 @@ module ApplicationHelper
 	    fsdate = (date == nil)? date :  I18n.l( DateTime.parse(date.localtime.to_s), format: :full)
 	end
 
+	def date_for_edit(date)
+	    fsdate = (date == nil)? date :  I18n.l( DateTime.parse(date.localtime.to_s), format: :edit_mode)
+	end
+
 end

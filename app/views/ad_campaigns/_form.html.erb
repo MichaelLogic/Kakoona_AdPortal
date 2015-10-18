@@ -24,7 +24,7 @@
         <div class="form-group">
           <%= f.label :start_date %><br>
           <div class='input-group date' id='start_datetimepicker'>
-              <%= f.text_field :start_date, class: "form-control" %>
+              <%= f.text_field :start_date, class: "form-control", value: date_for_edit(@ad_campaign.start_date) %>
               <span class="input-group-addon">
                   <span class="glyphicon glyphicon-calendar"></span>
               </span>
@@ -35,7 +35,7 @@
         <div class="form-group">
           <%= f.label :end_date %><br>
           <div class='input-group date' id='end_datetimepicker'>
-              <%= f.text_field :end_date, class: "form-control" %>
+              <%= f.text_field :end_date, class: "form-control", value: date_for_edit(@ad_campaign.end_date) %>
               <span class="input-group-addon">
                   <span class="glyphicon glyphicon-calendar"></span>
               </span>
