@@ -16,6 +16,7 @@ class AdCampaign < ActiveRecord::Base
   #Nested Product
   has_one :product, inverse_of: :ad_campaign
   accepts_nested_attributes_for :product, allow_destroy: true
+  
 
   def start_date=(date)   
     begin   

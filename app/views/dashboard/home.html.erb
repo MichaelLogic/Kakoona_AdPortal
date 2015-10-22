@@ -66,201 +66,65 @@
         <div class="table-products section">
             <div class="row head">
                 <div class="col-md-10">
-                    <i class="fa fa-bullhorn fa-2x"></i><span class="campaigns-subtitle">Current Campaigns</span><span class="campaign-count">(3)</span>
+                    <i class="fa fa-bullhorn fa-2x"></i><span class="campaigns-subtitle">Current Campaigns</span><span class="campaign-count">(<%= @ad_campaigns.count %>)</span>
                 </div>
                 <div class="col-md-2 btn-add-campaign">
                     <%= link_to "+ Add A Campaign", new_ad_campaign_path, class:"btn-flat new-product" %>
                 </div>
             </div>
 
-            <!-- row -->
-            <div class="row campaign-row">
-                <div class="col-md-4 col-sm-4 campaign-inst">
-                    <div class="campaign-thum">
-                        <%= link_to image_tag("thum-campaign-default.jpg", alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
-                    </div>
-                    <span class="campaign-title">
-                        Winter Skate Promo 2015
-                    </span>
-                    <span class="day">
-                        <i class="fa fa-link"></i>
-                        <%= link_to "facebook.com/hasbro", "http://www.facebook.com/hasbro" %>
-                    </span>
-                </div>
-                <div class="col-md-2 col-sm-2 campaign-inst">
-                    <div class="campaign-stat">
-                        <i class="fa fa-play fa-2x"></i>
-                        <span class="stat-label">Total Streams</span>
-                        <span class="number">
-                            83,789
+            <% @ad_campaigns.each do |ad_campaign| %>
+
+                <!--  start row -->
+                <div class="row campaign-row">
+                    <div class="col-md-4 col-sm-4 campaign-inst">
+                        <div class="campaign-thum">
+                            <%= link_to image_tag(ad_campaign.kakoona_video.movie.url(:thum_medium), alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
+                        </div>
+                        <span class="campaign-title">
+                            <%= ad_campaign.campaign_title  %>
+                        </span>
+                        <span class="day">
+                            <i class="fa fa-link"></i>
+                            <%= link_to "View Details", ad_campaign_path(ad_campaign.id) %>
                         </span>
                     </div>
-                </div>
-                <div class="col-md-2 col-sm-2 campaign-inst">
-                    <div class="campaign-stat">
-                        <i class="fa fa-volume-up fa-2x"></i>
-                        <span class="stat-label">Total Clicks</span>
-                        <span class="number">
-                            81,534
-                        </span>
+                    <div class="col-md-2 col-sm-2 campaign-inst">
+                        <div class="campaign-stat">
+                            <i class="fa fa-play fa-2x"></i>
+                            <span class="stat-label">Total Streams</span>
+                            <span class="number">
+                                83,789
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 campaign-inst">
+                        <div class="campaign-stat">
+                            <i class="fa fa-volume-up fa-2x"></i>
+                            <span class="stat-label">Total Clicks</span>
+                            <span class="number">
+                                81,534
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 campaign-inst">
+                        <div class="campaign-stat">
+                            <i class="fa fa-money fa-2x"></i>
+                            <span class="stat-label">Total Purchases</span>
+                            <span class="number">
+                               2,677
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 campaign-inst">
+                        <div class="campaign-stat edit">
+                            <span class="number">Edit Product</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-2 campaign-inst">
-                    <div class="campaign-stat">
-                        <i class="fa fa-money fa-2x"></i>
-                        <span class="stat-label">Total Purchases</span>
-                        <span class="number">
-                           2,677
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-2 campaign-inst">
-                    <div class="campaign-stat edit">
-                        <span class="number">Edit Product</span>
-                    </div>
-                </div>
-            </div>
-            <!-- row -->
-            <div class="row campaign-row">
-                <div class="col-md-4 col-sm-4 campaign-inst">
-                    <div class="campaign-thum">
-                        <%= link_to image_tag("thum-campaign-default.jpg", alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
-                    </div>
-                    <span class="campaign-title">
-                        Winter Skate Promo 2015
-                    </span>
-                    <span class="day">
-                        <i class="fa fa-link"></i>
-                        <%= link_to "facebook.com/hasbro", "http://www.facebook.com/hasbro" %>
-                    </span>
-                </div>
-                <div class="col-md-2 col-sm-2 campaign-inst">
-                    <div class="campaign-stat">
-                        <i class="fa fa-play fa-2x"></i>
-                        <span class="stat-label">Total Streams</span>
-                        <span class="number">
-                            83,789
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-2 campaign-inst">
-                    <div class="campaign-stat">
-                        <i class="fa fa-volume-up fa-2x"></i>
-                        <span class="stat-label">Total Clicks</span>
-                        <span class="number">
-                            81,534
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-2 campaign-inst">
-                    <div class="campaign-stat">
-                        <i class="fa fa-money fa-2x"></i>
-                        <span class="stat-label">Total Purchases</span>
-                        <span class="number">
-                           2,677
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-2 campaign-inst">
-                    <div class="campaign-stat edit">
-                        <span class="number">Edit Product</span>
-                    </div>
-                </div>
-            </div>
-            <!-- row -->
-            <div class="row campaign-row">
-                <div class="col-md-4 col-sm-4 campaign-inst">
-                    <div class="campaign-thum">
-                        <%= link_to image_tag("thum-campaign-default.jpg", alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
-                    </div>
-                    <span class="campaign-title">
-                        Winter Skate Promo 2015
-                    </span>
-                    <span class="day">
-                        <i class="fa fa-link"></i>
-                        <%= link_to "facebook.com/hasbro", "http://www.facebook.com/hasbro" %>
-                    </span>
-                </div>
-                <div class="col-md-2 col-sm-2 campaign-inst">
-                    <div class="campaign-stat">
-                        <i class="fa fa-play fa-2x"></i>
-                        <span class="stat-label">Total Streams</span>
-                        <span class="number">
-                            83,789
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-2 campaign-inst">
-                    <div class="campaign-stat">
-                        <i class="fa fa-volume-up fa-2x"></i>
-                        <span class="stat-label">Total Clicks</span>
-                        <span class="number">
-                            81,534
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-2 campaign-inst">
-                    <div class="campaign-stat">
-                        <i class="fa fa-money fa-2x"></i>
-                        <span class="stat-label">Total Purchases</span>
-                        <span class="number">
-                           2,677
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-2 campaign-inst">
-                    <div class="campaign-stat edit">
-                        <span class="number">Edit Product</span>
-                    </div>
-                </div>
-            </div>
-            <!-- row -->
-            <div class="row campaign-row">
-                <div class="col-md-4 col-sm-4 campaign-inst">
-                    <div class="campaign-thum">
-                        <%= link_to image_tag("thum-campaign-default.jpg", alt: "Campaign", title: "Campaign Info"), "#" , class: 'img-responsive', id: 'campaign-thum-img' %>
-                    </div>
-                    <span class="campaign-title">
-                        Winter Skate Promo 2015
-                    </span>
-                    <span class="day">
-                        <i class="fa fa-link"></i>
-                        <%= link_to "facebook.com/hasbro", "http://www.facebook.com/hasbro" %>
-                    </span>
-                </div>
-                <div class="col-md-2 col-sm-2 campaign-inst">
-                    <div class="campaign-stat">
-                        <i class="fa fa-play fa-2x"></i>
-                        <span class="stat-label">Total Streams</span>
-                        <span class="number">
-                            83,789
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-2 campaign-inst">
-                    <div class="campaign-stat">
-                        <i class="fa fa-volume-up fa-2x"></i>
-                        <span class="stat-label">Total Clicks</span>
-                        <span class="number">
-                            81,534
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-2 campaign-inst">
-                    <div class="campaign-stat">
-                        <i class="fa fa-money fa-2x"></i>
-                        <span class="stat-label">Total Purchases</span>
-                        <span class="number">
-                           2,677
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-2 campaign-inst">
-                    <div class="campaign-stat edit">
-                        <span class="number">Edit Product</span>
-                    </div>
-                </div>
-            </div>
+                <!-- end row -->
+
+            <% end %>
 
 
 
