@@ -1,0 +1,25 @@
+<!-- Product Feature Object -->
+<div class="row display-table bottom10 row-no-padding dyno-fields">
+  <div class="col-md-5 col-xs-5 display-cell">
+    <%= ftr.text_field :ftr_name, class: "form-control text_field feature_name" %>
+    <%= ftr.hidden_field :_destroy %>
+  </div>
+  <div class="col-md-6 col-xs-6 display-cell">
+    <input type="text" class="text_field csv_values" placeholder="values(ex: s,m,l,xl)"/>
+  </div>
+  <div class="col-md-1 col-xs-1">
+    <div class="btn-remove-attr">
+      <%= link_to "<i class='fa fa-times fa-2x'></i>remove".html_safe, '#', class: "remove_fields" %>
+    </div>
+  </div>
+</div>
+<div class="row display-table bottom10 row-no-padding feature-value-fields">
+    <div class="col-md-12 col-xs-12 display-cell">
+      <%= ftr.fields_for :product_feature_values do |value| %>
+        <%= render 'products/product_feature_value_fields', val: value %>
+      <% end %>
+      <!-- Feature Value Regex -->
+      <%= feature_value_div ftr, :product_feature_values %>
+    </div>
+</div>
+<!-- End of Product Feature Object -->

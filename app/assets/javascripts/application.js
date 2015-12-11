@@ -41,7 +41,6 @@
 // require raphael
 // require fullcalendar
 // require fullcalendar/gcal
-//= require turbolinks
 
 //= require products
 //= require fileupload
@@ -49,5 +48,5 @@
 //= require ad_campaigns
 
 //= require orders
-
+//= require turbolinks
 //= require z.jquery.fileupload

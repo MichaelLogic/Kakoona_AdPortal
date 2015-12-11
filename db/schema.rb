@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150927200445) do
+ActiveRecord::Schema.define(version: 20151121005604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -222,6 +222,22 @@ ActiveRecord::Schema.define(version: 20150927200445) do
 
   add_index "orders", ["ad_campaign_id"], name: "index_orders_on_ad_campaign_id", using: :btree
 
+  create_table "product_feature_values", force: true do |t|
+    t.integer "product_feature_id"
+    t.string  "value",              null: false
+    t.string  "abbreviation"
+  end
+
+  add_index "product_feature_values", ["product_feature_id"], name: "index_product_feature_values_on_product_feature_id", using: :btree
+
+  create_table "product_features", force: true do |t|
+    t.integer "product_id"
+    t.string  "ftr_name"
+    t.string  "ftr_detail"
+  end
+
+  add_index "product_features", ["product_id"], name: "index_product_features_on_product_id", using: :btree
+
   create_table "product_inventory", id: false, force: true do |t|
     t.integer  "ad_campaign_id"
     t.integer  "product_id"
@@ -233,22 +249,62 @@ ActiveRecord::Schema.define(version: 20150927200445) do
   add_index "product_inventory", ["ad_campaign_id"], name: "index_product_inventory_on_ad_campaign_id", using: :btree
   add_index "product_inventory", ["product_id"], name: "index_product_inventory_on_product_id", using: :btree
 
+  create_table "product_sku_variants", force: true do |t|
+    t.integer  "product_id"
+    t.string   "sku",                                   null: false
+    t.text     "feature_set",              default: [],              array: true
+    t.text     "description"
+    t.float    "price"
+    t.integer  "in_stock"
+    t.string   "gal_grffk01_file_name"
+    t.string   "gal_grffk01_content_type"
+    t.integer  "gal_grffk01_file_size"
+    t.datetime "gal_grffk01_updated_at"
+    t.string   "cloud_asset01_url"
+    t.string   "gal_grffk02_file_name"
+    t.string   "gal_grffk02_content_type"
+    t.integer  "gal_grffk02_file_size"
+    t.datetime "gal_grffk02_updated_at"
+    t.string   "cloud_asset02_url"
+    t.string   "gal_grffk03_file_name"
+    t.string   "gal_grffk03_content_type"
+    t.integer  "gal_grffk03_file_size"
+    t.datetime "gal_grffk03_updated_at"
+    t.string   "cloud_asset03_url"
+    t.string   "gal_grffk04_file_name"
+    t.string   "gal_grffk04_content_type"
+    t.integer  "gal_grffk04_file_size"
+    t.datetime "gal_grffk04_updated_at"
+    t.string   "cloud_asset04_url"
+    t.string   "gal_grffk05_file_name"
+    t.string   "gal_grffk05_content_type"
+    t.integer  "gal_grffk05_file_size"
+    t.datetime "gal_grffk05_updated_at"
+    t.string   "cloud_asset05_url"
+    t.string   "gal_grffk06_file_name"
+    t.string   "gal_grffk06_content_type"
+    t.integer  "gal_grffk06_file_size"
+    t.datetime "gal_grffk06_updated_at"
+    t.string   "cloud_asset06_url"
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+  end
+
+  add_index "product_sku_variants", ["product_id"], name: "index_product_sku_variants_on_product_id", using: :btree
+
   create_table "products", force: true do |t|
     t.integer  "ad_campaign_id"
-    t.string   "product_type"
+    t.integer  "product_type"
     t.string   "grffk_file_name"
     t.string   "grffk_content_type"
     t.integer  "grffk_file_size"
     t.datetime "grffk_updated_at"
     t.string   "cloud_asset_url"
     t.string   "name"
-    t.float    "price"
-    t.integer  "in_stock",           default: 0, null: false
-    t.string   "description"
-    t.hstore   "config_vars"
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.boolean  "grffk_processing"
+    t.string   "download_url"
   end
 
   add_index "products", ["ad_campaign_id", "created_at"], name: "index_products_on_ad_campaign_id_and_created_at", using: :btree

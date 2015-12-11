@@ -1,0 +1,17 @@
+<!-- Digital Product Toggled Object -->
+<div class="row display-table bottom10 digital-product toggle-obj">
+  <div class="col-md-12 col-xs-12 display-cell grffk-wrap">
+      <fieldset>
+        <%= prod.label :download_url, capture { %>
+          <div class="product-digital text-center">
+            <span class="glyphicon glyphicon-file">
+              <!--<p class="main-image-label">Digital Product<p>-->
+            </span>
+          </div>
+        <% } %>
+        <input type="file" id="digital_asset" name="digital_asset" class="form-control">
+        <%= prod.hidden_field :download_url, value: "upload" %>
+      </fieldset>
+  </div>
+</div>
+<!-- End of Digital Product Object -->

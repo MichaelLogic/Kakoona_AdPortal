@@ -1,0 +1,2 @@
+$(".toggle-obj").slideUp('slow', function(){ $(this).remove(); });
+$("#toggle-wrap").append("<%= escape_javascript( render( partial: 'config_features', locals: { prod: @product}) ) %>"); //add simple product field set

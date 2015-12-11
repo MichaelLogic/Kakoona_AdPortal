@@ -1,4 +1,33 @@
+.digital-asset-fields{
+	/*display: none;*/
+
+	.digital-upload-pad {
+		background-color: #fff;
+		border: 2px solid #CCC;
+		min-width: 250px;
+		min-height: 90px;
+		line-height: 90px;
+
+		.glyphicon.glyphicon-file {
+		    font-size: 45px;
+		    vertical-align: middle;
+	    	display: inline-block;
+		}
+	}
+}
+
+.config-asset-fields{
+	/*display: none;*/
+
+}
+
+
 .config-subtitle {
+	font-weight: 600;
+	margin-left: 15px;
+}
+
+.config-p {
 	margin-left: 15px;
 }
 
@@ -29,3 +58,93 @@
 .underline {
   text-decoration: underline;
 }
+
+.button {
+	margin-top: 15px;
+}
+
+.row-generate-action{
+	margin-bottom: 20px;
+
+	.btn-generate{
+		padding: 4px 14px;
+		background-color: green;
+	}
+}
+
+.product-preview-feature {
+	background-color: #fff;
+	border: 2px solid #CCC;
+	min-width: 160px;
+	min-height: 160px;
+	line-height: 160px;
+
+	.glyphicon.glyphicon-camera {
+	    font-size: 40px;
+	    vertical-align: middle;
+    	display: inline-block;
+	}
+
+}
+
+.main-image-label {
+    		font-size: 18px;
+    	}
+
+
+
+.product-preview-thum {
+	background-color: #fff;
+	border: 2px solid #CCC;
+	min-width: 90px;
+	min-height: 90px;
+	line-height: 90px;
+
+	.glyphicon.glyphicon-camera {
+	    font-size: 30px;
+	    vertical-align: middle;
+    	display: inline-block;
+	}
+
+}
+
+
+.variant-inst{
+	padding: 15px 15px 15px 15px;
+	margin: 0px 0px 0px 0px;
+	background-color: #ffffcc;
+	border-top: solid #cccccc 2px;
+
+	.variant-thum-row {
+		padding-left: 18px;
+		.col-md-2, .col-xs-6{
+			padding: 0px;
+		}
+	}
+
+	.first-variant {
+		padding-left: 35px;
+	}
+
+
+	.variant-thum-wrap {
+		margin: 5px 5px 5px 5px;
+	}
+
+	.variant-img-label {
+    		font-size: 12px;
+    	}
+
+	.btn-delete-variant{
+		font-size: 24px;
+	}
+}
+
+.feature-value-fields{
+
+	.feature-value {
+		margin: 0px 10px;
+	}
+	
+}
+

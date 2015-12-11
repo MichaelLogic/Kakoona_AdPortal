@@ -1,0 +1,77 @@
+<!-- Variant Instance -->
+<div class="row">
+  <div class="col-md-12 col-xs-12 variant-inst">
+
+    <div class="row">
+      <div class="col-md-12 col-xs-12">
+        <div class="btn-remove-attr pull-right">
+          <a href="#" class="btn-remove-fields removeRow">
+            <i class="fa fa-times fa-2x"><span class="btn-delete-variant">Delete</i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row head">
+      <div class="col-md-4 col-xs-12">
+        <div class="input-group">
+            <span class="input-group-addon">Variant SKU</span>
+            <input type=text class="form-control" placeholder="(created when saved)">
+        </div>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <div class="row display-table bottom10">
+          <div class="col-md-7 col-xs-12 display-cell first-variant">
+            <div class="input-group">
+                <span class="input-group-addon">Memory</span>
+                <%= sku.text_field :memory, class: "form-control", value: "16GB", readonly: true %>
+            </div>
+          </div>
+          <div class="col-md-5 col-xs-12 display-cell">
+            <div class="input-group">
+                <span class="input-group-addon">Color</span>
+                <%= sku.text_field :color, class: "form-control", value: "red", readonly: true %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row display-table">
+       <div class="col-md-3 col-xs-12 display-cell grffk-wrap">
+          <div class="product-add text-center">
+            <span class="glyphicon glyphicon-camera">
+              <p class="main-image-label">Main Variant Image<p>
+            </span>
+          </div>
+       </div>
+      <div class="col-md-9 col-xs-12 display-cell">
+        <div class="row display-table bottom10">
+          <div class="col-md-8 col-xs-12 display-cell">
+            <%= sku.label "Price" %>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <%= sku.text_field :price, class: "form-control", placeholder: '000.00' %>
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 display-cell">
+            <%= sku.label "In Stock" %>
+            <div class="input-group">
+                <%= sku.text_field :in_stock, class: "form-control", placeholder: '0' %>
+                <span class="input-group-addon">count</span>
+            </div>
+          </div>
+        </div>
+        <div class="row bottom10">
+          <div class="col-md-12 col-xs-12">
+            <%= sku.label :description %>
+            <%= sku.text_area :description, rows: 5, class: 'form-control' %>
+          </div>
+        </div>
+
+        <%= render 'products/thumbnailer' %>
+      
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- End of Variant Instance -->

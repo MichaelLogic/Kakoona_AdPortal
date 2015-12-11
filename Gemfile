@@ -41,6 +41,7 @@ gem 'gcal-ruby',            '~> 0.1.3'
 
 gem 'seed-fu',              '~> 2.3'
 
+#Media Processing & Storage
 gem 'aws-sdk-v1'
 gem "paperclip-ffmpeg"
 gem 'paperclip-av-transcoder'

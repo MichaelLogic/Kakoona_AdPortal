@@ -1,7 +1,7 @@
-$(function() {
-  if ($('.direct-upload').length > 0) {
-    $.get( "/pspost", function( s3params ) {
 
+var upload_ready = $(function() {
+  if ($('.direct-upload').length > 0) {        
+    $.get( "/pspost", function( s3params ) {
       $('.direct-upload').find("input:file").each(function(i, elem) {
         var fileInput    = $(elem);
         var uploadWrap = $(fileInput.parents('fieldset:first'));
@@ -108,6 +108,10 @@ $(function() {
       });
     }, 'json');
   }
+
 });
+
+//$(document).ready(upload_ready)
+$(document).on('page:change', upload_ready)
 
 

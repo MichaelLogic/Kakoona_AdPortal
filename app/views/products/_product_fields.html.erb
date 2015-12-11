@@ -1,0 +1,88 @@
+<div class="row head">
+    <div class="col-md-9">
+        <span class="section-title">Product</span>
+        <p>Create your product for this campaign.</p>
+    </div>
+</div>
+<div class="row display-table">
+  <div class="col-md-3 col-xs-12 display-cell grffk-wrap">
+    <fieldset class: 'product_upload-fields' id: 'product_upload-fields'>
+      <%= prod.label :grffk, capture { %>
+        <div class="product-add text-center">
+          <span class="glyphicon glyphicon-camera">
+            <p class="main-image-label">Main Product Image<p>
+          </span>
+        </div>
+      <% } %>
+      <%= prod.file_field :grffk, accept: 'image/png,image/gif,image/jpeg,image/jpg', class: "form-control" %>
+      <%= prod.hidden_field :cloud_asset_url, value: "upload" %>
+    </fieldset>
+  </div>
+  <div class="col-md-9 col-xs-12 display-cell attributeContainer" id="product-detail-wrap">
+
+
+    <div class="row bottom10">
+      <div class="col-md-12 col-xs-12">
+        <%= prod.text_field :name, class: "form-control", placeholder: 'Product Name' %>
+      </div>
+    </div>
+    <div class="row display-table bottom10">
+      <div class="col-md-12 col-xs-12 display-cell">
+          <% product_types = [['Simple Product', 'simple'], ['Digital Product', 'digital'], ['Configurable Product', 'configurable']] %>
+          <%= prod.select(:product_type, options_for_select(product_types, prod.object.product_type), {include_blank: false}, {'data-toggle' => "select", required: "true", autofocus: "true", class: "kakoona-select"})%>
+      </div>
+    </div>
+
+    <!-- Digital Product Toggled Object -->
+    <div class="row display-table bottom10">
+      <div class="col-md-12 col-xs-12 display-cell grffk-wrap">
+          <fieldset class="digital-asset-fields <%= 'hidden' if !@ad_campaign.product.digital? %>">
+            <%= prod.label :download_url, capture { %>
+              <div class="digital-upload-pad text-center">
+                <span class="glyphicon glyphicon-file">
+                  <!--<p class="main-image-label">Digital Product<p>-->
+                </span>
+              </div>
+            <% } %>
+            <input type="file" id="digital_asset" name="digital_asset" class="form-control">
+            <%= prod.hidden_field :download_url, value: "upload" %>
+          </fieldset>
+      </div>
+    </div>
+    <!-- End of Digital Product Object -->
+  
+    <div class="config-asset-fields <%= 'hidden' if !@ad_campaign.product.configurable? %>">
+      <!-- Configurable Product Objects -->
+
+      <div class="row config-product config-asset-fields">
+        <h4 class="config-subtitle">Product Features</h4>
+        <p class="config-p">Identify the product's configurable features. Then generate the product variations.</p>
+        <%= prod.fields_for :product_features do |feature| %>
+          <%= render 'products/product_feature_fields', ftr: feature %>
+        <% end %>
+        <p><%= link_to_add_features "+ More Features", prod, :product_features %></p>
+      </div>
+      <!-- End of Configurable Product Objects -->
+
+      <!-- Config Products Action -->
+      <div class="row row-generate-action  config-generate <%= 'hide' if !@ad_campaign.product.configurable? %>">
+          <div class="col-md-9">
+
+          </div>
+          <div class="col-md-3 btn-add-campaign">
+            <%= link_to_generate_skus "GENERATE VARIATIONS", prod, :product_sku_variants %>
+          </div>
+      </div>
+      <!-- End of Config Products Action -->
+    </div>
+    
+
+  </div>
+</div>
+<div class="config-sku-variants" id="config-sku-variants">
+  <%= prod.fields_for :product_sku_variants do |variant| %>
+    <%= render 'products/product_sku_variant_fields', sku: variant %>
+  <% end %>
+</div>
+
+

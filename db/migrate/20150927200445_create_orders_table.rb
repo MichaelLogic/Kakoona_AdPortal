@@ -2,7 +2,7 @@ class CreateOrdersTable < ActiveRecord::Migration
   def change
     create_table :orders do |t|
       t.belongs_to :ad_campaign, index: true
- 	  t.string :selected_product_model
+ 	    t.string :selected_product_model
       t.integer :quantity
       t.float	:total_sale
       t.boolean :shipping_needed, default: true, null: false

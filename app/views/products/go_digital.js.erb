@@ -1,0 +1,3 @@
+$(".toggle-obj").slideUp('slow', function(){ $(this).remove(); });
+$("#toggle-wrap").append("<%= j render 'digital_upload', prod: Proc.new {|f| fields_for @product} %>");
+$("#toggle-wrap").append("<%= j render 'simple_sku_variant', prod: @product %>"); //add simple product field set

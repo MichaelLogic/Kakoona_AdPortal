@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-    logger.debug "Product Config Var Keys: #{@product.config_vars}"
+    #logger.debug "Product Config Var Keys: #{@product.config_vars}"
 
     respond_to do |format|
       if @product.save
@@ -23,6 +23,27 @@ class ProductsController < ApplicationController
   end
 
   def add_attribute
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def go_simple
+    @product = Product.new
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def go_digital
+    @product = Product.new
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def go_configurable
+    @product = Product.new
     respond_to do |format|
       format.js
     end
@@ -66,8 +87,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:merchant_id, :name, :product_type, :price, :in_stock, :description, :grffk, :cloud_asset_url).tap do |whitelisted|
-        whitelisted[:product] = params[:product][:config_vars]
-      end
+      params.require(:product).permit(:merchant_id, :name, :product_type, :grffk, :cloud_asset_url, :download_url)
     end
 end

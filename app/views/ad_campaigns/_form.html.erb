@@ -67,7 +67,7 @@
 <div class="separator"></div>
 
 <%= f.fields_for :product do |product_form| %>
-  <%= render 'products/single', prod: product_form %>
+  <%= render 'products/product_fields', prod: product_form %>
 <% end %>
   
 

@@ -5,9 +5,17 @@ class Product < ActiveRecord::Base
   					:styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :grffk, :content_type => /\Aimage\/.*\Z/
 
-  after_initialize :init
+  enum product_type: {simple: 1, digital: 2, configurable: 3}
 
-  store_accessor :config_vars
+  #Nested Product Features
+  has_many :product_features, :dependent => :destroy
+  accepts_nested_attributes_for :product_features, allow_destroy: true
+
+  #Nested SKU Variants
+  has_many :product_sku_variants, :dependent => :destroy
+  accepts_nested_attributes_for :product_sku_variants, allow_destroy: true
+
+  after_initialize :init
 
   process_in_background :grffk
 
@@ -127,7 +135,7 @@ class Product < ActiveRecord::Base
 
     def init
       if self.new_record? && self.product_type.nil?
-        self.product_type = 1
+        self.product_type = :configurable
       end
     end
 
