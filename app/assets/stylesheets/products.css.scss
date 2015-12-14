@@ -142,8 +142,26 @@
 
 .feature-value-fields{
 
-	.feature-value {
-		margin: 0px 10px;
+	.valtag_container ul{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		text-align: center;
+	}
+
+	.valtag_container ul li { display: inline; }
+
+	.valtag_container ul li span{
+		text-decoration: none;
+		padding: .2em 1em;
+		color: #fff;
+		background-color: #036;
+		margin: 3px 10px;
+	}
+
+	.valtag_container ul li:hover{
+		color: #fff;
+		background-color: #369;
 	}
 	
 }

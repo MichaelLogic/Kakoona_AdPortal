@@ -30,7 +30,9 @@ function makeValueRegExp(valArr){
             regexp = new RegExp($(cl_this).data('id'), 'g');
             valExp = new RegExp($(cl_this).data('spanval'), 'g');
             $(cl_this).data('fields').replace(valExp, splitVals[cl_t]);
-            $(cl_this).before($(cl_this).data('fields').replace(regexp, time));
+            //$(cl_this).before($(cl_this).data('fields').replace(regexp, time));
+            $(cl_this).closest('.valList').append($(cl_this).data('fields').replace(regexp, time).replace(valExp, splitVals[cl_t]));
+            //$(cl_this).before($(cl_this).data('fields').replace(regexp, time).replace(valExp, splitVals[cl_t]));
             console.log(regexp);
             console.log(valExp);
             console.log(splitVals[cl_t])
@@ -150,10 +152,12 @@ $('#ad_campaign_product_attributes_product_type').change(function(){
   if(productType == 'simple'){
     $('.digital-asset-fields').addClass("hidden");
     $('.config-asset-fields').addClass("hidden");
+    $('.config-generate').addClass("hidden");
     //action_url = '/go_simple';
   }else if(productType == 'digital'){
     //action_url = '/go_digital';
     $('.config-asset-fields').addClass("hidden");
+    $('.config-generate').addClass("hidden");
     $('.digital-asset-fields').removeClass("hidden");
     //$('.digital-asset-fields').slideDown("slow");
     //$('.digital-asset-fields').show();
@@ -161,6 +165,7 @@ $('#ad_campaign_product_attributes_product_type').change(function(){
   }else{
     $('.digital-asset-fields').addClass("hidden");
     $('.config-asset-fields').removeClass("hidden");
+    $('.config-generate').removeClass("hidden");
     //action_url = '/go_configurable';
   }
   

@@ -18,8 +18,13 @@
       <%= ftr.fields_for :product_feature_values do |value| %>
         <%= render 'products/product_feature_value_fields', val: value %>
       <% end %>
-      <!-- Feature Value Regex -->
-      <%= feature_value_div ftr, :product_feature_values %>
+      <div class="valtag_container">
+        <ul class="valList">
+
+        <ul>
+        <!-- Feature Value Regex -->
+        <%= feature_value_div ftr, :product_feature_values %>
+      </div>
     </div>
 </div>
 <!-- End of Product Feature Object -->
